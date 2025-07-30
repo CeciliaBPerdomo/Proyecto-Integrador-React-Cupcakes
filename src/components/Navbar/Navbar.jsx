@@ -26,7 +26,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        style={{ height: '80px' }}
+                        style={{ height: '95px' }}
                     />
                 </Link>
             </div>
@@ -45,7 +45,7 @@ const Navbar = () => {
 
                 {/* Shopping cart */}
                 <motion.div whileTap={{ scale: 0.97 }}>
-                    <Link to='/cart'>
+                    <Link to='/'>
                         <GiShoppingCart />
                         Tu carrito
                     </Link>
