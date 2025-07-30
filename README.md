@@ -8,7 +8,14 @@
     <img src="./src/assets/LogoCupcakeLandia.png">
 </p>
 
-**CupcakeLandia** es una tienda online de cupcakes desarrollada con tecnologías modernas del stack frontend. Permite a los usuarios registrarse, iniciar sesión, explorar un menú de delicias, armar su carrito, confirmar pedidos y consultar su historial. Todo en una experiencia ágil, visual y responsive.
+**CupcakeLandia** es una tienda online de cupcakes desarrollada con tecnologías modernas del *stack frontend*. Permite a los usuarios registrarse, iniciar sesión, explorar un menú de delicias, armar su carrito, confirmar pedidos y consultar su historial. Todo en una experiencia ágil, visual y responsive.
+
+## ✨ Funcionalidades
+- Registro e inicio de sesión de usuarios
+- Visualización de menú con productos
+- Carrito de compras interactivo
+- Confirmación y gestión de pedidos
+- Historial de pedidos por usuario
 
 ## ⚙️ Tecnologías utilizadas
 | 🛠️ Tecnología          |            | 🛠️ Tecnología          |          |  🛠️ Tecnología          |        |
@@ -18,20 +25,12 @@
 | **React Router DOM** | ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white) | **Framer Motion** | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) | **GitHub** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white) 
 | **React Icons** | ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white) |  
 
-## ✨ Funcionalidades
-- Registro e inicio de sesión de usuarios
-- Visualización de menú con productos
-- Carrito de compras interactivo
-- Confirmación y gestión de pedidos
-- Historial de pedidos por usuario
-
-## 🚀 Instalación y uso local
+## 🚀 Instalación y uso local del código
 - Cloná el repositorio: `git clone https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes.git` 
 - Ingresá al directorio del proyecto: `cd Proyecto-Integrador-React-Cupcakes`
 - Instalá las dependencias: `npm install`
 - Levantá el servidor de desarrollo: `npm run dev`
 - Abrí tu navegador en: `http://localhost:5173`
-
 
 ## 🛠️ Desarrollo
 - Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025
