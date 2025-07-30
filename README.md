@@ -4,7 +4,10 @@
 
 </a></p>
 
-# 🧁 CupcakeLandia
+<p align="start">
+<img src="./src/assets/LogoCupcakeLandia.png">
+</p>
+
 **CupcakeLandia** es una tienda online de cupcakes desarrollada con tecnologías modernas del stack frontend. Permite a los usuarios registrarse, iniciar sesión, explorar un menú de delicias, armar su carrito, confirmar pedidos y consultar su historial. Todo en una experiencia ágil, visual y responsive.
 
 ## ⚙️ Tecnologías utilizadas
