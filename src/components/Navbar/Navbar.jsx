@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import {
     NavbarContainerStyled,
     LinksContainerStyled,
-    LinkContainerStyled
+    LinkContainerStyled,
+    LogoContainerStyled
 } from './NavbarStyles';
 
 //Imagenes e iconos
@@ -18,7 +19,7 @@ const Navbar = () => {
     return (
         <NavbarContainerStyled>
             {/* Logo */}
-            <div>
+            <LogoContainerStyled>
                 <Link to='/'>
                     <img
                         src={logo}
@@ -29,7 +30,7 @@ const Navbar = () => {
                         style={{ height: '95px' }}
                     />
                 </Link>
-            </div>
+            </LogoContainerStyled>
 
 
             {/* Home */}

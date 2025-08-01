@@ -32,7 +32,25 @@
 - Levantá el servidor de desarrollo: `npm run dev`
 - Abrí tu navegador en: `http://localhost:5173`
 
-## 🛠️ Desarrollo
+## Requisitos para la entrega
+- 👉 Una **landing page** con:
+    - Header con su navbar funcional en responsive con API Context o Redux Toolkit.
+    - Hero representativo de su página.
+    - Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera (por ejemplo, un botón).
+    - Sección de cards con productos destacados que lleve a la página de productos de alguna manera (por ejemplo, un botón).
+    - Footer.
+- 👉 Una página de "**Sobre nosotros**" (Con Header , footer y la información que corresponda y quieran colocar en su página "Sobre nosotros").
+- 👉 Una página de "**Productos**", con los productos renderizados dinámicamente, lógica de filtros, agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra.(Todas estas acciones deben tener un modal de confirmación).
+- 👉 Una página de contacto en la cual tienen que tener al menos un formulario de **contacto** con los campos "nombre", "apellido" , "email" y "asunto". Además, utilizando Formik, deberán realizar la validación del formulario de contacto. El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación.
+- 👉 Todas las páginas vinculadas entre si mediante React Router.
+- 👉 Diseño responsive de todas las páginas.
+- 👉 Se deben poder persistir los productos del carrito.
+- 👉 Agregar un sistema de login y registro.
+- 👉 Agregar una página de checkout al realizar la compra.
+- 👉 Agregar una página de producto para cada producto individual
+- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS.
+
+## 🛠️ Desarrollo y deploy web
 - Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025
 - Github: <a href="https://github.com/CeciliaBPerdomo" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo</a>
 - Repositorio: <a href="https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes</a>

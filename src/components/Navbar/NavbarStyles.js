@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
-import { motion } from 'framer-motion';
+import styled from 'styled-components';
+// import { motion } from 'framer-motion';
 
 export const NavbarContainerStyled = styled.div`
   height: 100px;
@@ -8,6 +8,28 @@ export const NavbarContainerStyled = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 4rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    height: auto;
+    gap: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    padding: 1rem;
+  }
+`;
+
+export const LogoContainerStyled = styled.div`
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    width: 100%;
+  }
 `;
 
 export const LinksContainerStyled = styled.div`
@@ -20,9 +42,8 @@ export const LinksContainerStyled = styled.div`
     align-items: center;
     gap: 10px;
     padding: 1rem 1.5rem;
-    background-color: var(--color-primary-light); /* fondo más clarito */
-    border-radius: 1rem;
-    font-weight: 600;
+    background-color: var(--color-primary-light);
+    border-radius: 1rem; 
     font-size: 1rem;
     color: var(--color-text-dark);
     transition: all 0.25s ease-in-out;
@@ -34,17 +55,23 @@ export const LinksContainerStyled = styled.div`
     }
 
     svg {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
     }
+
+     @media (max-width: 768px) {
+      flex-direction: column;
+      width: 100%;
+    a {
+      width: 100%;
+      justify-content: center;
+    }
+  }
   }
 `;
 
-
-
-
 export const LinkContainerStyled = styled.div`
   font-size: 1.2rem;
-  color: ${props => (props.home ? '#ff9d01' : '#ff9300')};
+  color: ${props => (props.home ? '#c9184a' : '#ff66c4')};
 `;
 
 export const CartNavStyled = styled.div`
@@ -52,46 +79,6 @@ export const CartNavStyled = styled.div`
   cursor: pointer;
   color: var(--color-text-dark);
   font-size: 1.5rem;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.1);
-  }
-
-  span {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background-color: #ff5c8a;
-    color: white;
-    font-size: 0.75rem;
-    border-radius: 50%;
-    width: 18px;
-    height: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid white;
-  }
-`;
-
-export const UserNavStyled = styled.div`
- height: 100px;
-  background-color: var(--color-secondary-background);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 4rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-  border-bottom: 2px solid var(--color-border);
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  span {
-    color: white;
-    font-size: 1rem;
-    margin-right: 20px;
-  }
 `;
 
 export const UserImageStyled = styled.img`
@@ -99,24 +86,4 @@ export const UserImageStyled = styled.img`
   height: 30px;
   border-radius: 100px;
   cursor: pointer;
-`;
-
-export const SpanStyled = styled.span`
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
-export const UserContainerStyled = styled(LinkContainerStyled)`
- display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--color-text-dark);
-  font-weight: 500;
-  transition: all 0.2s;
-
-  &:hover {
-    text-decoration: underline;
-    color: var(--color-accent);
-  }
 `;
