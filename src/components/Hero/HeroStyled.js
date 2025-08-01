@@ -7,12 +7,12 @@ export const HeroContainerStyled = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 85vh;   
+    height: 86vh;   
     margin: 0 auto;
 `;
 
 export const TituloContainerStyled = styled.div`
-    width: 50%;
+    width: 45%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,7 +22,7 @@ export const TituloContainerStyled = styled.div`
     h1 {
         font-size: 2.5rem;
         color: #FF66C4;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
         display: flex;
         align-items: center;
         gap: 1rem;
@@ -46,8 +46,11 @@ export const HeroParagraphStyled = styled(motion.p)`
 `;
 
 export const ImagenContainerStyled = styled.div`
-    width: 50%;
+    width: 60%;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
     img {
         width: 100%;
     }
