@@ -55,3 +55,7 @@
 - Github: <a href="https://github.com/CeciliaBPerdomo" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo</a>
 - Repositorio: <a href="https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes</a>
 - Live versión: <a href="https://proyecto-integrador-react-cupcakes.vercel.app/" style="text-decoration: none; color: black">en Vercel</a>
+
+<p align="start">
+    <img src="./src/assets/cupcakes/hero.png">
+</p>

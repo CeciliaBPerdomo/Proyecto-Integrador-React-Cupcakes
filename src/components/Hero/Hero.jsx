@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../UI/Boton/Button'
 
 // imagenes 
 import cupcakesHero from '../../assets/cupcakes/hero.png'
@@ -9,7 +10,8 @@ import {
     HeroContainerStyled,
     TituloContainerStyled,
     ImagenContainerStyled,
-    HeroParagraphStyled
+    HeroParagraphStyled,
+    HeroButtonContainerStyled
 } from './HeroStyled'
 
 const Hero = () => {
@@ -30,6 +32,18 @@ const Hero = () => {
                     <p>Descubrí sabores únicos, colores que enamoran 💜 y cupcakes que hacen sonreír a todos 🥰​</p>
                     <p>¡Vení a probarlos y llevate tu favorito a casa 🏠!​</p>
                 </HeroParagraphStyled>
+                <HeroButtonContainerStyled
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                >
+                    <Button
+                        onClick={e => e.preventDefault()}
+                        radius='50'
+                    >
+                        Conocé nuestros cupcakes
+                    </Button>
+                </HeroButtonContainerStyled>
             </TituloContainerStyled>
 
             <ImagenContainerStyled>
@@ -38,6 +52,7 @@ const Hero = () => {
                     alt='Cupcakes'
                 />
             </ImagenContainerStyled>
+
         </HeroContainerStyled>
     )
 }

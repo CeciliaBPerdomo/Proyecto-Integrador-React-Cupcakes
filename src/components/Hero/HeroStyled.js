@@ -31,25 +31,18 @@ export const TituloContainerStyled = styled.div`
             margin: 0;
         }
     }
-
-    /* p {
-        color: var(--color-text-black);
-        font-size: 1.5rem;
-        line-height: 1.5;
-        margin: 0;
-    } */
 `;
 
 export const HeroParagraphStyled = styled(motion.p)`
-  color: var(--color-text-black);
-  font-size: 1.5rem;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 600px;
+    color: var(--color-text-black);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 600px;
 
-  @media (max-width: 768px) {
-    text-align: center;
-  }
+    @media (max-width: 768px) {
+        text-align: center;
+    }
 `;
 
 export const ImagenContainerStyled = styled.div`
@@ -58,4 +51,16 @@ export const ImagenContainerStyled = styled.div`
     img {
         width: 100%;
     }
+`;
+
+
+export const HeroButtonContainerStyled = styled(motion.div)`
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
