@@ -57,5 +57,5 @@
 - Live versión: <a href="https://proyecto-integrador-react-cupcakes.vercel.app/" style="text-decoration: none; color: black">en Vercel</a>
 
 <p align="start">
-    <img src="./src/assets/cupcakes/hero.png">
+    <img src="./src/assets/cupcakes/hero.png" style="width: 40%;">
 </p>
