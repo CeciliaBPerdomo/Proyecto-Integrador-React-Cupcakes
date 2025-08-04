@@ -29,8 +29,8 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    <p>Descubrí sabores únicos, colores que enamoran 💜 y cupcakes que hacen sonreír a todos 🥰​</p>
-                    <p>¡Vení a probarlos y llevate tu favorito a casa 🏠!​</p>
+                    <p>Descubrí sabores únicos, colores que enamoran 💜 y cupcakes que hacen sonreír a todos 🥰</p>
+                    <p>¡Vení a probarlos y llevates tu favoritos a casa 🏠!</p>
                 </HeroParagraphStyled>
                 <HeroButtonContainerStyled
                     initial={{ opacity: 0, y: 30 }}

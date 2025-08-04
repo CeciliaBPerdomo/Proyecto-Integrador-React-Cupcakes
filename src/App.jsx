@@ -8,8 +8,12 @@ import Rutas from './routes/Rutas.jsx'
 function App() {
   return (
     <Layout>
-        <Navbar />
-        <Rutas/>
+      {/* Navbar */}
+      <Navbar />
+      {/* Rutas */}
+      <Rutas />
+      {/* Footer */}
+      
     </Layout>
   )
 }
