@@ -14,7 +14,6 @@ import {
 const Productos = () => {
     return (
         <ContenedorProductos>
-            <h1>Nuestros cupcakes</h1>
             <ProductosContainer>
                 {Object.entries(cupcakes).map(([, muffins]) => (
                     muffins.map((producto) => (

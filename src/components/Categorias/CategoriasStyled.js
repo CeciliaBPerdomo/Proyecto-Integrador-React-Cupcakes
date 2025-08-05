@@ -3,11 +3,10 @@ import { motion } from 'framer-motion';
 
 export const CategoriasContainer = styled.div`
     width: 100%;
-    background-color: var(--color-tertiary-background);
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0 0 1rem 0;
     user-select: none;
 `;
 
@@ -38,3 +37,14 @@ export const CardCategoria = styled(motion.div)`
         height: 80px;
     }
 `;
+
+export const ContenedorPrincipal =  styled.div`
+    width: 100%;
+    margin: 0 auto;
+
+
+    h1 {
+        padding: 1rem 0 0 1rem;
+        color: var(--color-text)
+    }
+`

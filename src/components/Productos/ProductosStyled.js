@@ -12,13 +12,7 @@ export const ProductosContainer = styled.div`
 
 export const ContenedorProductos = styled.div`
     width: 100%;
-    margin: 0 auto;
-    padding-left: 2rem;
-
-    h1 {
-        padding-top: 1rem;
-        color: var(--color-text)
-    }
+    background-color: var(--color-tertiary-background);
 `;
 
 // Card de productos
