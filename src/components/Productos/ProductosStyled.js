@@ -26,7 +26,7 @@ export const ProductosCard = styled.div`
     background: var(--color-secondary-background);
     width: 300px;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 1.5rem;
     border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;

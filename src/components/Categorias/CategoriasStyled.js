@@ -7,12 +7,12 @@ export const CategoriasContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
     user-select: none;
 `;
 
 export const CardCategoria = styled(motion.div)`
-    width: 90px;
+    width: 110px;
     height: 130px;
     display: flex;
     flex-direction: column;
