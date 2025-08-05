@@ -1,4 +1,5 @@
 import './App.css'
+import Footer from './components/Footer/Footer.jsx'
 
 
 import Layout from './components/Layout/Layout'
@@ -13,7 +14,7 @@ function App() {
       {/* Rutas */}
       <Rutas />
       {/* Footer */}
-      
+      <Footer/>
     </Layout>
   )
 }

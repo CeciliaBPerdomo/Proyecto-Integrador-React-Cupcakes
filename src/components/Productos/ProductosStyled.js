@@ -7,7 +7,7 @@ export const ProductosContainer = styled.div`
   grid-template-columns: repeat(auto-fit, 400px);
   row-gap: 3.5rem;
   width: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0 2rem 0;
 `;
 
 export const ContenedorProductos = styled.div`
@@ -19,6 +19,7 @@ export const ContenedorProductos = styled.div`
 export const ProductosCard = styled.div`
     background: var(--color-secondary-background);
     width: 300px;
+    height: 435px;
     border-radius: 15px;
     padding: 1.5rem;
     border: 1px solid var(--color-border);
@@ -53,7 +54,7 @@ export const CardPrecio = styled.p`
     text-align: end;
     font-weight: 800;
     font-size: 1.75rem;
-    background: linear-gradient(83deg, var(--color-text-dark), #ffa100);
+    background: linear-gradient(83deg, var(--color-text), var(--color-text-dark));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;

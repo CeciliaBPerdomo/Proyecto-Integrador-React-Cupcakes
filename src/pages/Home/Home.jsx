@@ -9,6 +9,7 @@ import Hero from '../../components/Hero/Hero.jsx';
 import Productos from '../../components/Productos/Productos.jsx';
 import Categorias from '../../components/Categorias/Categorias.jsx';
 import Recomendados from '../../components/Recomendados/Recomendados.jsx';
+import BarraBusqueda from '../../components/Busqueda/BarraBusqueda.jsx';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Hero />
 
       {/* Barra de búsqueda */}
+      <BarraBusqueda />
 
       {/* Productos destacados */}
       <Recomendados />

@@ -31,7 +31,7 @@ export const productos = [
     { id: 30, title: "CocoBanana", imagen: "/cupcakes/CocoBanana.png", descripcion: "Mezcla tropical de banana y coco.", precio: 145, categoria: "coco" },
     { id: 31, title: "Dolce Latte", imagen: "/cupcakes/doble.png", descripcion: "Dulce de leche con un toque de espresso.", precio: 150, categoria: "dulce de leche" },
     { id: 32, title: "Chocobanana", imagen: "/cupcakes/ChocoBanana.png", descripcion: "Banana madura con cobertura de chocolate.", precio: 145, categoria: "chocolate" },
-    { id: 33, title: "Spice & Choco", imagen: "/cupcakes/spicyChoco.png", descripcion: "Especias dulces y cacao intenso.", precio: 150, categoria: "especias" },
+    { id: 33, title: "Spice & Choco", imagen: "/cupcakes/spicyChoco.png", descripcion: "Especias dulces y un toque de cacao intenso.", precio: 150, categoria: "especias" },
     { id: 34, title: "Fruit Fantasy", imagen: "/cupcakes/FruitFantasy.png", descripcion: "Mix de frutas rojas en bizcochuelo esponjoso.", precio: 150, categoria: "fruta" },
     { id: 35, title: "Vanilla Gold", imagen: "/cupcakes/VainillaGold.png", descripcion: "Vainilla premium con crema pastelera.", precio: 145, categoria: "vainilla" },
     { id: 36, title: "Latte Cookie", imagen: "/cupcakes/Latte.png", descripcion: "Café suave con base crocante de galleta.", precio: 150, categoria: "galleta" }
