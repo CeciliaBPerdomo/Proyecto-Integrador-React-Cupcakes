@@ -10,6 +10,8 @@ import Productos from '../../components/Productos/Productos.jsx';
 import Categorias from '../../components/Categorias/Categorias.jsx';
 import Recomendados from '../../components/Recomendados/Recomendados.jsx';
 import BarraBusqueda from '../../components/Busqueda/BarraBusqueda.jsx';
+import AcercaDeNosotros from '../AcercaDeNosotros/AcercaDeNosotros.jsx';
+import Contacto from '../Contacto/Contacto.jsx';
 
 const Home = () => {
   return (
@@ -24,15 +26,17 @@ const Home = () => {
       <Recomendados />
 
       {/* Categorías */}
-      <Categorias/>
+      <Categorias />
 
       {/* Productos */}
       <Productos />
 
       {/* Nosotros */}
+      <AcercaDeNosotros />
 
       {/* Contacto */}
-      
+      <Contacto />
+
     </HomeWrapper>
   )
 }

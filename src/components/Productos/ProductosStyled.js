@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 
+export const ContenedorProductos = styled.div`
+    width: 100%;
+    background-color: var(--color-tertiary-background);
+`;
+
 export const ProductosContainer = styled.div`
   display: grid;
   place-items: center;
@@ -8,11 +13,6 @@ export const ProductosContainer = styled.div`
   row-gap: 3.5rem;
   width: 100%;
   padding: 2rem 0 2rem 0;
-`;
-
-export const ContenedorProductos = styled.div`
-    width: 100%;
-    background-color: var(--color-tertiary-background);
 `;
 
 // Card de productos
