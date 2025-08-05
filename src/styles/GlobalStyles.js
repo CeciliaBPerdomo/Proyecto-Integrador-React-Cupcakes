@@ -13,6 +13,7 @@ export const GlobalStyles = createGlobalStyle`
         --color-text: #ff66c4;
         --color-text-dark: #c9184a;
         --color-text-black: #000000;
+        --color-text-white: #fffcfcff;
         --color-border: #fcd5ce;
         --color-primary-light: #fdeaea; 
         --color-botones: #ff5c8a;

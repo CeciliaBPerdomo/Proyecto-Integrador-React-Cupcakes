@@ -1,50 +1,26 @@
 export const recomendados = [
   {
-    "id": 4,
-    "titulo": "Red Velvet Crush",
-    "img": "",
-    "desc": "Red velvet con frosting de queso crema y amor.",
-    "prrecio": 150,
-    "categoria": "gourmet"
+    id: 3,
+    title: "Lemon Kiss",
+    imagen: "/cupcakes/LemonKiss.png",
+    descripcion: "Bizcocho de limón ácido con merengue flameado.",
+    precio: 140,
+    categoria: "fruta"
   },
   {
-    "id": 8,
-    "titulo": "Dulce Amor",
-    "img": "",
-    "desc": "Relleno de dulce de leche con cobertura de chocolate blanco.",
-    "prrecio": 145,
-    "categoria": "dulce de leche"
+    id: 13,
+    title: "Blueberry Pop",
+    imagen: "/cupcakes/BlueberryPop.png",
+    descripcion: "Muffin de arándanos con glaseado violeta.",
+    precio: 150,
+    categoria: "fruta"
   },
   {
-    "id": 2,
-    "titulo": "Vainiberry",
-    "img": "",
-    "desc": "Vainilla con corazón de frutilla y topping de chantilly.",
-    "prrecio": 130,
-    "categoria": "vainilla"
-  },
-  {
-    "id": 6,
-    "titulo": "Banana Zen",
-    "img": "",
-    "desc": "Cupcake vegano de banana con nuez tostada.",
-    "prrecio": 140,
-    "categoria": "vegano"
-  },
-  {
-    "id": 10,
-    "titulo": "Chai Spice",
-    "img": "",
-    "desc": "Infusión de especias chai con cobertura cremosa.",
-    "prrecio": 140,
-    "categoria": "especias"
-  },
-  {
-    "id": 1,
-    "titulo": "ChocoBoom",
-    "img": "",
-    "desc": "Explosión de chocolate con crema de cacao y trocitos de brownie.",
-    "prrecio": 120,
-    "categoria": "chocolate"
+    id: 17,
+    title: "Frambubliss",
+    imagen: "/cupcakes/Frambubliss.png",
+    descripcion: "Relleno de frambuesa con crema chantilly.",
+    precio: 140,
+    categoria: "fruta"
   }
 ]

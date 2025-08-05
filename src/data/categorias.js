@@ -1,61 +1,61 @@
 export const categorias = [
   {
     id: 1,
-    imagen: "",
+    imagen: "/cupcakes/ChocoBoom.png",
     titulo: "Todo Chocolate",
     categoria: "chocolate"
   },
   {
     id: 2,
-    imagen: "",
+    imagen: "/cupcakes/VainillaDream.png",
     titulo: "Sabor Vainilla",
     categoria: "vainilla"
   },
   {
     id: 3,
-    imagen: "",
+    imagen: "/cupcakes/BlueberryPop.png",
     titulo: "Frutas Frescas",
     categoria: "fruta"
   },
   {
     id: 4,
-    imagen: "",
+    imagen: "/cupcakes/PeanutLover.png",
     titulo: "Gourmet Lovers",
     categoria: "gourmet"
   },
   {
     id: 5,
-    imagen: "",
+    imagen: "/cupcakes/OreoLicious.png",
     titulo: "Galletas & Más",
     categoria: "galleta"
   },
   {
     id: 6,
-    imagen: "",
+    imagen: "/cupcakes/VeganDream.png",
     titulo: "Vegano y Natural",
     categoria: "vegano"
   },
   {
     id: 7,
-    imagen: "",
+    imagen: "/cupcakes/doble.png",
     titulo: "Dulce de Leche",
     categoria: "dulce de leche"
   },
   {
     id: 8,
-    imagen: "",
+    imagen: "/cupcakes/CafeBombon.png",
     titulo: "Pasión por el Café",
     categoria: "café"
   },
   {
     id: 9,
-    imagen: "",
+    imagen: "/cupcakes/CoconutKiss.png",
     titulo: "Coco Lovers",
     categoria: "coco"
   },
   {
     id: 10,
-    imagen: "",
+    imagen: "/cupcakes/chai.png",
     titulo: "Toque de Especias",
     categoria: "especias"
   }

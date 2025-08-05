@@ -7,6 +7,7 @@ import {
 
 import Hero from '../../components/Hero/Hero.jsx';
 import Productos from '../../components/Productos/Productos.jsx';
+import Categorias from '../../components/Categorias/Categorias.jsx';
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       {/* Productos destacados */}
 
       {/* Categorías */}
+      <Categorias/>
 
       {/* Productos */}
       <Productos />
@@ -26,6 +28,7 @@ const Home = () => {
       {/* Nosotros */}
 
       {/* Contacto */}
+      
     </HomeWrapper>
   )
 }
