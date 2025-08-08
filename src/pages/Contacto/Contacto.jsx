@@ -1,15 +1,34 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Estilos 
-import { 
-    ContenedorContacto
+import {
+  ContenedorContactos,
+  ContenedorPrincipal,
+  ContenedorFormulario,
+  ContenedorImagen
 } from "./ContactoStyled"
 
+
+// Boton 
+
+
 const Contacto = () => {
+
   return (
-    <ContenedorContacto>
-        <h1>Contacto</h1>
-    </ContenedorContacto>
+    <ContenedorContactos>
+      <h2>🧁 La dulzura empieza aquí, contactanos!</h2>
+      <ContenedorPrincipal>
+        <ContenedorFormulario>
+          {/* Formulario */}
+        </ContenedorFormulario>
+        <ContenedorImagen>
+          <img
+          src='/cupcakes/contacto.jpg'
+          alt="Contacto"
+          />
+        </ContenedorImagen>
+      </ContenedorPrincipal>
+    </ContenedorContactos>
   )
 }
 

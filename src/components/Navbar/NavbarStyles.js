@@ -15,6 +15,7 @@ export const NavbarContainerStyled = styled.div`
   align-items: center;
   padding: 1rem 4rem;
   box-sizing: border-box;
+  border-bottom: 1px solid var(--color-tertiary-background);
 
   @media (max-width: 768px) {
     flex-direction: column;
