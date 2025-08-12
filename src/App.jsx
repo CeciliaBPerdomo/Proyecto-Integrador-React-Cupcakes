@@ -1,10 +1,7 @@
-import './App.css'
-import Footer from './components/Footer/Footer.jsx'
-
-
 import Layout from './components/Layout/Layout'
 import Navbar from './components/Navbar/Navbar'
 import Rutas from './routes/Rutas.jsx'
+import Footer from './components/Footer/Footer.jsx'
 
 function App() {
   return (
@@ -14,7 +11,7 @@ function App() {
       {/* Rutas */}
       <Rutas />
       {/* Footer */}
-      <Footer/>
+      <Footer />
     </Layout>
   )
 }

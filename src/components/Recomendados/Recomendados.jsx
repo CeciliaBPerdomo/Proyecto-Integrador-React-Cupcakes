@@ -1,20 +1,22 @@
 import React from 'react'
-
-// Recomendados
-import { recomendados } from "../../data/recomendados"
-
-// Estilos
+// Estilos e iconos
 import {
     Contenedor,
     CardsContainer
 } from "./RecomendadosStyled"
+import { GiCupcake } from "react-icons/gi";
 
 // Card
 import RecomendadosCard from './RecomendadosCard'
 
-import { GiCupcake } from "react-icons/gi";
+//Redux
+import { useSelector } from 'react-redux';
+
 
 const Recomendados = () => {
+
+    const recomendados = useSelector(state => state.recomendados.recomendados)
+
     return (
         <Contenedor>
             <h1><GiCupcake /> Cupcakes destacados</h1>
