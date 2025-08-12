@@ -7,9 +7,12 @@ import persistStore from "redux-persist/lib/persistStore";
 
 // Recomendados
 import recomendadosReducer from "./recomendados/recomendadosSlice"
+// Categorias
+import categoriasReducer from "./categorias/categoriasSlice"
 
 const reducers = combineReducers({
     recomendados: recomendadosReducer,
+    categorias: categoriasReducer,
 })
 
 const persistConfig = {
