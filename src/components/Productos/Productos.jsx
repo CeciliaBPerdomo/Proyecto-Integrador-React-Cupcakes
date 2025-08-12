@@ -1,8 +1,4 @@
 import React from "react";
-
-// Data
-import { cupcakes } from "../../data/productos";
-
 import CardProducto from "./CardProducto";
 
 // Estilos baby
@@ -11,7 +7,13 @@ import {
     ContenedorProductos,
 } from "./ProductosStyled";
 
+// Redux sweet heart 
+import { useSelector } from "react-redux";
+
 const Productos = () => {
+
+    const cupcakes = useSelector(state => state.productos.productos)
+    
     return (
         <ContenedorProductos>
             <ProductosContainer>
