@@ -1,8 +1,6 @@
 import React from 'react'
 
-// Cocineros
-import { cocineros } from "../../data/cocineros"
-import CocinerosCard from './CocinerosCard'
+import CocinerosCard from "./CocinerosCard"
 
 // Estilos
 import {
@@ -10,7 +8,13 @@ import {
   CocinerosGrid,
 } from "./AcercaDeNosotrosStyled"
 
+//Redux
+import { useSelector } from 'react-redux'
+
 const AcercaDeNosotros = () => {
+
+  const cocineros = useSelector(state => state.cocineros.cocineros)
+
   return (
     <CocinerosWrapper>
       <h2>👩‍🍳 Nuestros Maestros Cupcakeros 👨‍🍳</h2>

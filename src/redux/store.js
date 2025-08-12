@@ -11,11 +11,14 @@ import recomendadosReducer from "./recomendados/recomendadosSlice"
 import categoriasReducer from "./categorias/categoriasSlice"
 // Productos
 import productosReducer from "./productos/productosSlice"
+// Cocineros
+import cocinerosReducer from "./cocineros/cocinerosSlice"
 
 const reducers = combineReducers({
     recomendados: recomendadosReducer,
     categorias: categoriasReducer,
     productos: productosReducer,
+    cocineros: cocinerosReducer,
 })
 
 const persistConfig = {
