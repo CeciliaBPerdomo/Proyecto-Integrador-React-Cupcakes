@@ -5,11 +5,18 @@ import {
     CardCategoria
 } from "./CategoriasStyled"
 
+// Redux
+import { useDispatch, useSelector } from 'react-redux'
+import { seleccionarCategoria } from '../../redux/categorias/categoriasSlice'
+
 const CategoriaCard = ({ imagen, categoria }) => {
+    const dispatch = useDispatch()
+    const seleccionada = useSelector(state => state.categorias.selectedCategoria)
+
     return (
         <CardCategoria
-            selected={false}
-            onClick={e => e.preventDefault()}
+            selected={categoria == seleccionada}
+            onClick={() => dispatch(seleccionarCategoria(categoria))}
             whileTap={{ scale: 0.95 }}
         >
             <img

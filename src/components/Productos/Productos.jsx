@@ -12,8 +12,13 @@ import { useSelector } from "react-redux";
 
 const Productos = () => {
 
-    const cupcakes = useSelector(state => state.productos.productos)
-    
+    let cupcakes = useSelector(state => state.productos.productos)
+    const categoriaSeleccionada = useSelector(state => state.categorias.selectedCategoria)
+
+    if(categoriaSeleccionada) {
+        cupcakes = { [categoriaSeleccionada]: cupcakes[categoriaSeleccionada] }
+    }
+
     return (
         <ContenedorProductos>
             <ProductosContainer>
