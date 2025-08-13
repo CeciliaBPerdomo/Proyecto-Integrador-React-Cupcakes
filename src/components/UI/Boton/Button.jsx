@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import { StyledButton } from './ButtonStyled'
 
 const Button = ({

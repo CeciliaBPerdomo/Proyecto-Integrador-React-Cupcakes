@@ -1,0 +1,1 @@
+export const limite_inicial = 6;

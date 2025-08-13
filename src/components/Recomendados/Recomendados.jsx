@@ -19,7 +19,7 @@ const Recomendados = () => {
 
     return (
         <Contenedor>
-            <h1><GiCupcake /> Cupcakes destacados</h1>
+            <h1><GiCupcake /> Nuestros Cupcakes recomendados</h1>
             <CardsContainer gridLength={recomendados.length}>
                 {recomendados.map((reTop) => (
                     <RecomendadosCard

@@ -39,7 +39,7 @@ export const categorias = [
     id: 7,
     imagen: "/cupcakes/doble.png",
     titulo: "Dulce de Leche",
-    categoria: "dulce de leche"
+    categoria: "Dulce de leche"
   },
   {
     id: 8,
