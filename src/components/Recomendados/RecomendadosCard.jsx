@@ -13,7 +13,12 @@ import {
 import Button from "../UI/Boton/Button"
 import { MdAddShoppingCart } from "react-icons/md";
 
-const RecomendadosCard = ({ title, imagen, descripcion, precio }) => {
+// Redux
+import { useDispatch } from 'react-redux';
+import { agregarCarrito } from '../../redux/carrito/carritoSlice';
+
+const RecomendadosCard = ({ id, title, imagen, descripcion, precio }) => {
+    const dispatch = useDispatch()
     return (
         <CardRecomendado
             whileHover={{
@@ -36,11 +41,11 @@ const RecomendadosCard = ({ title, imagen, descripcion, precio }) => {
                 <span>
                     {formatoPrecio(precio)}
                 </span>
-                {/* <Button
-                    onClick={e => e.preventDefault()}
+                <Button
+                    onClick={()=> dispatch(agregarCarrito({id, title, imagen, descripcion, precio}))}
                 >
                     <MdAddShoppingCart />
-                </Button> */}
+                </Button>
             </CardInfo>
         </CardRecomendado>
     )

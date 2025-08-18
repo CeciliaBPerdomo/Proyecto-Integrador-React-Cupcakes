@@ -34,13 +34,15 @@
 - Levantá el servidor de desarrollo: `npm run dev`
 - Abrí tu navegador en: `http://localhost:5173`
 
-## Instalaciones
+## 🧿​ Instalaciones
+- **React Icons**
+    - `npm install react-icons --save`
 - **Redux**:
-    - npm i @reduxjs/toolkit
-    - npm i react-redux
-    - npm i redux-persist
+    - `npm i @reduxjs/toolkit`
+    - `npm i react-redux`
+    - `npm i redux-persist`
 
-## Requisitos para la entrega
+## 🎓​ Requisitos para la entrega
 - 👉 Una **landing page** con:
     - Header con su navbar funcional en responsive con API Context o Redux Toolkit.
     - Hero representativo de su página.

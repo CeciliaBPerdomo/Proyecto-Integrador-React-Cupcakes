@@ -16,8 +16,14 @@ import {
     ContainerBoton
 } from "./ProductosStyled"
 
-// id,
-const CardProducto = ({ title, imagen, descripcion, precio }) => {
+// Redux
+import { useDispatch } from 'react-redux';
+import { agregarCarrito } from '../../redux/carrito/carritoSlice';
+
+
+const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
+      const dispatch = useDispatch()
+
     return (
         <ProductosCard>
             <img
@@ -33,7 +39,7 @@ const CardProducto = ({ title, imagen, descripcion, precio }) => {
             </ContainerPrecio>
             <ContainerBoton>
                 <Button
-                    onClick={e => e.preventDefault()}>
+                    onClick={()=> dispatch(agregarCarrito({id, title, imagen, descripcion, precio}))}>
                     <BsCartPlus />
                     Agregar al carrito
                 </Button>

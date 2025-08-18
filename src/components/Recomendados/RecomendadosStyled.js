@@ -84,5 +84,10 @@ export const CardInfo = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    button {
+      width: 50%; 
+      margin: 0 auto;
+    }
 `;
 
