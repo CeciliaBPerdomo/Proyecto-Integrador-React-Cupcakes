@@ -37,10 +37,13 @@
 ## 🧿​ Instalaciones
 - **React Icons**
     - `npm install react-icons --save`
-- **Redux**:
+- **Redux**
     - `npm i @reduxjs/toolkit`
     - `npm i react-redux`
     - `npm i redux-persist`
+- **Formik**
+    - `npm i formik`
+    - `npm i yup`
 
 ## 🎓​ Requisitos para la entrega
 - 👉 Una **landing page** con:

@@ -7,7 +7,7 @@ export const CarritoStyled = styled(motion.div)`
     left: 0;
     z-index: 9;
     width: calc(100vw - 350px);
-    height: 100vh;
+    height: 100%;
 
     ${({ oculto }) => !oculto && css`backdrop-filter: blur(4px);`}
 `;
@@ -24,7 +24,7 @@ export const ContainerStyled = styled(motion.div)`
     gap: 30px;
 
     width: 350px;
-    height: 1000px;
+    height: 100%;
 
     padding: 2rem;
     background-color: var(--color-tertiary-background);
@@ -36,7 +36,7 @@ export const ContenedorHeaderStyled = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-color: var(--color-text-dark);
+    color: var(--color-text-dark);
 
    h1 {
       margin: 0;
@@ -46,6 +46,9 @@ color: var(--color-text-dark);
 
 export const ContenedorPrincipalStyled = styled.div`
     height: 100%;
+    p {
+        color: var(--color-text);
+    }
 `;
 
 export const CupcakeStyled = styled.div`
@@ -130,5 +133,4 @@ export const CantidadStyled = styled.span`
     font-size: 22px;
     letter-spacing: 0.6px;
     padding-right:1rem;
-
 `;
