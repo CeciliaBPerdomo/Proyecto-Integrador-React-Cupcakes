@@ -17,7 +17,7 @@ const Productos = ({ itemsCarrito, envio, precio }) => {
 
     return (
         <ProductosContainerStyled>
-            <h3>Tus cupcakes</h3>
+            <h2>Tus cupcakes</h2>
             <CardsWrapperStyled>
                 {itemsCarrito.length ? (
                     itemsCarrito.map((cupcake) => {
@@ -34,21 +34,21 @@ const Productos = ({ itemsCarrito, envio, precio }) => {
             </CardsWrapperStyled>
 
             {/* Precios */}
-<PreciosWrapper>
-            <hr />
-            <ContenedorPrecio>
-                <p>sub-Total:</p>
-                <p>{formatoPrecio(precio)}</p>
-            </ContenedorPrecio>
-                 <ContenedorPrecio>
-                <p>Envio:</p>
-                <p>{formatoPrecio(envio)}</p>
-            </ContenedorPrecio>
+            <PreciosWrapper>
+                <hr />
+                <ContenedorPrecio>
+                    <p>sub-Total:</p>
+                    <p>{formatoPrecio(precio)}</p>
+                </ContenedorPrecio>
+                <ContenedorPrecio>
+                    <p>Envio:</p>
+                    <p>{formatoPrecio(envio)}</p>
+                </ContenedorPrecio>
 
-             <ContenedorPrecio>
-                <p>Total:</p>
-                <span>{formatoPrecio(precio + envio)}</span>
-            </ContenedorPrecio>
+                <ContenedorPrecio>
+                    <p>Total:</p>
+                    <span>{formatoPrecio(precio + envio)}</span>
+                </ContenedorPrecio>
             </PreciosWrapper>
         </ProductosContainerStyled>
     )

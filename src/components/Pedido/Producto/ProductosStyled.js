@@ -5,7 +5,7 @@ export const ProductosContainerStyled = styled.div`
     padding: 0 0 1rem 0;
     color: var(--color-text);
 
-    h3 {
+    h2 {
         text-align: center;
         font-weight: 600;
     }
