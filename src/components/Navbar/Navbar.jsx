@@ -4,26 +4,32 @@ import {
     NavbarContainerStyled,
     LinksContainerStyled,
     LinkContainerStyled,
-    LogoContainerStyled
+    LogoContainerStyled,
+    CartBadge,
+    CarritoWrapper,
+    MenuIconos,
+    TooltipWrapper,
+    Tooltip
 } from './NavbarStyles';
 
 //Imagenes e iconos
 import logo from "../../assets/LogoCupcakeLandia.png"
 import { GiCupcake, GiShoppingCart } from "react-icons/gi";
 import { LuCircleUserRound } from "react-icons/lu";
+import { LuSend } from "react-icons/lu";
+import { GiCook } from "react-icons/gi";
 
-// Motion 
-import { motion } from 'framer-motion';
 // Carrito de compras
 import CarritoCompras from './Carrito/CarritoCompras';
 
 // Redux
 import { toggleCarrito } from '../../redux/carrito/carritoSlice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const Navbar = () => {
 
     const dispatch = useDispatch()
+    const cantidad = useSelector((state) => state.carrito.itemsCarrito).reduce((acc, item) => (acc += item.cantidad), 0)
 
     return (
         <>
@@ -42,37 +48,64 @@ const Navbar = () => {
                     </Link>
                 </LogoContainerStyled>
 
+                <MenuIconos>
+                    {/* Home */}
+                    <LinksContainerStyled
+                        whileTap={{ scale: 0.97 }}>
+                        <TooltipWrapper>
+                            <Link to='/'>
+                                <GiCupcake size={30} />
+                            </Link>
+                            <Tooltip>Productos</Tooltip>
+                        </TooltipWrapper>
+                    </LinksContainerStyled>
 
-                {/* Home */}
-                <LinksContainerStyled>
-                    <motion.div whileTap={{ scale: 0.97 }}>
-                        <Link to='/'>
-                            <LinkContainerStyled home>
-                                <GiCupcake />
-                            </LinkContainerStyled>
-                            Home
-                        </Link>
-                    </motion.div>
+                    {/* Nosotros */}
+                    <LinksContainerStyled
+                        whileTap={{ scale: 0.97 }}
+                    >
+                        <TooltipWrapper>
+                            <Link to='/'>
+                                <GiCook size={30} />
+                            </Link>
+                            <Tooltip>Nosotros</Tooltip>
+                        </TooltipWrapper>
+                    </LinksContainerStyled>
+
+                    {/* Contacto */}
+                    <LinksContainerStyled whileTap={{ scale: 0.97 }}>
+                        <TooltipWrapper>
+                            <Link to='/'>
+                                <LuSend size={30} />
+                            </Link>
+                            <Tooltip>Contacto</Tooltip>
+                        </TooltipWrapper>
+                    </LinksContainerStyled>
 
                     {/* Shopping cart */}
-                    <motion.div
+                    <LinksContainerStyled
                         whileTap={{ scale: 0.97 }}
                         onClick={() => dispatch(toggleCarrito())}
                     >
-                        <Link to='#'>
-                            <GiShoppingCart />
-                            Tu carrito
-                        </Link>
-                    </motion.div>
+                        <TooltipWrapper>
+                            <CarritoWrapper to='#'>
+                                <GiShoppingCart size={30} />
+                                {cantidad > 0 && <CartBadge>{cantidad}</CartBadge>}
+                            </CarritoWrapper >
+                            <Tooltip>Tu carrito</Tooltip>
+                        </TooltipWrapper>
+                    </LinksContainerStyled>
 
                     {/*  Inicio sesion */}
-                    <motion.div whileTap={{ scale: 0.97 }}>
-                        <Link to='/'>
-                            <LuCircleUserRound />
-                            Inicia sesión
-                        </Link>
-                    </motion.div>
-                </LinksContainerStyled>
+                    <LinksContainerStyled whileTap={{ scale: 0.97 }}>
+                        <TooltipWrapper>
+                            <Link to='/'>
+                                <LuCircleUserRound size={30} />
+                            </Link>
+                            <Tooltip>Iniciar sesión</Tooltip>
+                        </TooltipWrapper>
+                    </LinksContainerStyled>
+                </MenuIconos>
             </NavbarContainerStyled>
 
             {/* Carrito de compras */}

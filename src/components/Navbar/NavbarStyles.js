@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-// import { motion } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 export const NavbarContainerStyled = styled.div`
   position: fixed;  
@@ -30,6 +31,12 @@ export const NavbarContainerStyled = styled.div`
   }
 `;
 
+export const MenuIconos = styled.div`
+display: flex; 
+justify-content: flex-end;
+gap: 10px;
+`
+
 export const LogoContainerStyled = styled.div`
     display: flex;
     align-items: center;
@@ -40,10 +47,10 @@ export const LogoContainerStyled = styled.div`
     }
 `;
 
-export const LinksContainerStyled = styled.div`
+export const LinksContainerStyled = styled(motion.div)`
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
     flex-wrap: wrap;
     max-width: 100%;
     box-sizing: border-box;
@@ -100,4 +107,70 @@ export const UserImageStyled = styled.img`
   height: 30px;
   border-radius: 100px;
   cursor: pointer;
+`;
+
+export const CartBadge = styled.span`
+  background-color: var(--color-primary-light);
+  color: var(--color-texto);
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 1px solid var( --color-text-white);
+  padding: 0.3rem 0.5rem;
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+`;
+
+export const CarritoWrapper = styled(Link)`
+  position: relative; 
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--color-primary-light);
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+
+  svg {
+    font-size: 1.5rem;
+  }
+`;
+
+
+export const TooltipWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+
+  &:hover span {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-5px);
+  }
+`;
+
+export const Tooltip = styled.span`
+  position: absolute;
+  top: 120%; 
+  left: 5px;
+  transform: translateX(-50%);
+  background: var(--color-botones);
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  pointer-events: none;
+  z-index: 100;
 `;
