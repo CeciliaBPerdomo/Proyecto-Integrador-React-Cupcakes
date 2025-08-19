@@ -18,9 +18,11 @@ import { IoMdCloseCircleOutline } from "react-icons/io";
 import CupackeCard from "./CupackeCard"
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCarrito, vaciarCarrito } from '../../../redux/carrito/carritoSlice';
+import { useNavigate } from 'react-router-dom';
 
 const CarritoCompras = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate();
 
     const invisible = useSelector(state => state.carrito.hidden)
     const { itemsCarrito, envio } = useSelector((state) => state.carrito)
@@ -71,9 +73,9 @@ const CarritoCompras = () => {
                                 {itemsCarrito?.length ? (
                                     itemsCarrito.map((cupcake) => {
                                         return (
-                                            <CupackeCard 
-                                            key={cupcake.id}
-                                            {...cupcake}
+                                            <CupackeCard
+                                                key={cupcake.id}
+                                                {...cupcake}
                                             />
                                         )
                                     })
@@ -89,6 +91,10 @@ const CarritoCompras = () => {
                             <hr />
                             <p>Total: $ {precio + envio}</p>
                             <Button
+                                onClick={() => {
+                                    navigate("/tu-pedido")
+                                    dispatch(toggleCarrito())
+                                }}
                                 disabled={!itemsCarrito.length}
                             >Iniciar pedido
                             </Button>

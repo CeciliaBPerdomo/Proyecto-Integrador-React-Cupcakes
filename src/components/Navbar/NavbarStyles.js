@@ -90,11 +90,6 @@ export const LinksContainerStyled = styled(motion.div)`
 `;
 
 
-export const LinkContainerStyled = styled.div`
-  font-size: 1.2rem;
-  color: ${props => (props.home ? '#c9184a' : '#ff66c4')};
-`;
-
 export const CartNavStyled = styled.div`
   position: relative;
   cursor: pointer;

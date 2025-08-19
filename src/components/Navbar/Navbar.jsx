@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
     NavbarContainerStyled,
     LinksContainerStyled,
-    LinkContainerStyled,
     LogoContainerStyled,
     CartBadge,
     CarritoWrapper,
