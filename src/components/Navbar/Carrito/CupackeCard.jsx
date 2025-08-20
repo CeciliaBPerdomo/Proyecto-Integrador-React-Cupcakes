@@ -9,6 +9,12 @@ import {
     CantidadStyled,
 } from "./CarrritoComprasStyled"
 
+// Iconos 
+import { BsTrash } from "react-icons/bs";
+import { CiCircleMinus } from "react-icons/ci";
+import { CiCirclePlus } from "react-icons/ci";
+
+// Formato de precios
 import { formatoPrecio } from "../../../utilidades/precio"
 
 // Botonazo 
@@ -39,7 +45,7 @@ const CupackeCard = ({ id, imagen, title, descripcion, precio, cantidad }) => {
                         bgColor='var(--color-border)'
                         onClick={() => dispatch(borrarDelCarrito(id))}
                     >
-                        -
+                        {cantidad === 1 ? <BsTrash /> : <CiCircleMinus />}
                     </Aumento>
 
                     {/* Cantidad */}
@@ -52,7 +58,7 @@ const CupackeCard = ({ id, imagen, title, descripcion, precio, cantidad }) => {
                         bgColor='var(--color-border)'
                         onClick={() => dispatch(agregarCarrito({ id, imagen, title, descripcion, precio, cantidad }))}
                     >
-                        +
+                        <CiCirclePlus />
                     </Aumento>
                 </ContadorStyled>
             </TextContainerStyled>

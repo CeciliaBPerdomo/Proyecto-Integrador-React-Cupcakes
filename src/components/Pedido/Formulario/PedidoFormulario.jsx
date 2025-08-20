@@ -8,9 +8,9 @@ import {
 } from "./PedidoFormularioStyled"
 
 
+import Input from '../../UI/Input/Input'
+import BotonSubmit from '../../UI/Boton/Submit/BotonSubmit'
 
-import Input from '../../UI/Boton/Input/Input'
-import Button from '../../UI/Boton/Button'
 
 // Formik
 import { pedidoInitialValues } from '../../../formik/initialValues'
@@ -70,11 +70,11 @@ const PedidoFormulario = ({ itemsCarrito, envio, precio }) => {
           </Input>
 
           <div>
-            <button
-              type="submit"
+            <BotonSubmit
+              disabled={!itemsCarrito.length}
             >
               Iniciar Pedido
-            </button>
+            </BotonSubmit>
           </div>
         </Form>
       </Formik>

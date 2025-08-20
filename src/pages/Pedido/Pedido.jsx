@@ -1,10 +1,11 @@
 import React from 'react'
 
-// Estilos
+// Estilos e íconos
 import {
     PedidoContainerStyled,
     PedidoStyled
 } from "./PedidoStyled"
+import { GiCupcake } from "react-icons/gi";
 
 // Redux
 import { useSelector } from 'react-redux'
@@ -23,7 +24,7 @@ const Pedido = () => {
 
     return (
         <PedidoContainerStyled>
-            <h1>Tu pedido</h1>
+            <h1><GiCupcake /> Tu pedido</h1>
 
             <PedidoStyled>
                 {/* Formulario de pedido */}

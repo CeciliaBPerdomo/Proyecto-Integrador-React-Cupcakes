@@ -30,6 +30,10 @@ export const ContainerStyled = styled(motion.div)`
     background-color: var(--color-tertiary-background);
     border-radius: 1.5rem;
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+
+    svg {
+        color: var(--color-text-black);
+    }
 `;
 
 export const ContenedorHeaderStyled = styled.div`

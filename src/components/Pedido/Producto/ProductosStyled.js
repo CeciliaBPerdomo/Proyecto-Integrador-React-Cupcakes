@@ -42,6 +42,10 @@ export const CardsWrapperStyled = styled.div`
   @media (max-width: 1500px) {
     width: 100%;
   }
+
+  svg {
+        color: var(--color-text-black);
+    }
 `;
 
 export const ContenedorPrecio = styled.div`
