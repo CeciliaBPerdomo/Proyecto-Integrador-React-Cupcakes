@@ -4,3 +4,15 @@ export const pedidoInitialValues = {
     address: '',
     email: ''
 }
+
+export const contactoInitialValues = {
+    nombre: "", 
+    email: "", 
+    mensaje: ""
+}
+
+export const registroInitialValues = {
+    nombre: '',
+    email: "",
+    password: "",
+}

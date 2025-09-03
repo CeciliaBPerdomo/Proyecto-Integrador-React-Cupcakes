@@ -15,6 +15,9 @@ import productosReducer from "./productos/productosSlice"
 import cocinerosReducer from "./cocineros/cocinerosSlice"
 // Carrito
 import carritoReducer from "./carrito/carritoSlice"
+// Usuarios
+import usuarioReducer from "./usuario/usuarioSlice"
+
 
 const reducers = combineReducers({
     recomendados: recomendadosReducer,
@@ -22,12 +25,13 @@ const reducers = combineReducers({
     productos: productosReducer,
     carrito: carritoReducer,
     cocineros: cocinerosReducer,
+    usuario: usuarioReducer,
 })
 
 const persistConfig = {
     key: "root",
     storage,
-    whitelist: ["carrito"] // Lo que realmente quiero peristir
+    whitelist: ["carrito", "usuario"] // Lo que realmente quiero peristir
 }
 
 // Persiste la info, le paso la configuración y que quiero que persista.
@@ -35,6 +39,10 @@ const persistedReducer = persistReducer(persistConfig, reducers)
 
 export const store = configureStore({
     reducer: persistedReducer,
+    // para interactuar con la api externa
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+        serializableCheck: false // redux no guardaba bien los datos serializable
+    })
 })
 
 

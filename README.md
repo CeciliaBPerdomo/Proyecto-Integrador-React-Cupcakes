@@ -25,7 +25,7 @@
 | **JavaScript** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | **React**   | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | **Vite**  | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) |
 | **React Router DOM** | ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white) | **Framer Motion** | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) | **GitHub** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white) ![GitHub Issues](https://img.shields.io/badge/GitHub_Issues-FF3366?style=flat&logo=github&logoColor=white) 
 | **React Icons** | ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white) | **Formik** | ![Formik](https://img.shields.io/badge/Formik-0A4D8C?style=flat&logo=formik&logoColor=white) ![Yup](https://img.shields.io/badge/Yup-4B32C3?style=flat&logo=yup&logoColor=white) | **Redux ToolKit** | ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?style=flat&logo=redux&logoColor=white) | 
-| | | | | Deploy in **Vercel** | ![Vercel](https://img.shields.io/badge/Vercel-000?style=flat&logo=vercel&logoColor=white) |
+|**Axios** | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white) | | | Deploy in **Vercel** | ![Vercel](https://img.shields.io/badge/Vercel-000?style=flat&logo=vercel&logoColor=white) |
 
 ## 🚀 Instalación y uso local del código
 - Cloná el repositorio: `git clone https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes.git` 
@@ -44,6 +44,8 @@
 - **Formik**
     - `npm i formik`
     - `npm i yup`
+- **Axios**
+    - `npm i axios`
 
 ## 🎓​ Requisitos para la entrega
 - 👉 Una **landing page** con:

@@ -26,7 +26,6 @@ import { toggleCarrito } from '../../redux/carrito/carritoSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Navbar = () => {
-
     const dispatch = useDispatch()
     const cantidad = useSelector((state) => state.carrito.itemsCarrito).reduce((acc, item) => (acc += item.cantidad), 0)
 
@@ -98,7 +97,7 @@ const Navbar = () => {
                     {/*  Inicio sesion */}
                     <LinksContainerStyled whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/'>
+                            <Link to='/registrate'>
                                 <LuCircleUserRound size={30} />
                             </Link>
                             <Tooltip>Iniciar sesión</Tooltip>

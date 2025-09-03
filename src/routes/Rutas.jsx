@@ -6,6 +6,7 @@ import {
 import Home from '../pages/Home/Home';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
 import Pedido from '../pages/Pedido/Pedido';
+import Registro from '../pages/Registro/Registro';
 
 function Rutas() {
     return (
@@ -13,6 +14,7 @@ function Rutas() {
             <Route path='/' element={<Home />} />
 
             <Route path='/tu-pedido' element={<Pedido />} />
+            <Route path='/registrate' element={<Registro />} />
 
             {/* Pagina no encontrada */}
              <Route path='*' element={<PageNotFound />} />
