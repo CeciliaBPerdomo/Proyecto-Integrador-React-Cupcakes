@@ -36,6 +36,7 @@ function Rutas() {
                     </ProtectedRoute>
                 }
             />
+            
             {/* Pagina no encontrada */}
             <Route path='*' element={<PageNotFound />} />
         </Routes>

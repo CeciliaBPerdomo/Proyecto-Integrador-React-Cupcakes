@@ -113,7 +113,7 @@ const Navbar = () => {
                             <Link>
                                 <LuCircleUserRound size={30} />
                             </Link>
-                            <Tooltip>Iniciar sesión</Tooltip>
+                            <Tooltip> { usuarioActual ? usuarioActual.nombre : "Iniciar sesión" } </Tooltip>
                         </TooltipWrapper>
                     </LinksContainerStyled>
                 </MenuIconos>
