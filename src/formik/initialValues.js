@@ -16,3 +16,8 @@ export const registroInitialValues = {
     email: "",
     password: "",
 }
+
+export const loginInitialValues = {
+    email: "",
+    password: "",
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import {
     NavbarContainerStyled,
     LinksContainerStyled,
@@ -24,10 +24,16 @@ import CarritoCompras from './Carrito/CarritoCompras';
 // Redux
 import { toggleCarrito } from '../../redux/carrito/carritoSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { toggleHiddenMenu } from '../../redux/usuario/usuarioSlice';
+import Usuario from './Usuario/Usuario';
 
 const Navbar = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
+    // Carrito
     const cantidad = useSelector((state) => state.carrito.itemsCarrito).reduce((acc, item) => (acc += item.cantidad), 0)
+    // Login
+    const { usuarioActual } = useSelector(state => state.usuario)
 
     return (
         <>
@@ -95,9 +101,16 @@ const Navbar = () => {
                     </LinksContainerStyled>
 
                     {/*  Inicio sesion */}
-                    <LinksContainerStyled whileTap={{ scale: 0.97 }}>
+                    <LinksContainerStyled
+                        whileTap={{ scale: 0.97 }}
+                        onClick={() => {
+                            usuarioActual ?
+                                dispatch(toggleHiddenMenu()) :
+                                navigate("/registrate")
+                        }}
+                    >
                         <TooltipWrapper>
-                            <Link to='/registrate'>
+                            <Link>
                                 <LuCircleUserRound size={30} />
                             </Link>
                             <Tooltip>Iniciar sesión</Tooltip>
@@ -108,6 +121,9 @@ const Navbar = () => {
 
             {/* Carrito de compras */}
             <CarritoCompras />
+
+            {/* Información del usuario */}
+            <Usuario />
         </>
     )
 }

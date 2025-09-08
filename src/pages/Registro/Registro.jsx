@@ -19,8 +19,14 @@ import { createUser } from '../../axios/axios-usuario';
 import { useDispatch } from 'react-redux';
 import { setUsuarioActual } from "../../redux/usuario/usuarioSlice"
 
+import useRedirect  from "../../hooks/useRedirect"
+import { Link } from 'react-router-dom';
+
 const Registro = () => {
     const dispatch = useDispatch()
+
+    useRedirect("/")
+
     return (
         <ContenedorPrincipal>
             <h1>🧁 Sé parte del cupcake club</h1>
@@ -67,7 +73,7 @@ const Registro = () => {
                         placeholder='Tú contraseña'
                     />
 
-                    <p>¿Ya tienes cuenta? Inicia sesión</p>
+                    <p>¿Ya tienes cuenta? <Link to="/iniciar-sesion">Inicia sesión</Link></p>
 
                     <BotonSubmit>
                         Registrate!
