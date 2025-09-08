@@ -27,16 +27,18 @@ const Usuario = () => {
                     key='cart-user'
                 >
                     <h2>Hola 👋 {usuarioActual.nombre}</h2>
-                    <p>¿Qué quieres hacer?</p>
                     <hr />
-<LinkStyled>Ver mis órdenes</LinkStyled>
-                    <span
-                        onClick={() => {
-                            dispatch(setUsuarioActual(null))
-                            dispatch(toggleHiddenMenu())
-                        }}>
-                        Cerrar sesión
+
+                    <p>¿Qué quieres hacer?</p>
+                    <span onClick={() => { dispatch(toggleHiddenMenu())}}>
+                        <LinkStyled to="/tus-ordenes">Ver tus órdenes</LinkStyled>
                     </span>
+
+                    <span onClick={() => {
+                        dispatch(setUsuarioActual(null))
+                        dispatch(toggleHiddenMenu())
+                    }}>Cerrar sesión</span>
+                    <hr />
                 </ContainerStyled>
             )}
         </AnimatePresence>

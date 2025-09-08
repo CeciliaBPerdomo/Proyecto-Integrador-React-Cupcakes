@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Form as FormikForm } from 'formik';
 
 export const ContenedorPrincipal = styled.div`
     display: flex;
@@ -16,12 +15,3 @@ export const ContenedorPrincipal = styled.div`
         color: var(--color-text-dark);
     }
 `
-
-export const FormFormik = styled(FormikForm)`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2rem;
-    gap: 20px;
-`;

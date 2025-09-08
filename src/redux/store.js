@@ -17,6 +17,8 @@ import cocinerosReducer from "./cocineros/cocinerosSlice"
 import carritoReducer from "./carrito/carritoSlice"
 // Usuarios
 import usuarioReducer from "./usuario/usuarioSlice"
+// Ordenes
+import ordenReducer from "./ordenes/ordenesSlice"
 
 
 const reducers = combineReducers({
@@ -26,6 +28,7 @@ const reducers = combineReducers({
     carrito: carritoReducer,
     cocineros: cocinerosReducer,
     usuario: usuarioReducer,
+    orden: ordenReducer,
 })
 
 const persistConfig = {

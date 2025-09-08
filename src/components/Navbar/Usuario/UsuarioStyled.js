@@ -11,17 +11,19 @@ export const ContainerStyled = styled(motion.div)`
     right: 0;
     z-index: 9;
     border-radius: 1rem;
+    border: 1px solid var(--color-botones);
     padding: 1.5rem;
     margin-right: 10px;
 
     h2 {
-        text-align: right;
+        text-align: center;
         color: var(--color-text-black);
     }
 
     p {
         text-align: center;
         color: var(--color-text-dark);
+        font-size: 18px;
     } 
 
     hr {
@@ -34,9 +36,11 @@ export const ContainerStyled = styled(motion.div)`
     span {
         display: flex;
         font-size: 18px;
+        justify-content: center;
         color: var(--color-text-black);
+
         margin-top: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 12px;
         cursor: pointer;
 
         &:hover {
