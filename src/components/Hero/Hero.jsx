@@ -37,7 +37,7 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                 >
-                    ¡Vení a probarlos y llevates tu favoritos a casa 🏠!
+                    ¡Vení a probarlos y llevate tus favoritos a casa 🏠!
                 </HeroParagraphStyled>
                 <HeroButtonContainerStyled
                     initial={{ opacity: 0, y: 30 }}

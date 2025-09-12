@@ -11,8 +11,8 @@ export const CategoriasContainer = styled.div`
 `;
 
 export const CardCategoria = styled(motion.div)`
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
