@@ -12,8 +12,8 @@
 
 ## ✨ Funcionalidades
 - Registro e inicio de sesión de usuarios
-- Visualización de categorias y productos
-- Productos recomenandados
+- Visualización de categorias y cupackes
+- Cupcakes recomenandados
 - Carrito de compras interactivo
 - Confirmación y gestión de pedidos
 - Historial de pedidos por usuario
@@ -35,17 +35,10 @@
 - Abrí tu navegador en: `http://localhost:5173`
 
 ## 🧿​ Instalaciones
-- **React Icons**
-    - `npm install react-icons --save`
-- **Redux**
-    - `npm i @reduxjs/toolkit`
-    - `npm i react-redux`
-    - `npm i redux-persist`
-- **Formik**
-    - `npm i formik`
-    - `npm i yup`
-- **Axios**
-    - `npm i axios`
+
+| **React Icons** | **Redux** | **Formik** | **Axios** | 
+| ----------- | ----------- | ----------- | ----------- | 
+|  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/>`npm i react-redux` <br/> `npm i redux-persist` | `npm i formik` <br />`npm i yup`| `npm i axios` | 
 
 ## 🎓​ Requisitos para la entrega
 - 👉 Una **landing page** con:
@@ -66,19 +59,13 @@
 - 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS.
 
 ## Documentación
-- **NucbazAPI** 
-    - Web: `https://nucbaz-api.vercel.app/`
-    - Endpoints
-        - POST /auth/register
-        - POST /auth/login
-        - GET /orders
-        - POST /orders
-- **Loader**
-    - The Largest Library of Open-Source UI
-    - Web: `https://uiverse.io/raunak_2064/rotten-falcon-14`
+| **NucbazAPI** | **Loader** |
+| ----- | ----- | 
+| Web: `https://nucbaz-api.vercel.app/` | The Largest Library of Open-Source UI | 
+| Endpoints: <br />- POST /auth/register <br />- POST /auth/login <br />- GET /orders <br />- POST /orders |  Web: `https://uiverse.io/raunak_2064/rotten-falcon-14` | 
 
 ## 🛠️ Desarrollo y deploy web
-- Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025
+- Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025.
 - Github: <a href="https://github.com/CeciliaBPerdomo" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo</a>
 - Repositorio: <a href="https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes</a>
 - Versión en vivo: <a href="https://proyecto-integrador-react-cupcakes.vercel.app/" style="text-decoration: none; color: black">en Vercel</a>
