@@ -39,6 +39,7 @@ export const HeroParagraphStyled = styled(motion.p)`
     line-height: 1.5;
     margin: 0;
     max-width: 600px;
+    margin-bottom: 20px;
 
     @media (max-width: 768px) {
         text-align: center;

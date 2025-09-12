@@ -10,6 +10,7 @@ import Registro from '../pages/Registro/Registro';
 import Login from '../pages/InicioSesion/Login';
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute"
 import Ordenes from '../pages/Ordenes/Ordenes';
+import Resumen from '../pages/Ordenes/Resumen/Resumen';
 
 function Rutas() {
     return (
@@ -36,7 +37,16 @@ function Rutas() {
                     </ProtectedRoute>
                 }
             />
-            
+
+            <Route
+                path='resumen-orden/:ordenId'
+                element={
+                    <ProtectedRoute redirectTo="/iniciar-sesion">
+                        <Resumen />
+                    </ProtectedRoute>
+                }
+            />
+
             {/* Pagina no encontrada */}
             <Route path='*' element={<PageNotFound />} />
         </Routes>

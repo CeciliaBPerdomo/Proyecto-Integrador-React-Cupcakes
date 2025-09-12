@@ -65,13 +65,17 @@
 - 👉 Agregar una página de producto para cada producto individual
 - 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS.
 
-## NucbazAPI. Documentación
-- Web: https://nucbaz-api.vercel.app/
-- Endpoints
-    - POST /auth/register
-    - POST /auth/login
-    - GET /orders
-    - POST /orders
+## Documentación
+- **NucbazAPI** 
+    - Web: `https://nucbaz-api.vercel.app/`
+    - Endpoints
+        - POST /auth/register
+        - POST /auth/login
+        - GET /orders
+        - POST /orders
+- **Loader**
+    - The Largest Library of Open-Source UI
+    - Web: `https://uiverse.io/raunak_2064/rotten-falcon-14`
 
 ## 🛠️ Desarrollo y deploy web
 - Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025

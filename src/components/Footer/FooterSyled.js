@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const FooterWrapper = styled.footer`
-  background-color: var(--color-secondary-background);
-  padding: 2rem 1rem 0 1rem;
-  border-top: 1px solid var(--color-border);
+    background-color: var(--color-secondary-background);
+    padding: 2rem 1rem 0 1rem;
+    border-top: 1px solid var(--color-border);
 `
 
 
@@ -12,13 +12,13 @@ export const FooterContenido = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 2rem;
-  max-width: 1200px;
+  max-width: 90%;
   margin: auto;
 `
 
 export const FooterColumna = styled.div`
     flex: 1;
-    min-width: 250px;
+    min-width: 300px;
     color: var(--color-text-black);
   
     h2 {

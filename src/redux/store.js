@@ -28,7 +28,7 @@ const reducers = combineReducers({
     carrito: carritoReducer,
     cocineros: cocinerosReducer,
     usuario: usuarioReducer,
-    orden: ordenReducer,
+    ordenes: ordenReducer,
 })
 
 const persistConfig = {

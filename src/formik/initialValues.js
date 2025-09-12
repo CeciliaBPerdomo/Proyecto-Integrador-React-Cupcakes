@@ -2,7 +2,7 @@ export const pedidoInitialValues = {
     name: '',
     cellphone: '',
     address: '',
-    email: ''
+    location: ''
 }
 
 export const contactoInitialValues = {

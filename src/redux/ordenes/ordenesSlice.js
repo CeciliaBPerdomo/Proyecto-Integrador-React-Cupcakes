@@ -24,9 +24,7 @@ const ordenSlice = createSlice({
                 ...state,
                 loading: false,
                 error: null,
-                orders: [
-                    ...action.payload
-                ]
+                ordenes: [ ...action.payload ]
             }
         },
 
