@@ -7,8 +7,12 @@ export const HeroContainerStyled = styled.div`
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 86vh;   
+    height: 90vh;   
     margin: 0 auto;
+
+    @media (max-width: 768px) { 
+        height: auto;
+    }
 `;
 
 export const TituloContainerStyled = styled.div`
@@ -29,6 +33,16 @@ export const TituloContainerStyled = styled.div`
 
         img {
             margin: 0;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        margin-top: 1rem;
+        text-align: center;
+
+        h1 { 
+           font-size: 1.75rem; 
         }
     }
 `;
@@ -54,6 +68,10 @@ export const ImagenContainerStyled = styled.div`
 
     img {
         width: 100%;
+
+        @media (max-width: 768px) {
+            display: none;
+        }
     }
 `;
 

@@ -19,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
         --color-botones: #ff5c8a;
     }
 
+    * {
+        box-sizing: border-box;
+    }
+
     html {
         scroll-behavior: smooth;
     }
