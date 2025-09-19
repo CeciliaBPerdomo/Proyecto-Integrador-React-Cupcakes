@@ -18,12 +18,9 @@ const Hero = () => {
     return (
         <HeroContainerStyled>
             <TituloContainerStyled>
-                <h1>Bienvenid@ a
-                    <img
-                        src={cupcakeText}
-                        alt="CupcakeLandia"
-                    />
-                </h1>
+                <h1>Bienvenid@ a</h1>
+                <img src={cupcakeText} alt="CupcakeLandia" />
+
                 <HeroParagraphStyled
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -39,6 +36,7 @@ const Hero = () => {
                 >
                     ¡Vení a probarlos y llevate tus favoritos a casa 🏠!
                 </HeroParagraphStyled>
+
                 <HeroButtonContainerStyled
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -51,6 +49,7 @@ const Hero = () => {
                         Conocé nuestros cupcakes
                     </Button>
                 </HeroButtonContainerStyled>
+                
             </TituloContainerStyled>
 
             <ImagenContainerStyled>

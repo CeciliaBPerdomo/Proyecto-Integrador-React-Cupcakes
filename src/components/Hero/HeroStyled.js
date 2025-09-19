@@ -26,14 +26,15 @@ export const TituloContainerStyled = styled.div`
     h1 {
         font-size: 2.5rem;
         color: #FF66C4;
-        margin-bottom: 0.25rem;
+        margin-bottom: 0.5rem;
         display: flex;
         align-items: center;
         gap: 1rem;
+    }
 
-        img {
-            margin: 0;
-        }
+    img {
+        margin: 0;
+        margin-bottom: 0.5rem;
     }
 
     @media (max-width: 768px) {
@@ -72,6 +73,10 @@ export const ImagenContainerStyled = styled.div`
         @media (max-width: 768px) {
             display: none;
         }
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `;
 
