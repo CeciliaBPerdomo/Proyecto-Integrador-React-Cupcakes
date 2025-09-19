@@ -29,6 +29,11 @@ export const NavbarContainerStyled = styled.div`
     width: 100%;
     padding: 1rem;
   }
+
+  @media (max-width: 400px) {
+    padding: 0.5rem;
+    max-width: 100vw;
+  }
 `;
 
 export const MenuIconos = styled.div`
@@ -37,27 +42,42 @@ export const MenuIconos = styled.div`
   gap: 10px;
 
    @media (max-width: 768px) {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    transition: max-height 0.3s ease;
-    overflow: hidden;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      transition: max-height 0.3s ease;
+      overflow: hidden;
 
-    &.hide {
-      max-height: 0;
-      opacity: 0;
-    }
+      &.hide {
+        max-height: 0;
+        opacity: 0;
+      }
 
-    &.show {
-      max-height: 500px; 
-      opacity: 1;
-    }
+      &.show {
+        max-height: 500px; 
+        opacity: 1;
+      }
   }
+
+    @media (max-width: 400px) {
+      max-width: 100vw;
+      gap: 4px;
+      padding: 0.5rem 0;
+    }
 `
 
 export const LogoContainerStyled = styled.div`
-    display: flex;
-    align-items: center;
+   // display: flex;
+   padding-top: 0.5rem;
+
+    img {
+      height: 85px;
+
+      @media (max-width: 400px) {
+        height: 60px;
+      }
+    
+    }
 
     @media (max-width: 768px) {
         justify-content: center;
@@ -104,8 +124,9 @@ export const LinksContainerStyled = styled(motion.div)`
     @media (max-width: 768px) {
       flex-direction: column;
       width: 100%;
+
       a {
-        width: 350px;
+        width: 250px;
         justify-content: center;
       }
 
@@ -115,36 +136,36 @@ export const LinksContainerStyled = styled(motion.div)`
     }
 `;
 
-export const CartNavStyled = styled.div`
-  position: relative;
-  cursor: pointer;
-  color: var(--color-text-dark);
-  font-size: 1.5rem;
-`;
+// export const CartNavStyled = styled.div`
+//   position: relative;
+//   cursor: pointer;
+//   color: var(--color-text-dark);
+//   font-size: 1.5rem;
+// `;
 
-export const UserImageStyled = styled.img`
-  width: 30px;
-  height: 30px;
-  border-radius: 100px;
-  cursor: pointer;
-`;
+// export const UserImageStyled = styled.img`
+//   width: 30px;
+//   height: 30px;
+//   border-radius: 100px;
+//   cursor: pointer;
+// `;
 
 export const CartBadge = styled.span`
-  background-color: var(--color-primary-light);
-  color: var(--color-texto);
-  font-size: 0.75rem;
-  font-weight: bold;
-  border-radius: 50%;
-  border: 1px solid var( --color-text-white);
-  padding: 0.3rem 0.5rem;
-  min-width: 1.5rem;
-  min-height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: -5px;
-  right: -10px;
+    background-color: var(--color-primary-light);
+    color: var(--color-texto);
+    font-size: 0.75rem;
+    font-weight: bold;
+    border-radius: 50%;
+    border: 1px solid var( --color-text-white);
+    padding: 0.3rem 0.5rem;
+    min-width: 1.5rem;
+    min-height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -5px;
+    right: -10px;
 `;
 
 export const CarritoWrapper = styled(Link)`
@@ -211,5 +232,9 @@ export const HamburgerButton = styled.button`
       position: absolute;
       right: 20px;
       top: 30px;
+    }
+
+    @media (max-width: 400px) {
+      padding: 0.15rem;
     }
 `;
