@@ -32,9 +32,27 @@ export const NavbarContainerStyled = styled.div`
 `;
 
 export const MenuIconos = styled.div`
-display: flex; 
-justify-content: flex-end;
-gap: 10px;
+  display: flex; 
+  justify-content: flex-end;
+  gap: 10px;
+
+   @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+
+    &.hide {
+      max-height: 0;
+      opacity: 0;
+    }
+
+    &.show {
+      max-height: 500px; 
+      opacity: 1;
+    }
+  }
 `
 
 export const LogoContainerStyled = styled.div`
@@ -79,16 +97,23 @@ export const LinksContainerStyled = styled(motion.div)`
       }
     }
 
+    a .link-text {
+      display: none;
+    }
+
     @media (max-width: 768px) {
       flex-direction: column;
       width: 100%;
       a {
-        width: 100%;
+        width: 350px;
         justify-content: center;
+      }
+
+      a .link-text {
+        display: inline
       }
     }
 `;
-
 
 export const CartNavStyled = styled.div`
   position: relative;
@@ -140,7 +165,6 @@ export const CarritoWrapper = styled(Link)`
   }
 `;
 
-
 export const TooltipWrapper = styled.div`
   position: relative;
   display: inline-block;
@@ -168,4 +192,24 @@ export const Tooltip = styled.span`
   transition: all 0.2s ease;
   pointer-events: none;
   z-index: 100;
+
+  @media (max-width: 768px) {
+      display: none;
+  }
+`;
+
+export const HamburgerButton = styled.button`
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--color-text-dark);
+
+    @media (max-width: 768px) {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 30px;
+    }
 `;

@@ -58,7 +58,7 @@
 - 👉 Agregar una página de producto para cada producto individual
 - 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS.
 
-## Documentación
+## 📖 Documentación
 | **NucbazAPI** | **Loader** |
 | ----- | ----- | 
 | Web: `https://nucbaz-api.vercel.app/` | The Largest Library of Open-Source UI | 
