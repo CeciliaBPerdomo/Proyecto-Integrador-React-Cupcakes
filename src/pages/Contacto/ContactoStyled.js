@@ -9,8 +9,7 @@ export const ContenedorContactos = styled.div`
 
     h2 {
         color: var(--color-text);
-        font-size: 1.5rem;
-
+        font-size: 1.75rem;
     }
 `
 
@@ -22,6 +21,10 @@ export const ContenedorPrincipal = styled.div`
 
 export const ContenedorFormulario = styled.div`
     width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
 `
 
 export const ContenedorImagen = styled.div`
@@ -31,6 +34,10 @@ export const ContenedorImagen = styled.div`
     img {
         width: 90%;
         border-radius: 2rem; 
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `
 
@@ -48,12 +55,17 @@ export const FormularioBloque = styled.fieldset`
 
     input {
         width: 80%;
-        height: 30px;
+        height: 50px;
         padding: 0.5rem 0.75rem; 
         border-radius: 1rem;
         border: 1px solid var(--color-border);
         font-size: 1rem;
         outline: none;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            height: 45px;
+        } 
     }
 
     input:focus {
@@ -68,14 +80,26 @@ export const FormularioBloque = styled.fieldset`
         border: 1px solid var(--color-border);
         font-size: 1rem;
         resize: none;
+        font-family: 'Montserrat', sans-serif;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &:has(button) {
-        align-items: flex-end;
-        margin-right: 3.5rem;
+        align-items: center;
     } 
 
     button {
         width: 50%;
+
+        @media (max-width: 768px) {
+            width: 70%;
+        }
+    }
+
+    @media (max-width: 768px) {
+        margin-left: 0.5rem;
     }
 ` 
