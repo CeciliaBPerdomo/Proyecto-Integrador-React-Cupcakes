@@ -10,6 +10,10 @@ export const ContenedorContactos = styled.div`
     h2 {
         color: var(--color-text);
         font-size: 1.75rem;
+
+        @media (max-width: 768px) {
+            text-align: center;
+        }        
     }
 `
 
@@ -53,13 +57,18 @@ export const FormularioBloque = styled.fieldset`
         font-size: 1.25rem;
     }
 
-    input {
+    input, textarea {
         width: 80%;
-        height: 50px;
         padding: 0.5rem 0.75rem; 
         border-radius: 1rem;
         border: 1px solid var(--color-border);
         font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        resize: none;
+    }
+
+    input {
+        height: 50px;
         outline: none;
 
         @media (max-width: 768px) {
@@ -74,28 +83,19 @@ export const FormularioBloque = styled.fieldset`
     }
 
     textarea {
-        width: 82%;
-        padding: 0.5rem 0.75rem; 
-        border-radius: 1rem;
-        border: 1px solid var(--color-border);
-        font-size: 1rem;
-        resize: none;
-        font-family: 'Montserrat', sans-serif;
-
         @media (max-width: 768px) {
             width: 100%;
         }
     }
 
     &:has(button) {
-        align-items: center;
-    } 
+        align-items: center; 
 
-    button {
-        width: 50%;
-
-        @media (max-width: 768px) {
-            width: 70%;
+        button {
+            width: auto;
+            min-width: 350px;
+            margin: 0 auto;
+            display: block;
         }
     }
 
