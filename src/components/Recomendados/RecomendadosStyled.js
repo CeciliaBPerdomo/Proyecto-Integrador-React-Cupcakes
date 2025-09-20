@@ -36,8 +36,7 @@ export const CardsContainer = styled.div`
 `;
 
 export const CardRecomendado = styled(motion.div)`
-    width: 80%;
-    height: 175px;
+    width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,20 +52,22 @@ export const CardRecomendado = styled(motion.div)`
     will-change: transform, box-shadow;
 `;
 
+export const ContenedorImagen = styled.div`
+  width: 30%;
+`;
+
 export const CardImagen = styled.img`
     height: 150px;
+`;
+
+export const ContenedorCardInfo= styled.div`
+  width: 80%;
 `;
 
 export const CardInfo = styled.div`
     display: flex;
     flex-direction: column;
-    width: 270px;
-
-    h2 {
-        color: var(--color-text-dark);
-        margin: 2px;
-        margin-bottom: 10px;
-    }
+    width: 100%;
 
     p {
         margin: 0;
@@ -84,10 +85,21 @@ export const CardInfo = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
-    button {
-      width: 50%; 
-      margin: 0 auto;
-    }
 `;
 
+export const ContenedorEncabezado = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    h2 {
+      color: var(--color-text-dark);
+      margin: 2px;
+    }
+
+    button {
+      position: absolute;
+      top: 2px;
+      right: 2px;
+    }
+`
