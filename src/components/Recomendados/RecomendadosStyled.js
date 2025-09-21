@@ -7,10 +7,20 @@ export const Contenedor = styled.div`
     margin-bottom: 2rem; 
 
     h1 {
-        padding-top: 1rem;
-        color: var(--color-text)
+      padding-top: 1rem;
+      color: var(--color-text)
     }
-`
+
+    @media (max-width: 768px){
+      padding: 0.5rem;
+
+      h1 {
+        font-size: 1.5rem;
+        justify-content: center;
+      }
+    }
+
+`;
 export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: ${({ gridLength }) =>
@@ -33,6 +43,12 @@ export const CardsContainer = styled.div`
   &::-webkit-scrollbar:vertical {
     display: none;
   }
+
+  @media (max-width: 768px){
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    gap: 15px;
+  }
 `;
 
 export const CardRecomendado = styled(motion.div)`
@@ -53,7 +69,11 @@ export const CardRecomendado = styled(motion.div)`
 `;
 
 export const ContenedorImagen = styled.div`
-  width: 30%;
+    width: 20%;
+    min-width: 150px;
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 1rem;
 `;
 
 export const CardImagen = styled.img`
@@ -61,7 +81,7 @@ export const CardImagen = styled.img`
 `;
 
 export const ContenedorCardInfo= styled.div`
-  width: 80%;
+  width: 65%;
 `;
 
 export const CardInfo = styled.div`
@@ -99,7 +119,7 @@ export const ContenedorEncabezado = styled.div`
 
     button {
       position: absolute;
-      top: 2px;
-      right: 2px;
+      top: 5px;
+      right: 5px;
     }
 `
