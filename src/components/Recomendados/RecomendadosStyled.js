@@ -68,7 +68,8 @@ export const CardRecomendado = styled(motion.div)`
     will-change: transform, box-shadow;
 
     @media (max-width: 768px) {
-      width: 100%;
+      width: 98%;
+      padding: 1rem;
     }
 `;
 
@@ -114,7 +115,7 @@ export const CardInfo = styled.div`
     }
 
     span { 
-        text-align: end;
+        text-align: right;
         font-weight: 800;
         font-size: 1.5rem;
         background: linear-gradient(83deg, var(--color-text), var(--color-text-dark));
@@ -140,6 +141,7 @@ export const ContenedorEncabezado = styled.div`
     margin-bottom: 15px;
 
     h2 {
+      width: 90%;
       color: var(--color-text-dark);
       margin: 2px;
     }
@@ -147,7 +149,7 @@ export const ContenedorEncabezado = styled.div`
     button {
       position: absolute;
       top: 5px;
-      right: 5px;
+      right: 10px;
     }
 
     @media (max-width: 768px) {
