@@ -81,7 +81,7 @@ export const productos = [
     },
     {
         id: 9,
-        title: "CocoLoco",
+        title: "Coco Loco",
         imagen: "/cupcakes/CocoLoco.png",
         descripcion: "Coco rallado, crema de vainilla y topping de chocolate.",
         precio: 130,
@@ -291,7 +291,7 @@ export const productos = [
     },
     {
         id: 30,
-        title: "CocoBanana",
+        title: "Coco Banana",
         imagen: "/cupcakes/CocoBanana.png",
         descripcion: "Mezcla tropical de banana y coco.",
         precio: 145,
@@ -311,7 +311,7 @@ export const productos = [
     },
     {
         id: 32,
-        title: "Chocobanana",
+        title: "Choco Banana",
         imagen: "/cupcakes/ChocoBanana.png",
         descripcion: "Banana madura con cobertura de chocolate.",
         precio: 145,

@@ -15,8 +15,8 @@ export const Contenedor = styled.div`
       padding: 0.5rem;
 
       h1 {
-        font-size: 1.5rem;
-        justify-content: center;
+        text-align: center;
+        font-size: 1.75rem;
       }
     }
 
@@ -48,6 +48,7 @@ export const CardsContainer = styled.div`
     grid-template-columns: 1fr;
     margin: 0 auto;
     gap: 10px;
+    padding: 0.75rem;
   }
 `;
 
