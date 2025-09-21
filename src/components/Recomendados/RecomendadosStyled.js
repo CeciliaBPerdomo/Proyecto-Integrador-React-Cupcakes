@@ -19,12 +19,11 @@ export const Contenedor = styled.div`
         font-size: 1.75rem;
       }
     }
-
 `;
+
 export const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: ${({ gridLength }) =>
-        `repeat(${gridLength}, 1fr)`};
+  grid-template-columns: ${({ gridLength }) => `repeat(${gridLength}, 1fr)`};
   gap: 20px;
   overflow-x: auto;
   padding-bottom: 1rem;
@@ -68,9 +67,9 @@ export const CardRecomendado = styled(motion.div)`
     transition: all 0.4s ease;
     will-change: transform, box-shadow;
 
-      @media (max-width: 768px) {
-        width: 100%;
-      }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
 `;
 
 export const ContenedorImagen = styled.div`
@@ -88,6 +87,7 @@ export const ContenedorImagen = styled.div`
 
 export const CardImagen = styled.img`
     height: 150px;
+
     @media (max-width: 768px) {
       min-width: 100px;
     }
@@ -123,14 +123,14 @@ export const CardInfo = styled.div`
         -webkit-text-fill-color: transparent;
     }
 
-       @media (max-width: 768px) {
-        align-items: center;
-        text-align: center;
+    @media (max-width: 768px) {
+      align-items: center;
+      text-align: center;
         
-        p {
-            text-align: center;
-            font-size: 1.1rem;
-        }
+      p {
+        text-align: center;
+        font-size: 1.1rem;
+      }
     }
 `;
 
@@ -142,15 +142,23 @@ export const ContenedorEncabezado = styled.div`
     h2 {
       color: var(--color-text-dark);
       margin: 2px;
-
-      @media (max-width: 768px) {
-        width: 80%;
-      }
     }
 
     button {
       position: absolute;
       top: 5px;
       right: 5px;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.25rem;
+        margin: 0px;
+        text-align: center;
+        width: 70%;
+      }
+      button {
+        font-size: 16px;
+      }
     }
 `;

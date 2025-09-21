@@ -1,7 +1,7 @@
 export const productos = [
     {
         id: 1,
-        title: "ChocoBoom",
+        title: "Choco Boom",
         imagen: "/cupcakes/ChocoBoom.png",
         descripcion: "Explosión de chocolate con crema de cacao y trocitos de brownie.",
         precio: 120,
@@ -41,7 +41,7 @@ export const productos = [
     },
     {
         id: 5,
-        title: "OreoLicious",
+        title: "Oreo Licious",
         imagen: "/cupcakes/OreoLicious.png",
         descripcion: "Base de chocolate con Oreo triturada y crema de vainilla.",
         precio: 160,
@@ -151,7 +151,7 @@ export const productos = [
     },
     {
         id: 16,
-        title: "ChocoMint Deluxe",
+        title: "Choco Mint Deluxe",
         imagen: "/cupcakes/ChocoMint.png",
         descripcion: "Chocolate amargo con toque de menta fresca.",
         precio: 155,
@@ -261,7 +261,7 @@ export const productos = [
     },
     {
         id: 27,
-        title: "BrownieCrush",
+        title: "Brownie Crush",
         imagen: "/cupcakes/BrownieChoco.png",
         descripcion: "Base de brownie con dulce de leche.",
         precio: 160,
@@ -281,7 +281,7 @@ export const productos = [
     },
     {
         id: 29,
-        title: "GalletaManía",
+        title: "Galleta Manía",
         imagen: "/cupcakes/GalletaMania.png",
         descripcion: "Doble galleta, doble locura.",
         precio: 140,
