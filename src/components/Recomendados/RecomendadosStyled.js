@@ -44,10 +44,10 @@ export const CardsContainer = styled.div`
     display: none;
   }
 
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     grid-template-columns: 1fr;
     margin: 0 auto;
-    gap: 15px;
+    gap: 10px;
   }
 `;
 
@@ -66,6 +66,10 @@ export const CardRecomendado = styled(motion.div)`
     cursor: pointer;
     transition: all 0.4s ease;
     will-change: transform, box-shadow;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
 `;
 
 export const ContenedorImagen = styled.div`
@@ -74,14 +78,26 @@ export const ContenedorImagen = styled.div`
     display: flex;
     justify-content: flex-start;
     margin-right: 1rem;
+
+    @media (max-width: 768px) {
+        width: 5%;
+        min-width: 80px;
+    }
 `;
 
 export const CardImagen = styled.img`
     height: 150px;
+    @media (max-width: 768px) {
+      min-width: 100px;
+    }
 `;
 
 export const ContenedorCardInfo= styled.div`
-  width: 65%;
+  width: 80%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const CardInfo = styled.div`
@@ -105,6 +121,16 @@ export const CardInfo = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+       @media (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+        
+        p {
+            text-align: center;
+            font-size: 1.1rem;
+        }
+    }
 `;
 
 export const ContenedorEncabezado = styled.div`
@@ -115,6 +141,10 @@ export const ContenedorEncabezado = styled.div`
     h2 {
       color: var(--color-text-dark);
       margin: 2px;
+
+      @media (max-width: 768px) {
+        width: 80%;
+      }
     }
 
     button {
@@ -122,4 +152,4 @@ export const ContenedorEncabezado = styled.div`
       top: 5px;
       right: 5px;
     }
-`
+`;
