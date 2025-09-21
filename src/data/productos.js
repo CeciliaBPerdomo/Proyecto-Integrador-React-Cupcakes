@@ -11,7 +11,7 @@ export const productos = [
     },
     {
         id: 2,
-        title: "Vainiberry",
+        title: "Vainilla & Berry",
         imagen: "/cupcakes/Vainiberry.png",
         descripcion: "Vainilla con corazón de frutilla y topping de chantilly.",
         precio: 130,
@@ -61,7 +61,7 @@ export const productos = [
     },
     {
         id: 7,
-        title: "CaféLatte",
+        title: "Café Latte",
         imagen: "/cupcakes/CaffeLatte.png",
         descripcion: "Infusión de café con cobertura de crema moka.",
         precio: 135,

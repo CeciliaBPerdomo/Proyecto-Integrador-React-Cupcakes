@@ -108,13 +108,15 @@ export const CardInfo = styled.div`
     width: 100%;
 
     p {
-        margin: 0;
-        color: var(--color-text-black);
-        font-size: 1.2rem;
-        padding-bottom: 1rem;
+      height: 40%;
+      margin: 0;
+      color: var(--color-text-black);
+      font-size: 1.2rem;
+      padding-bottom: 1rem;
     }
 
     span { 
+        height: 30%;
         text-align: right;
         font-weight: 800;
         font-size: 1.5rem;
@@ -139,6 +141,7 @@ export const ContenedorEncabezado = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    height: 30%;
 
     h2 {
       width: 90%;
@@ -149,7 +152,7 @@ export const ContenedorEncabezado = styled.div`
     button {
       position: absolute;
       top: 5px;
-      right: 10px;
+      right: 7px;
     }
 
     @media (max-width: 768px) {
