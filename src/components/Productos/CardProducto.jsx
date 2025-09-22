@@ -21,10 +21,12 @@ import {
 // Redux
 import { useDispatch } from 'react-redux';
 import { agregarCarrito } from '../../redux/carrito/carritoSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     return (
         <ProductosCard
@@ -34,7 +36,7 @@ const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
             <ContenedorEncabezado>
                 <h2>{title}</h2>
                 <ContenedorBotones>
-                    <Button onClick={()=> console.log("Hellou")}>
+                    <Button onClick={()=> navigate(`/mas-info/${id}`)}>
                         <CiCirclePlus />
                     </Button>
                     <Button onClick={() => dispatch(agregarCarrito({ id, title, imagen, descripcion, precio }))}>

@@ -11,6 +11,7 @@ import Login from '../pages/InicioSesion/Login';
 import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute"
 import Ordenes from '../pages/Ordenes/Ordenes';
 import Resumen from '../pages/Ordenes/Resumen/Resumen';
+import MasInfo from '../pages/MasInfo/MasInfo';
 
 function Rutas() {
     return (
@@ -18,8 +19,9 @@ function Rutas() {
             <Route path='/' element={<Home />} />
             <Route path='/registrate' element={<Registro />} />
             <Route path="/iniciar-sesion" element={<Login />} />
+            <Route path="/mas-info/:cupcakeId" element={<MasInfo />} />
 
-            {/* Ruta de pedido y ordenes protegida */}
+            {/* Ruta de pedido y ordenes protegidas */}
             <Route
                 path='/tu-pedido'
                 element={
