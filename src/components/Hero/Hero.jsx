@@ -11,7 +11,8 @@ import {
     TituloContainerStyled,
     ImagenContainerStyled,
     HeroParagraphStyled,
-    HeroButtonContainerStyled
+    HeroButtonContainerStyled, 
+    ContenedorImagenResponsive
 } from './HeroStyled'
 
 const Hero = () => {
@@ -20,6 +21,10 @@ const Hero = () => {
             <TituloContainerStyled>
                 <h1>Bienvenid@ a</h1>
                 <img src={cupcakeText} alt="CupcakeLandia" />
+                
+                <ContenedorImagenResponsive>
+                    <img src={cupcakesHero} alt='Cupcakes' />
+                </ContenedorImagenResponsive>
 
                 <HeroParagraphStyled
                     initial={{ opacity: 0, y: 20 }}
@@ -53,10 +58,7 @@ const Hero = () => {
             </TituloContainerStyled>
 
             <ImagenContainerStyled>
-                <img
-                    src={cupcakesHero}
-                    alt='Cupcakes'
-                />
+                <img src={cupcakesHero} alt='Cupcakes' />
             </ImagenContainerStyled>
 
         </HeroContainerStyled>

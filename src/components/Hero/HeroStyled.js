@@ -91,3 +91,17 @@ export const HeroButtonContainerStyled = styled(motion.div)`
     justify-content: center;
   }
 `;
+
+export const ContenedorImagenResponsive = styled.div`
+    img {
+        display: none;
+
+         @media (max-width: 768px) {
+            display: flex;
+            margin: 0 auto;
+            width: 80%;
+            margin-top: -20px;
+        }
+    }
+
+`;
