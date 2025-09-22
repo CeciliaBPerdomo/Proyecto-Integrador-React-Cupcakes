@@ -43,18 +43,20 @@ export const CardCategoria = styled(motion.div)`
     }
 
     @media (max-width: 768px) {
-    flex-direction: row; 
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%; 
-    
-    img {
-      margin-right: 0.5rem;
-    }
+        flex-direction: row; 
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%; 
 
-    h2 {
-      text-align: left;
-    }
+        min-height: 100px;
+    
+        img {
+            margin-right: 0.5rem;
+        }
+
+        h2 {
+            text-align: left;
+        }
   }
 `;
 
