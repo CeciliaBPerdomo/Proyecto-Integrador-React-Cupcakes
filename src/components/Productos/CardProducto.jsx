@@ -7,13 +7,15 @@ import { formatoPrecio } from "../../utilidades/precio";
 // Boton e iconos
 import Button from "../UI/Boton/Button";
 import { BsCartPlus } from "react-icons/bs"
+import { CiCirclePlus } from "react-icons/ci";
 
 //Estilos
 import {
     ProductosCard,
     ContainerPrecio,
     CardPrecio,
-    ContainerBoton
+    ContenedorEncabezado,
+    ContenedorBotones
 } from "./ProductosStyled"
 
 // Redux
@@ -22,28 +24,31 @@ import { agregarCarrito } from '../../redux/carrito/carritoSlice';
 
 
 const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
-      const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     return (
         <ProductosCard>
+            <ContenedorEncabezado>
+                <h2>{title}</h2>
+                <ContenedorBotones>
+                    <Button onClick={() => dispatch(agregarCarrito({ id, title, imagen, descripcion, precio }))}>
+                        <BsCartPlus />
+                    </Button>
+                    <Button onClick={()=> console.log("Hellou")}>
+                        <CiCirclePlus />
+                    </Button>
+                </ContenedorBotones>
+            </ContenedorEncabezado>
             <img
                 src={imagen}
                 alt={title}
             />
-            <h2>{title}</h2>
             <p>{descripcion}</p>
             <ContainerPrecio>
                 <CardPrecio>
                     {formatoPrecio(precio)}
                 </CardPrecio>
             </ContainerPrecio>
-            <ContainerBoton>
-                <Button
-                    onClick={()=> dispatch(agregarCarrito({id, title, imagen, descripcion, precio}))}>
-                    <BsCartPlus />
-                    Agregar al carrito
-                </Button>
-            </ContainerBoton>
         </ProductosCard>
     )
 }

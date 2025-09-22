@@ -17,30 +17,58 @@ export const ProductosContainer = styled.div`
 
 // Card de productos
 export const ProductosCard = styled.div`
-    background: var(--color-secondary-background);
-    width: 300px;
-    height: 435px;
-    border-radius: 15px;
-    padding: 1.5rem;
-    border: 1px solid var(--color-border);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    width: 300px;
+    height: auto;
+    max-height: 550px;
+
+    border-radius: 15px;
+    padding: 1.5rem;
+    background: var(--color-secondary-background);
+    border: 1px solid var(--color-border);
 
     img {
         height: 200px;
         margin: 0 auto 1rem auto;
     }
 
-    h2 {
-        color: var(--color-text-dark);
-        font-weight: 600;
-        margin: 0;
-    }
-
     p {
         color: var(--color-text-black);
         font-size: 1.2rem;
+    }
+`;
+
+
+export const ContenedorEncabezado = styled.div`
+    position: relative;
+    min-height: 40px;
+
+    h2 {
+        width: 70%;
+        padding-right: 80px; 
+        color: var(--color-text-dark);
+        font-weight: 600;
+        margin: 0;
+        text-align: left;
+    }
+`;
+
+export const ContenedorBotones = styled.div`
+    display: flex;
+    gap: 0.5rem;
+    position: absolute;
+    right: 1px;
+    top: 0;
+
+    button {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 `;
 
