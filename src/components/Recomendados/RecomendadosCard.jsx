@@ -30,7 +30,7 @@ const RecomendadosCard = ({ id, title, imagen, descripcion, precio }) => {
             transition={{ duration: 0.25, ease: "easeInOut" }}
         >
 
-        {/* Titulo y boton de agregar al carrito */}
+            {/* Titulo y boton de agregar al carrito */}
             <ContenedorEncabezado>
                 <h2>{title}</h2>
                 <ContenedorBotones>
@@ -46,7 +46,7 @@ const RecomendadosCard = ({ id, title, imagen, descripcion, precio }) => {
                     <CardImagen src={imagen} alt={title} />
                 </ContenedorImagen>
 
-{/* Información adicional */}
+                {/* Información adicional */}
                 <ContenedorCardInfo>
                     <CardInfo>
                         <p>{descripcion}</p>

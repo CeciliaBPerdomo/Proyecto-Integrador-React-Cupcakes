@@ -104,8 +104,8 @@ export const ContenedorImagen = styled.div`
     margin-right: 1rem;
 
     @media (max-width: 768px) {
-        width: 5%;
-        min-width: 80px;
+        display: flex;
+        justify-content: center;
     }
 `;
 
@@ -156,6 +156,7 @@ export const CardInfo = styled.div`
     @media (max-width: 768px) {
       align-items: center;
       text-align: center;
+      margin-top: 10px;
         
       p {
         text-align: center;
