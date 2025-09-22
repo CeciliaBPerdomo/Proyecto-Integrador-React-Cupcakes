@@ -26,7 +26,7 @@ export const CardsContainer = styled.div`
   grid-template-columns: ${({ gridLength }) => `repeat(${gridLength}, 1fr)`};
   gap: 20px;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding: 0 1rem;
 
   &::-webkit-scrollbar {
     height: 6px;
@@ -51,11 +51,15 @@ export const CardsContainer = styled.div`
   }
 `;
 
+
+// RecomendadosCard.jsx
+
 export const CardRecomendado = styled(motion.div)`
     width: 95%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
     padding: 1rem 1.7rem;
     margin-top: 1rem;
@@ -73,11 +77,30 @@ export const CardRecomendado = styled(motion.div)`
     }
 `;
 
+export const ContenedorEncabezado = styled.div`
+    width: 100%;  
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h2 {
+      color: var(--color-text-dark);
+      margin: 0;
+      align-items: left;
+    }
+
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.25rem;
+        margin: 0px;
+        width: 70%;
+      }
+    }
+`;
+
 export const ContenedorImagen = styled.div`
     width: 20%;
     min-width: 150px;
-    display: flex;
-    justify-content: flex-start;
     margin-right: 1rem;
 
     @media (max-width: 768px) {
@@ -96,6 +119,9 @@ export const CardImagen = styled.img`
 
 export const ContenedorCardInfo= styled.div`
   width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -103,9 +129,10 @@ export const ContenedorCardInfo= styled.div`
 `;
 
 export const CardInfo = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    margin-top: 30px;
 
     p {
       height: 40%;
@@ -137,33 +164,30 @@ export const CardInfo = styled.div`
     }
 `;
 
-export const ContenedorEncabezado = styled.div`
+export const ContenedorContenido = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
+
+export const ContenedorBotones = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto; 
+  
+  button {
+    font-size: 1.5rem;
+    padding: 0.5rem;
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    height: 30%;
-
-    h2 {
-      width: 90%;
-      color: var(--color-text-dark);
-      margin: 2px;
-    }
-
-    button {
-      position: absolute;
-      top: 5px;
-      right: 7px;
-    }
-
-    @media (max-width: 768px) {
-      h2 {
-        font-size: 1.25rem;
-        margin: 0px;
-        text-align: center;
-        width: 70%;
-      }
-      button {
-        font-size: 16px;
-      }
-    }
+    align-items: center;
+    justify-content: center;
+  }
 `;

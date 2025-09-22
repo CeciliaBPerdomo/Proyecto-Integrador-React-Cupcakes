@@ -9,7 +9,9 @@ import {
     CardInfo,
     ContenedorImagen,
     ContenedorCardInfo,
-    ContenedorEncabezado
+    ContenedorEncabezado,
+    ContenedorContenido,
+    ContenedorBotones,
 } from './RecomendadosStyled'
 
 // Boton del carrito
@@ -25,27 +27,33 @@ const RecomendadosCard = ({ id, title, imagen, descripcion, precio }) => {
     return (
         <CardRecomendado
             whileHover={{ y: -12, scale: 1.02, boxShadow: "0 14px 25px rgba(0,0,0,0.15)" }}
-            transition={{ duration: 0.25,  ease: "easeInOut" }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
         >
-            <ContenedorImagen>
-                <CardImagen src={imagen} alt={title} />
-            </ContenedorImagen> 
 
-            <ContenedorCardInfo>
-                <CardInfo>
-                    <ContenedorEncabezado>
-                        <h2>{title}</h2>
+        {/* Titulo y boton de agregar al carrito */}
+            <ContenedorEncabezado>
+                <h2>{title}</h2>
+                <ContenedorBotones>
+                    <Button onClick={() => dispatch(agregarCarrito({ id, title, imagen, descripcion, precio }))} >
+                        <MdAddShoppingCart />
+                    </Button>
+                </ContenedorBotones>
+            </ContenedorEncabezado>
 
-                        <Button onClick={()=> dispatch(agregarCarrito({id, title, imagen, descripcion, precio}))} >
-                            <MdAddShoppingCart />
-                        </Button>
-                    </ContenedorEncabezado>
+            <ContenedorContenido>
+                {/* Imagen de cupcakes */}
+                <ContenedorImagen>
+                    <CardImagen src={imagen} alt={title} />
+                </ContenedorImagen>
 
-                    <p>{descripcion}</p>
-                    <span> {formatoPrecio(precio)} </span>
-                                        
-                </CardInfo>
-            </ContenedorCardInfo>
+{/* Información adicional */}
+                <ContenedorCardInfo>
+                    <CardInfo>
+                        <p>{descripcion}</p>
+                        <span> {formatoPrecio(precio)} </span>
+                    </CardInfo>
+                </ContenedorCardInfo>
+            </ContenedorContenido>
         </CardRecomendado>
     )
 }

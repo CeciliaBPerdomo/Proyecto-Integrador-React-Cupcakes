@@ -39,10 +39,7 @@ const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
                     </Button>
                 </ContenedorBotones>
             </ContenedorEncabezado>
-            <img
-                src={imagen}
-                alt={title}
-            />
+            <img src={imagen} alt={title} />
             <p>{descripcion}</p>
             <ContainerPrecio>
                 <CardPrecio>
