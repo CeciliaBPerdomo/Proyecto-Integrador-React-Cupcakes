@@ -46,7 +46,9 @@ const RecomendadosCard = ({ id, title, imagen, descripcion, precio }) => {
                     <CardImagen src={imagen} alt={title} />
                 </ContenedorImagen>
 
-                {/* Información adicional */}
+                {/* Información adicional 
+                    descripcion y precio
+                */}
                 <ContenedorCardInfo>
                     <CardInfo>
                         <p>{descripcion}</p>

@@ -53,7 +53,6 @@ export const CardsContainer = styled.div`
 
 
 // RecomendadosCard.jsx
-
 export const CardRecomendado = styled(motion.div)`
     width: 95%;
     display: flex;

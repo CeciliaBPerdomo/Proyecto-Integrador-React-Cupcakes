@@ -21,7 +21,7 @@ export const ProductosCard = styled.div`
     flex-direction: column;
     align-items: flex-start;
 
-    width: 300px;
+    width: 380px;
     height: auto;
     max-height: 550px;
 
@@ -32,25 +32,28 @@ export const ProductosCard = styled.div`
 
     img {
         height: 200px;
+        padding-top: 5px;
         margin: 0 auto 1rem auto;
     }
 
     p {
         color: var(--color-text-black);
         font-size: 1.2rem;
+        text-align: center;
     }
 `;
 
 
 export const ContenedorEncabezado = styled.div`
-    position: relative;
-    min-height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5;
 
     h2 {
-        width: 70%;
-        padding-right: 80px; 
+        flex: 1;
         color: var(--color-text-dark);
-        font-weight: 600;
         margin: 0;
         text-align: left;
     }
@@ -59,9 +62,6 @@ export const ContenedorEncabezado = styled.div`
 export const ContenedorBotones = styled.div`
     display: flex;
     gap: 0.5rem;
-    position: absolute;
-    right: 1px;
-    top: 0;
 
     button {
         font-size: 1.5rem;
@@ -79,7 +79,7 @@ export const ContainerPrecio = styled.div`
 `;
 
 export const CardPrecio = styled.p`
-    text-align: end;
+    text-align: right;
     font-weight: 800;
     font-size: 1.75rem;
     background: linear-gradient(83deg, var(--color-text), var(--color-text-dark));
