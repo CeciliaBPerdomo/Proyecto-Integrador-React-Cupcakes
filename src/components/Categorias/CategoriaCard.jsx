@@ -19,10 +19,7 @@ const CategoriaCard = ({ imagen, categoria }) => {
             onClick={() => dispatch(seleccionarCategoria(categoria))}
             whileTap={{ scale: 0.95 }}
         >
-            <img
-                src={imagen}
-                alt={categoria}
-            />
+            <img src={imagen} alt={categoria} />
             <h2>{categoria}</h2>
         </CardCategoria>
     )

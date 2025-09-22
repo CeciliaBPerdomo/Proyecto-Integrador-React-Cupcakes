@@ -31,11 +31,11 @@ const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
             <ContenedorEncabezado>
                 <h2>{title}</h2>
                 <ContenedorBotones>
-                    <Button onClick={() => dispatch(agregarCarrito({ id, title, imagen, descripcion, precio }))}>
-                        <BsCartPlus />
-                    </Button>
                     <Button onClick={()=> console.log("Hellou")}>
                         <CiCirclePlus />
+                    </Button>
+                    <Button onClick={() => dispatch(agregarCarrito({ id, title, imagen, descripcion, precio }))}>
+                        <BsCartPlus />
                     </Button>
                 </ContenedorBotones>
             </ContenedorEncabezado>
