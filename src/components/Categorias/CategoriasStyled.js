@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const CategoriasContainer = styled.div`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 0.5rem; 
     /* arriba derecha abajo izq */
     padding: 0 0.5rem 1rem 1.5rem;
