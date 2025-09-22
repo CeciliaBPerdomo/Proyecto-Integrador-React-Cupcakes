@@ -7,7 +7,7 @@ export const CategoriasContainer = styled.div`
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 0.5rem; 
     /* arriba derecha abajo izq */
-    padding: 0 0.5rem 1rem 1.5rem;
+    padding: 0 1rem 1rem 1rem;
     user-select: none;
 
     @media (max-width: 768px) {
