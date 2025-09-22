@@ -30,6 +30,7 @@ export const CardCategoria = styled(motion.div)`
     border: 1px solid var(--color-text-white);
     border-radius: 15px;
     cursor: pointer;
+    transition: all 0.25s ease-in-out;
 
     h2 {
         text-align: center;

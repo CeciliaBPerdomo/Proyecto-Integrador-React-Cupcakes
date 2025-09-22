@@ -18,6 +18,7 @@ const CategoriaCard = ({ imagen, categoria }) => {
             selected={categoria == seleccionada}
             onClick={() => dispatch(seleccionarCategoria(categoria))}
             whileTap={{ scale: 0.95 }}
+            whileHover={{ scale: 1.05, boxShadow: "0 6px 12px rgba(0,0,0,0.15)" }}
         >
             <img src={imagen} alt={categoria} />
             <h2>{categoria}</h2>

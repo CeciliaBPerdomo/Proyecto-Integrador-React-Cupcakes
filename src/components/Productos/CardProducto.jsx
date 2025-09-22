@@ -27,7 +27,10 @@ const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
     const dispatch = useDispatch()
 
     return (
-        <ProductosCard>
+        <ProductosCard
+            whileHover={{ y: -5, scale: 1.02 }}
+            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+        >
             <ContenedorEncabezado>
                 <h2>{title}</h2>
                 <ContenedorBotones>

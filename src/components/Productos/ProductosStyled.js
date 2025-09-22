@@ -29,6 +29,12 @@ export const ProductosCard = styled.div`
     padding: 1.5rem;
     background: var(--color-secondary-background);
     border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
 
     img {
         height: 200px;
