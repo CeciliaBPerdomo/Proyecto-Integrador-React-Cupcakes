@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components';
 import { motion } from 'framer-motion';
 
+
+// Carrito de compras
 export const CarritoStyled = styled(motion.div)`
     position: fixed;
     top: 0;
@@ -8,7 +10,6 @@ export const CarritoStyled = styled(motion.div)`
     z-index: 9;
     width: calc(100vw - 350px);
     height: 100%;
-
     ${({ oculto }) => !oculto && css`backdrop-filter: blur(4px);`}
 `;
 
@@ -30,9 +31,46 @@ export const ContainerStyled = styled(motion.div)`
     background-color: var(--color-tertiary-background);
     border-radius: 1.5rem;
     box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.3);
+`;
 
-    svg {
-        color: var(--color-text-black);
+export const ContenedorBotonCierre = styled.div`
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    z-index: 9;
+
+     button {
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-text-dark);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+`;
+
+export const BotonVaciarStyled = styled.div`
+    position: absolute;
+    top: 2.25rem;
+    right: 0.25rem;
+    z-index: 9;
+
+    button {
+        background: transparent;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: var(--color-text-dark);
+        transition: transform 0.2s ease;
+        transform: scaleX(-1);
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 `;
 
@@ -138,3 +176,8 @@ export const CantidadStyled = styled.span`
     letter-spacing: 0.6px;
     padding-right:1rem;
 `;
+
+export const SinProductos = styled(motion.p)`
+    text-align: center;
+    font-size: 1.2rem;
+`

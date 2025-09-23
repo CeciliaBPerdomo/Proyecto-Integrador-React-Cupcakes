@@ -7,12 +7,16 @@ import {
     ContenedorPrincipalStyled,
     CupcakeStyled,
     ContenedorHeaderStyled,
+    ContenedorBotonCierre,
+    BotonVaciarStyled,
+    SinProductos,
 } from "./CarrritoComprasStyled"
 import { AnimatePresence } from 'framer-motion';
 
 // Botones e iconos
 import Button from '../../UI/Boton/Button';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { BsCartX } from "react-icons/bs";
 
 // Card de cupcakes
 import CupackeCard from "./CupackeCard"
@@ -50,24 +54,27 @@ const CarritoCompras = () => {
                         transition={{ type: 'spring', damping: 27 }}
                         key='cart-modal'
                     >
-                        <ContenedorHeaderStyled>
-                            <h1>Tus cupcakes</h1>
-                            {/* Boton de cierre */}
-                            <Button
-                                onClick={() => dispatch(toggleCarrito())}
-                            >
+                        {/* Boton de cierre */}
+                        <ContenedorBotonCierre>
+                            <Button onClick={() => dispatch(toggleCarrito())} >
                                 <IoMdCloseCircleOutline />
                             </Button>
+                        </ContenedorBotonCierre>
+
+                        {/* Encabezado: titulo y vaciar carrito */}
+                        <ContenedorHeaderStyled>
+                            <h2>Tus cupcakes</h2>
+                            <BotonVaciarStyled>
+                                <Button
+                                    onClick={() => dispatch(vaciarCarrito())}
+                                    disabled={!itemsCarrito.length}
+                                >
+                                    <BsCartX />
+                                </Button>
+                            </BotonVaciarStyled>
                         </ContenedorHeaderStyled>
 
                         <ContenedorPrincipalStyled>
-                            {/* Vaciar el carrito */}
-                            <Button
-                                onClick={() => dispatch(vaciarCarrito())}
-                                disabled={!itemsCarrito.length}
-                            >
-                                Vaciar el carrito
-                            </Button>
                             <CupcakeStyled>
                                 {/* Productos que hay en el carrito */}
                                 {itemsCarrito?.length ? (
@@ -81,7 +88,13 @@ const CarritoCompras = () => {
                                     })
                                 ) :
                                     (
-                                        <p> Comprame amigo</p>
+                                        <SinProductos
+                                            initial={{ opacity: 0, y: -10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            🛒 Tu carrito está vacío… ¡Vamos por esos cupcakes! 🧁
+                                        </SinProductos>
                                     )
                                 }
                             </CupcakeStyled>
@@ -96,7 +109,8 @@ const CarritoCompras = () => {
                                     dispatch(toggleCarrito())
                                 }}
                                 disabled={!itemsCarrito.length}
-                            >Iniciar pedido
+                            >
+                                Iniciar pedido
                             </Button>
                         </ContenedorPrincipalStyled>
                     </ContainerStyled>
