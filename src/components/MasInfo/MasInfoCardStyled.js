@@ -24,7 +24,7 @@ export const CardContainer = styled(motion.div)`
         align-items: center;
         width: 90%;
     }
-`
+`;
 
 export const CardTitle = styled.h1`
     width: 100%;
@@ -35,7 +35,7 @@ export const CardTitle = styled.h1`
     @media (max-width: 768px) {
         text-align: center;
     }
-`
+`;
 
 export const ImagenWrapper = styled.div`
     flex: 1;
@@ -44,12 +44,12 @@ export const ImagenWrapper = styled.div`
     @media (max-width: 768px) {
         max-width: 60%;
     }
-`
+`;
 
 export const CardImagen = styled.img`
   width: 100%;
   object-fit: cover;
-`
+`;
 
 export const InfoWrapper = styled.div`
   flex: 2;
@@ -77,7 +77,7 @@ export const InfoWrapper = styled.div`
         font-size: 1rem;
     }
   }
-`
+`;
 
 export const Precio = styled.p`
     text-align: right;
@@ -87,7 +87,8 @@ export const Precio = styled.p`
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-`
+`;
+
 export const BotonesWrapper = styled.div`
   display: flex;
   gap: 0.5rem;
@@ -110,4 +111,4 @@ export const BotonesWrapper = styled.div`
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
   }
-`
+`;

@@ -12,8 +12,8 @@ export const InputStyled = styled.input`
     color: var(--color-text-black);
     background-color: var(--color-primary-background);
     border-radius: 15px;
-    border: ${({ isError }) => (
-            isError ?
+    border: ${({ $isError }) => (
+            $isError ?
                 '1px solid #fb103d ' :
                 '1px solid var(--color-botones)')};
 
@@ -31,7 +31,8 @@ export const InputStyled = styled.input`
 
 export const ErrorMessageStyled = styled.p`
   margin: 0;
-  margin-top: 5px;
+  margin-top: 1px;
   color: #fb103d;
   font-size: 14px;
+  margin-bottom: 3px;
 `;

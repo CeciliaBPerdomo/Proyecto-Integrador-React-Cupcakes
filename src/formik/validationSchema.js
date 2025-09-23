@@ -7,7 +7,7 @@ export const pedidoValidationSchema = Yup.object({
     location: Yup.string().required("Tu ciudad es un campo obligatorio."),
 })
 
-export const contactoValidtionSchema = Yup.object({
+export const contactoValidationSchema = Yup.object({
     nombre: Yup.string().required("Tu nombre completo es un campo obligatorio."),
     email: Yup.string().required("Tu correo electrónico es un campo obligatorio."),
     mensaje: Yup.string()

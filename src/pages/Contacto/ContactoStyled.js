@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Form as FormikForm } from 'formik';
 
 export const ContenedorContactos = styled.div`
     width: 100%; 
@@ -23,11 +24,41 @@ export const ContenedorPrincipal = styled.div`
     margin-bottom: 2rem;
 `
 
-export const ContenedorFormulario = styled.div`
+export const ContenedorFormulario = styled(FormikForm)`
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+
+    label {
+        margin-bottom: 10px;
+        font-size: 24px;
+    }
+
+    input, textarea {
+        width: 90%;
+        padding: 0.5rem 0.75rem; 
+        border-radius: 1rem;
+        border: 1px solid var(--color-border);
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        resize: none;
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+
+    input {
+        height: 50px;
+        outline: none;
+    }
+
+    button {
+        width: 80%;
+    }
 
     @media (max-width: 768px) {
         width: 100%;
+
     }
 `
 

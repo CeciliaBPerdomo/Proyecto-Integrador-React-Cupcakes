@@ -30,8 +30,8 @@ const CardProducto = ({ id, title, imagen, descripcion, precio }) => {
 
     return (
         <ProductosCard
-            whileHover={{ y: -5, scale: 1.02 }}
-            transition={{ type: "spring", stiffness: 200, damping: 15 }}
+            $whileHover={{ y: -5, scale: 1.02 }}
+            $transition={{ type: "spring", stiffness: 200, damping: 15 }}
         >
             <ContenedorEncabezado>
                 <h2>{title}</h2>

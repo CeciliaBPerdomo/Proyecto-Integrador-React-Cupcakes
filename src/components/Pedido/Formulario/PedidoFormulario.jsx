@@ -26,7 +26,7 @@ import { vaciarCarrito } from "../../../redux/carrito/carritoSlice"
 
 
 const PedidoFormulario = ({ itemsCarrito, envio, precio }) => {
-  console.log(itemsCarrito)
+
   const dispatch = useDispatch()
   const navigate = useNavigate()
 

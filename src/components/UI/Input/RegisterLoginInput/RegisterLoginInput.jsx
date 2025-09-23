@@ -19,7 +19,7 @@ const RegisterLoginInput = ({ type, placeholder, name }) => {
                         type={type}
                         placeholder={placeholder}
                         {...field}
-                        isError={errors[field.name] && touched[field.name]}
+                        $isError={errors[field.name] && touched[field.name]}
                     />
                     <ErrorMessage name={field.name}>
                         {msg => <ErrorMessageStyled>{msg}</ErrorMessageStyled>}

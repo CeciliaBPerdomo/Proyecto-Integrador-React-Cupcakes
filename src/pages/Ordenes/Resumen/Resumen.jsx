@@ -32,8 +32,6 @@ const Resumen = () => {
         setVerOrden(ordenes?.find((orden) => orden._id === ordenId))
     }, [usuarioActual, dispatch, ordenes, ordenId])
 
-    // console.log(verOrden)
-
     return (
         <ResumenStyled>
             <h3>Tu orden: #{ordenId.slice(18)}</h3>

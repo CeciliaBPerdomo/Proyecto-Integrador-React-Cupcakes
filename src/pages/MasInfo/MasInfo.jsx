@@ -28,8 +28,6 @@ const MasInfo = () => {
 
     }, [productos, cupcakeId, dispatch])
 
-    console.log(verCupcake)
-
     return (
         <ContenedorPrincipal>
             <MasInfoCard 

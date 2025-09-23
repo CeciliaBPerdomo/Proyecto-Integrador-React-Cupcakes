@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { ErrorMessageStyled, InputBoxStyled, InputLabelStyled, InputStyled } from './InputStyled';
+// Estilos 
+import { 
+  ErrorMessageStyled, 
+  InputBoxStyled, 
+  InputLabelStyled, 
+  InputStyled 
+} from './InputStyled';
+
+// Formik
 import { ErrorMessage, Field } from 'formik';
 
 const Input = ({ children, htmlFor, type, id, placeholder, name }) => {

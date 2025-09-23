@@ -20,7 +20,7 @@ const Recomendados = () => {
     return (
         <Contenedor>
             <h1><GiCupcake /> Nuestros Cupcakes recomendados</h1>
-            <CardsContainer gridLength={recomendados.length}>
+            <CardsContainer $gridLength={recomendados.length}>
                 {recomendados.map((reTop) => (
                     <RecomendadosCard
                         key={reTop.id}

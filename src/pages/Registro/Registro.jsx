@@ -47,7 +47,6 @@ const Registro = () => {
 
                     // se envia al store-persist
                     if (user) {
-                        console.log(user)
                         dispatch(setUsuarioActual({
                             ...user.usuario
                         }))

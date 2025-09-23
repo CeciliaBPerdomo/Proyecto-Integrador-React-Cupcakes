@@ -23,7 +23,7 @@ export const Contenedor = styled.div`
 
 export const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: ${({ gridLength }) => `repeat(${gridLength}, 1fr)`};
+  grid-template-columns: ${({ $gridLength }) => `repeat(${$gridLength}, 1fr)`};
   gap: 20px;
   overflow-x: auto;
   padding: 0 1rem;

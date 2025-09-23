@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // Estilos 
 import {
@@ -6,93 +6,101 @@ import {
   ContenedorPrincipal,
   ContenedorFormulario,
   ContenedorImagen,
-  FormularioBloque
 } from "./ContactoStyled"
 
+import Loader from "../../components/UI/Loader/Loader"
+
+// Formik
+import { Formik } from 'formik';
+import { contactoInitialValues } from "../../formik/initialValues"
+import { contactoValidationSchema } from "../../formik/validationSchema"
+import RegisterLoginInput from '../../components/UI/Input/RegisterLoginInput/RegisterLoginInput';
 
 // Boton 
-import Button from "../../components/UI/Boton/Button"
+import BotonSubmit from "../../components/UI/Boton/Submit/BotonSubmit"
+import TextArea from '../../components/UI/TextArea/TextArea';
+
+// Envío de email
+import emailjs from "@emailjs/browser";
+// Sweet Alert 
+import Swal from 'sweetalert2'
 
 const Contacto = () => {
-
-  const [formData, setFormData] = useState({
-    nombre: "",
-    email: "",
-    mensaje: "",
-  });
-
-  const handleChange = (e) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(
-      `Gracias, ${formData.nombre}! Tu mensaje fue enviado.\n\n` +
-      `Email: ${formData.email}\nMensaje: ${formData.mensaje}`
-    );
-    setFormData({ nombre: "", email: "", mensaje: "" });
-  };
 
 
   return (
     <ContenedorContactos>
       <h2>🧁 La dulzura empieza aquí, contactanos!</h2>
-
       <ContenedorPrincipal>
-        <ContenedorFormulario>
-          {/* Nombre */}
-          <FormularioBloque>
-            <label htmlFor="nombre">Tu nombre</label>
-            <input
-              type="text"
-              placeholder='Tu nombre'
-              name="nombre"
-              value={formData.nombre}
-              onChange={handleChange}
-              required
-            />
-          </FormularioBloque>
+        <Formik
+          initialValues={contactoInitialValues}
+          validationSchema={contactoValidationSchema}
+          onSubmit={async (values, actions) => {
+            try {
+              const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+              const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+              const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-          {/* Mail */}
-          <FormularioBloque>
-            <label htmlFor="email">Tu e-mail</label>
-            <input
-              type="email"
-              placeholder='Tu correo electrónico'
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </FormularioBloque>
+              await emailjs.send(serviceID, templateID, values, publicKey);
 
-          {/* Mensaje */}
-          <FormularioBloque>
-            <label htmlFor="mensaje">Tu mensaje</label>
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              rows="6"
-              placeholder='Tu mensaje o comentario'
-              value={formData.mensaje}
-              onChange={handleChange}
-              required
-            >
-            </textarea>
-          </FormularioBloque>
+              Swal.fire({
+                title: "Mensaje enviado!",
+                text: 'Gracias por contactarnos 🚀',
+                icon: "success",
+                timer: 3000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                background: "var(--color-primary-light)",
+              });
 
-          <FormularioBloque>
-            <Button
-              onClick={(e) => handleSubmit(e)}
-            >
-              Enviar mensaje
-            </Button>
-          </FormularioBloque>
-        </ContenedorFormulario>
+              actions.resetForm();
+            } catch (error) {
+              console.error("Error de envío: ", error);
+              Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Ocurrió un error al enviar el mensaje 😢',
+                timer: 3000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                position: 'center',
+                background: "var(--color-primary-light)",
+              });
+            } finally {
+              actions.setSubmitting(false);
+            }
+          }}
+        >
+          {({ isSubmitting }) => (
+            <ContenedorFormulario>
+              <label htmlFor="nombre">Tu nombre</label>
+              <RegisterLoginInput
+                name="nombre"
+                type="text"
+                placeholder='Tu nombre'
+              />
+
+              <label htmlFor="email">Tu e-mail</label>
+              <RegisterLoginInput
+                name="email"
+                type='email'
+                placeholder='Tú correo electrónico'
+              />
+
+              <label htmlFor="mensaje">Tu mensaje</label>
+              <TextArea
+                name="mensaje"
+                rows="6"
+                placeholder='Tu mensaje o comentario'
+              />
+              <BotonSubmit
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? <Loader /> : "Enviar mensaje"}
+              </BotonSubmit>
+            </ContenedorFormulario>
+          )}
+        </Formik>
 
         <ContenedorImagen>
           <img
@@ -100,7 +108,6 @@ const Contacto = () => {
             alt="Contacto"
           />
         </ContenedorImagen>
-
       </ContenedorPrincipal>
     </ContenedorContactos>
   )
