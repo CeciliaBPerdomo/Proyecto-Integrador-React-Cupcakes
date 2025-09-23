@@ -16,13 +16,13 @@ export const ContenedorContactos = styled.div`
             text-align: center;
         }        
     }
-`
+`;
 
 export const ContenedorPrincipal = styled.div`
     width: 100%;
     display: flex;
     margin-bottom: 2rem;
-`
+`;
 
 export const ContenedorFormulario = styled(FormikForm)`
     width: 50%;
@@ -52,15 +52,11 @@ export const ContenedorFormulario = styled(FormikForm)`
         outline: none;
     }
 
-    button {
-        width: 80%;
-    }
-
     @media (max-width: 768px) {
         width: 100%;
 
     }
-`
+`;
 
 export const ContenedorImagen = styled.div`
     width: 50%;
@@ -74,63 +70,14 @@ export const ContenedorImagen = styled.div`
     @media (max-width: 768px) {
         display: none;
     }
-`
+`;
 
-export const FormularioBloque = styled.fieldset`
-    display: flex;
-    flex-direction: column;
-    border: none;
-    gap: 0.5rem; 
-    padding: 1rem;
+export const ContenedorBoton = styled.div`
+    display: flex; 
+    justify-content: center;
+    width: 90%;
 
-    label {
-        font-weight: 500;
-        font-size: 1.25rem;
+    button {
+        width: 50%;
     }
-
-    input, textarea {
-        width: 80%;
-        padding: 0.5rem 0.75rem; 
-        border-radius: 1rem;
-        border: 1px solid var(--color-border);
-        font-size: 1rem;
-        font-family: 'Montserrat', sans-serif;
-        resize: none;
-    }
-
-    input {
-        height: 50px;
-        outline: none;
-
-        @media (max-width: 768px) {
-            width: 100%;
-            height: 45px;
-        } 
-    }
-
-    input:focus {
-        border-color: var(--color-primary);
-        box-shadow: 0 0 4px var(--color-primary);
-    }
-
-    textarea {
-        @media (max-width: 768px) {
-            width: 100%;
-        }
-    }
-
-    &:has(button) {
-        align-items: center; 
-
-        button {
-            width: auto;
-            min-width: 350px;
-            margin: 0 auto;
-            display: block;
-        }
-    }
-
-    @media (max-width: 768px) {
-        margin-left: 0.5rem;
-    }
-` 
+`;

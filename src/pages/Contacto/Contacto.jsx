@@ -6,6 +6,7 @@ import {
   ContenedorPrincipal,
   ContenedorFormulario,
   ContenedorImagen,
+  ContenedorBoton,
 } from "./ContactoStyled"
 
 import Loader from "../../components/UI/Loader/Loader"
@@ -93,11 +94,12 @@ const Contacto = () => {
                 rows="6"
                 placeholder='Tu mensaje o comentario'
               />
-              <BotonSubmit
-                disabled={isSubmitting}
-              >
-                {isSubmitting ? <Loader /> : "Enviar mensaje"}
-              </BotonSubmit>
+
+              <ContenedorBoton>
+                <BotonSubmit disabled={isSubmitting} >
+                  {isSubmitting ? <Loader /> : "Enviar mensaje"}
+                </BotonSubmit>
+              </ContenedorBoton>
             </ContenedorFormulario>
           )}
         </Formik>

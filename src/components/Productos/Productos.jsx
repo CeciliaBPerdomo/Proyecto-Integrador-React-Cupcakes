@@ -25,9 +25,10 @@ const Productos = () => {
 
     let cupcakes = useSelector(state => state.productos.productos)
     const categoriaSeleccionada = useSelector(state => state.categorias.selectedCategoria)
-
+    
     if (categoriaSeleccionada) {
-        cupcakes = { [categoriaSeleccionada]: cupcakes[categoriaSeleccionada] }
+        const categoriaElegida = categoriaSeleccionada.toLowerCase();
+        cupcakes = { [categoriaElegida]: cupcakes[categoriaElegida] || [] }
     }
 
     return (

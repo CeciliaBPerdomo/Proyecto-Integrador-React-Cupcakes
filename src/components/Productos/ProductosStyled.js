@@ -23,7 +23,7 @@ export const ProductosCard = styled.div`
 
     width: 380px;
     height: auto;
-    max-height: 550px;
+    min-height: 460px;
 
     border-radius: 15px;
     padding: 1.5rem;

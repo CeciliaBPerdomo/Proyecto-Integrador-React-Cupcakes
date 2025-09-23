@@ -14,6 +14,9 @@ import { BsSearch } from "react-icons/bs";
 import { useDispatch, useSelector } from 'react-redux';
 import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice"
 
+// Sweet Alert 
+import Swal from 'sweetalert2'
+
 const BarraBusqueda = ({ doScroll }) => {
     const dispatch = useDispatch()
     const [valueCategoria, setValueCategoria] = useState("")
@@ -24,7 +27,7 @@ const BarraBusqueda = ({ doScroll }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newCategory = valueCategoria.trim().toLowerCase().split(" ").join("")
+        const newCategory = valueCategoria.trim().toLowerCase()
         const categoriaSelecionado = listofCategories.find((categoria) => {
             return categoria.toLowerCase() === newCategory
         })
@@ -33,7 +36,16 @@ const BarraBusqueda = ({ doScroll }) => {
             dispatch(seleccionarCategoria(categoriaSelecionado))
             doScroll()
         } else {
-            return alert("Categoria no encontrada.")
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'No se encontró la categoría que buscas 😲​',
+                timer: 3000,
+                timerProgressBar: true,
+                showConfirmButton: false,
+                position: 'center',
+                background: "var(--color-primary-light)",
+            });
         }
 
         setValueCategoria("")

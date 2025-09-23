@@ -19,14 +19,11 @@
 - Historial de pedidos por usuario
 
 ## ⚙️ Tecnologías utilizadas
-| 🛠️ Tecnología          |            | 🛠️ Tecnología          |          |  🛠️ Tecnología          |        |
-|---------------------|-----------------------------------------|---------------------|-----------------------------------------| ---------------------|-----------------------------------------|
-| **HTML5**  | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | **CSS3**  | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)  | **Styled Components** | ![Styled Components](https://img.shields.io/badge/Styled--Components-DB7093?style=flat&logo=styled-components&logoColor=white) |
-| **JavaScript** | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) | **React**   | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | **Vite**  | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) |
-| **React Router DOM** | ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white) | **Framer Motion** | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) | **GitHub** | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white) ![GitHub Issues](https://img.shields.io/badge/GitHub_Issues-FF3366?style=flat&logo=github&logoColor=white) 
-| **React Icons** | ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white) | **Formik** | ![Formik](https://img.shields.io/badge/Formik-0A4D8C?style=flat&logo=formik&logoColor=white) ![Yup](https://img.shields.io/badge/Yup-4B32C3?style=flat&logo=yup&logoColor=white) | **Redux ToolKit** | ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?style=flat&logo=redux&logoColor=white) | 
-|**Axios** | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white) | **EmailJS** | ![EmailJS](https://img.shields.io/badge/EmailJS-FF5A1F?style=flat&logo=emailjs&logoColor=white) | **SweetAlert2** | ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF6F61?style=flat&logo=sweetalert&logoColor=white) |
-| Deploy in **Vercel** | ![Vercel](https://img.shields.io/badge/Vercel-000?style=flat&logo=vercel&logoColor=white) |
+| | | Tecnologías | | | |
+|--------|----------------------|------------|------------------------| ---------------------|-------------------|
+|  ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) | ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) | ![Styled Components](https://img.shields.io/badge/Styled--Components-DB7093?style=flat&logo=styled-components&logoColor=white) | ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) |  ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat&logo=vite&logoColor=white) |
+| ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat&logo=react-router&logoColor=white) | ![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=flat&logo=framer&logoColor=white) | ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white) | ![GitHub Issues](https://img.shields.io/badge/GitHub_Issues-FF3366?style=flat&logo=github&logoColor=white) | ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white)  | ![Formik](https://img.shields.io/badge/Formik-0A4D8C?style=flat&logo=formik&logoColor=white) |
+| ![Yup](https://img.shields.io/badge/Yup-4B32C3?style=flat&logo=yup&logoColor=white) | ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?style=flat&logo=redux&logoColor=white) | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white) | ![EmailJS](https://img.shields.io/badge/EmailJS-FF5A1F?style=flat&logo=emailjs&logoColor=white) | ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF6F61?style=flat&logo=sweetalert&logoColor=white) | ![Vercel](https://img.shields.io/badge/Vercel-000?style=flat&logo=vercel&logoColor=white) |
 
 ## 🚀 Instalación y uso local del código
 - Cloná el repositorio: `git clone https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes.git` 
@@ -37,9 +34,9 @@
 
 ## 🧿​ Instalaciones
 
-| **React Icons** | **Redux** | **Formik** | **Axios** | 
-| ----------- | ----------- | ----------- | ----------- | 
-|  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/>`npm i react-redux` <br/> `npm i redux-persist` | `npm i formik` <br />`npm i yup`| `npm i axios` | 
+| **React Icons** | **Redux** | **Formik** | **Axios** | **Email Js** | **Sweet Alert 2** |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
+|  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/>`npm i react-redux` <br/> `npm i redux-persist` | `npm i formik` <br />`npm i yup`| `npm i axios` | `npm install @emailjs/browser` | `npm install sweetalert2` | 
 
 ## 🎓​ Requisitos para la entrega
 - 👉 Una **landing page** con:
@@ -60,10 +57,16 @@
 - 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS.
 
 ## 📖 Documentación
-| **NucbazAPI** | **Loader** |
+| **NucbazAPI** | **Loader** | 
 | ----- | ----- | 
 | Web: `https://nucbaz-api.vercel.app/` | The Largest Library of Open-Source UI | 
 | Endpoints: <br />- POST /auth/register <br />- POST /auth/login <br />- GET /orders <br />- POST /orders |  Web: `https://uiverse.io/raunak_2064/rotten-falcon-14` | 
+
+
+| **Email Js** | **SweetAlert2** |
+| ----- | ----- |
+| Web: `https://www.emailjs.com/` | Web: `https://sweetalert2.github.io/#examples` | 
+| Documentación: `https://www.emailjs.com/docs/tutorial/overview/`| Documentación: `https://sweetalert2.github.io/#download` |
 
 ## 🛠️ Desarrollo y deploy web
 - Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025.
