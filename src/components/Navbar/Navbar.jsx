@@ -71,7 +71,7 @@ const Navbar = () => {
                     <LinksContainerStyled
                         whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/' onClick={handleLinkClick}>
+                            <Link to='/#productos' onClick={handleLinkClick}>
                                 <GiCupcake size={30} /> 
                                 <span className="link-text">Productos</span>
                             </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
                         whileTap={{ scale: 0.97 }}
                     >
                         <TooltipWrapper>
-                            <Link to='/' onClick={handleLinkClick}>
+                            <Link to='/#nosotros' onClick={handleLinkClick}>
                                 <GiCook size={30} />
                                 <span className="link-text">Nosotros</span>
                             </Link>
@@ -95,7 +95,7 @@ const Navbar = () => {
                     {/* Contacto */}
                     <LinksContainerStyled whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/' onClick={handleLinkClick}>
+                            <Link to='/#contacto' onClick={handleLinkClick}>
                                 <LuSend size={30} />
                                 <span className="link-text">Contacto</span>
                             </Link>

@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 // Styled 
 import {
@@ -14,14 +15,29 @@ import AcercaDeNosotros from '../AcercaDeNosotros/AcercaDeNosotros.jsx';
 import Contacto from '../Contacto/Contacto.jsx';
 
 const Home = () => {
-   const productsRef = useRef()
+  const productosRef = useRef()
+  const nosotrosRef = useRef(null)
+  const contactoRef = useRef(null)
+  const location = useLocation()
 
-  const doScroll = () => {
-    // window.scrollTo(
-    //   productsRef.current.getBoundingClientRect().x,
-    //   productsRef.current.getBoundingClientRect().y,
-    // )
+    const scrollToSection = (ref) => {
+    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '')
+
+    const scrollWithOffset = (el) => {
+      const yOffset = -100;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    };
+
+    if (hash === 'productos' && productosRef.current) scrollWithOffset(productosRef.current);
+    if (hash === 'nosotros' && nosotrosRef.current) scrollWithOffset(nosotrosRef.current);
+    if (hash === 'contacto' && contactoRef.current) scrollWithOffset(contactoRef.current);
+  }, [location])
+
 
   return (
     <HomeWrapper>
@@ -29,7 +45,7 @@ const Home = () => {
       <Hero />
 
       {/* Barra de búsqueda */}
-      <BarraBusqueda doScroll={doScroll}/>
+      <BarraBusqueda doScroll={() => scrollToSection(productosRef)} />
 
       {/* Productos destacados */}
       <Recomendados />
@@ -38,14 +54,19 @@ const Home = () => {
       <Categorias />
 
       {/* Productos */}
-      <Productos ref={productsRef}/>
+      <div ref={productosRef} id="productos">
+        <Productos />
+      </div>
 
       {/* Nosotros */}
-      <AcercaDeNosotros />
+      <div ref={nosotrosRef} id="nosotros">
+        <AcercaDeNosotros />
+      </div>
 
       {/* Contacto */}
-      <Contacto />
-
+      <div ref={contactoRef} id="contacto">
+        <Contacto />
+      </div>
     </HomeWrapper>
   )
 }
