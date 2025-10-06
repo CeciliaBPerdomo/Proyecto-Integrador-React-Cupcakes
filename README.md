@@ -34,7 +34,7 @@
 
 ## 🧿​ Instalaciones
 
-| **React Icons** | **Redux** | **Formik** | **Axios** | **Email Js** | **Sweet Alert 2** |
+| **React Icons** ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white) | **Redux** ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?style=flat&logo=redux&logoColor=white) | **Formik** ![Formik](https://img.shields.io/badge/Formik-0A4D8C?style=flat&logo=formik&logoColor=white) | **Axios**  | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white) | **Email Js**  ![EmailJS](https://img.shields.io/badge/EmailJS-FF5A1F?style=flat&logo=emailjs&logoColor=white) | **Sweet Alert 2** [SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF6F61?style=flat&logo=sweetalert&logoColor=white) |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
 |  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/> <br/>`npm i react-redux` <br/> <br/> `npm i redux-persist` | `npm i formik` <br/> <br />`npm i yup`| `npm i axios` | `npm install @emailjs/browser` | `npm install sweetalert2` | 
 
