@@ -42,19 +42,19 @@
 
 | Landing page | Sobre nosotros | Productos | Contacto |
 | ------------ | ------------ | ------------ | ------------ | 
-|- Header con su navbar funcional en responsive con API Context o Redux Toolkit. <br/> <br/>- Hero representativo de su página. <br/> <br/>- Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera. <br/> <br/>- Sección de cards con productos destacados que lleve a la página de productos de alguna manera. <br/><br/>- Footer. | Con Header , footer y la información que corresponda y quieran colocar en su página "Sobre nosotros". |- Renderizados dinámicamente <br/> <br/>- Lógica de filtros <br/> <br/>- Agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra. <br/> <br/>- Todas estas acciones deben tener un modal de confirmación.|- Formulario de con los campos: <br/>- Nombre <br/>- Apellido <br/>- Email <br/>- Asunto <br/> <br/>- Además, utilizando Formik, deberán realizar la validación del formulario de contacto. <br/> <br/>- El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación. |
+|Header con su navbar funcional en responsive con API Context o Redux Toolkit. <br/> <br/> Hero representativo de su página. <br/> <br/> Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera. <br/> <br/> Sección de cards con productos destacados que lleve a la página de productos de alguna manera. <br/><br/> Footer. | Con Header, footer y la información que corresponda y quieran colocar en su página "Sobre nosotros". | Renderizados dinámicamente <br/> <br/> Lógica de filtros <br/> <br/>- Agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra. <br/> <br/> Todas estas acciones deben tener un modal de confirmación.| Formulario de con los campos: <br/>- Nombre <br/>- Apellido <br/>- Email <br/>- Asunto <br/> <br/> Además, utilizando Formik, deberán realizar la validación del formulario de contacto. <br/> <br/> El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación. |
 
 
 | Extras |
 | ------------ |
-| - 👉 Todas las páginas vinculadas entre si mediante React Router. <br/>- 👉 Diseño responsive de todas las páginas. <br/>- 👉 Se deben poder persistir los productos del carrito. <br/>- 👉 Agregar un sistema de login y registro. <br/>- 👉 Agregar una página de checkout al realizar la compra. <br/>- 👉 Agregar una página de producto para cada producto individual. <br/>- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
+| 👉 Todas las páginas vinculadas entre si mediante React Router. <br/> 👉 Diseño responsive de todas las páginas. <br/> 👉 Se deben poder persistir los productos del carrito. <br/> 👉 Agregar un sistema de login y registro. <br/> 👉 Agregar una página de checkout al realizar la compra. <br/> 👉 Agregar una página de producto para cada producto individual. <br/> 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
 
 
 ## 📖 Documentación
 | **NucbazAPI** | **Loader** | 
 | ----- | ----- | 
 | **Web**: <br />`https://nucbaz-api.vercel.app/` | **Web**: <br />`https://uiverse.io/raunak_2064/rotten-falcon-14` | 
-| **Endpoints**: <br />- POST /auth/register <br />- POST /auth/login <br />- GET /orders <br />- POST /orders | The Largest Library of Open-Source UI | 
+| **Endpoints**: <br />- POST `/auth/register` <br />- POST `/auth/login` <br />- GET `/orders` <br />- POST `/orders` | The Largest Library of Open-Source UI | 
 
 
 | **Email Js** | **SweetAlert2** |
