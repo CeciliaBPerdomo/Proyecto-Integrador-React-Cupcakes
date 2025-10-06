@@ -7,6 +7,8 @@ import {
     TextContainerStyled,
     ContadorStyled,
     CantidadStyled,
+    EncabezadoStyled,
+    ImagenWrapper,
 } from "./CarrritoComprasStyled"
 
 // Iconos 
@@ -28,40 +30,39 @@ const CupackeCard = ({ id, imagen, title, descripcion, precio, cantidad }) => {
     const dispatch = useDispatch()
     return (
         <CupcakeContainerStyled>
-            {/* Imagen */}
-            <CupcakeImagen
-                src={imagen}
-                alt={title}
-            />
 
-            <TextContainerStyled>
+            {/* Encabezado: cupcake y precio */}
+            <EncabezadoStyled>
                 <h4>{title}</h4>
-                <p>{descripcion}</p>
-                <span>{formatoPrecio(precio)}</span>
+                <span>{formatoPrecio(precio * cantidad)}</span>
+            </EncabezadoStyled>
 
-                <ContadorStyled>
-                    {/* Disminuir */}
-                    <Aumento
-                        bgColor='var(--color-border)'
-                        onClick={() => dispatch(borrarDelCarrito(id))}
-                    >
-                        {cantidad === 1 ? <BsTrash /> : <CiCircleMinus />}
-                    </Aumento>
+            {/* Imagen y descripcion*/}
+            <ImagenWrapper>
+                <CupcakeImagen src={imagen} alt={title} />
 
-                    {/* Cantidad */}
-                    <CantidadStyled>
-                        {cantidad}
-                    </CantidadStyled>
+                <TextContainerStyled>
+                    <p>{descripcion}</p>
+                </TextContainerStyled>
+            </ImagenWrapper>
 
-                    {/* Aumentar */}
-                    <Aumento
-                        bgColor='var(--color-border)'
-                        onClick={() => dispatch(agregarCarrito({ id, imagen, title, descripcion, precio, cantidad }))}
-                    >
-                        <CiCirclePlus />
-                    </Aumento>
-                </ContadorStyled>
-            </TextContainerStyled>
+            {/* Cantidad */}
+            <ContadorStyled>
+                {/* Disminuir */}
+                <Aumento bgColor='var(--color-border)' onClick={() => dispatch(borrarDelCarrito(id))} >
+                    {cantidad === 1 ? <BsTrash /> : <CiCircleMinus />}
+                </Aumento>
+
+                {/* Cantidad */}
+                <CantidadStyled>
+                    {cantidad}
+                </CantidadStyled>
+
+                {/* Aumentar */}
+                <Aumento bgColor='var(--color-border)' onClick={() => dispatch(agregarCarrito({ id, imagen, title, descripcion, precio, cantidad }))} >
+                    <CiCirclePlus />
+                </Aumento>
+            </ContadorStyled>
 
         </CupcakeContainerStyled>
     )

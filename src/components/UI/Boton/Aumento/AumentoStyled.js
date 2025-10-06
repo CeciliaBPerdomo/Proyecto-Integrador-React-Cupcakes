@@ -12,7 +12,7 @@ export const AumentoStyled = styled(motion.button)`
     border: 1px solid var(--color-text-white);
     font-size: 1.1rem;
     font-weight: 800;
-    color: var(--color-text-white);
+    color: var(--color-text-black);
     cursor: pointer;
     margin: 0 5px;
 

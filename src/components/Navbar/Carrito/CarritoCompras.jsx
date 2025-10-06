@@ -10,8 +10,16 @@ import {
     ContenedorBotonCierre,
     BotonVaciarStyled,
     SinProductos,
+    TotalesWrapper,
+    TotalesFila, 
+    TotalesFilaValores, 
+    TotalFinal
 } from "./CarrritoComprasStyled"
 import { AnimatePresence } from 'framer-motion';
+
+
+// Formato de precios
+import { formatoPrecio } from "../../../utilidades/precio"
 
 // Botones e iconos
 import Button from '../../UI/Boton/Button';
@@ -38,10 +46,7 @@ const CarritoCompras = () => {
     return (
         <div>
             {!invisible && (
-                <CarritoStyled
-                    onClick={() => dispatch(toggleCarrito())}
-                    oculto={invisible}
-                >
+                <CarritoStyled onClick={() => dispatch(toggleCarrito())} oculto={invisible} >
                 </CarritoStyled>
             )}
 
@@ -63,7 +68,7 @@ const CarritoCompras = () => {
 
                         {/* Encabezado: titulo y vaciar carrito */}
                         <ContenedorHeaderStyled>
-                            <h2>Tus cupcakes</h2>
+                            <h2>🧁 Tus cupcakes</h2>
                             <BotonVaciarStyled>
                                 <Button
                                     onClick={() => dispatch(vaciarCarrito())}
@@ -86,32 +91,43 @@ const CarritoCompras = () => {
                                             />
                                         )
                                     })
-                                ) :
-                                    (
-                                        <SinProductos
-                                            initial={{ opacity: 0, y: -10 }}
-                                            animate={{ opacity: 1, y: 0 }}
-                                            transition={{ duration: 0.5 }}
-                                        >
-                                            🛒 Tu carrito está vacío… ¡Vamos por esos cupcakes! 🧁
-                                        </SinProductos>
-                                    )
-                                }
+                                ) : (
+                                    <>
+                                        <SinProductos > 🛒 Ups… este carrito está más vacío que tu heladera un domingo. </SinProductos>
+                                        <SinProductos > ¡Dale, llevate unos cupcakes a tú casa! 🧁✨ </SinProductos>
+                                    </>
+                                )}
                             </CupcakeStyled>
 
-                            <p>Sub-Total: $ {precio}</p>
-                            <p>Envío: $ {envio}</p>
-                            <hr />
-                            <p>Total: $ {precio + envio}</p>
-                            <Button
-                                onClick={() => {
-                                    navigate("/tu-pedido")
-                                    dispatch(toggleCarrito())
-                                }}
-                                disabled={!itemsCarrito.length}
-                            >
-                                Iniciar pedido
-                            </Button>
+                            {itemsCarrito?.length >= 1 ?
+                                <TotalesWrapper>
+                                    <TotalesFila>
+                                        <span>Sub-Total</span>
+                                        <span>Envío</span>
+                                    </TotalesFila>
+
+                                    <TotalesFilaValores>
+                                        <span>{formatoPrecio(precio)}</span>
+                                        <span>{formatoPrecio(envio)}</span>
+                                    </TotalesFilaValores>
+                                    <hr />
+                                    <TotalFinal>
+                                        <span>Total:</span>
+                                        <span>{formatoPrecio(precio + envio)}</span>
+                                    </TotalFinal>
+
+                                    <Button
+                                        onClick={() => {
+                                            navigate("/tu-pedido")
+                                            dispatch(toggleCarrito())
+                                        }}
+                                        disabled={!itemsCarrito.length}
+                                    >
+                                        Iniciar pedido
+                                    </Button>
+                                </TotalesWrapper>
+                                : null
+                            }
                         </ContenedorPrincipalStyled>
                     </ContainerStyled>
                 )}
