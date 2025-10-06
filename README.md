@@ -34,7 +34,7 @@
 
 ## 🧿​ Instalaciones
 
-| **React Icons** ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white) | **Redux** ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?style=flat&logo=redux&logoColor=white) | **Formik** ![Formik](https://img.shields.io/badge/Formik-0A4D8C?style=flat&logo=formik&logoColor=white) | **Axios**  | ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white) | **Email Js**  ![EmailJS](https://img.shields.io/badge/EmailJS-FF5A1F?style=flat&logo=emailjs&logoColor=white) | **Sweet Alert 2** [SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF6F61?style=flat&logo=sweetalert&logoColor=white) |
+| **React Icons** <br/> ![React Icons](https://img.shields.io/badge/React_Icons-61DAFB?style=flat&logo=react&logoColor=white) | **Redux** <br/> ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?style=flat&logo=redux&logoColor=white) | **Formik** <br/> ![Formik](https://img.shields.io/badge/Formik-0A4D8C?style=flat&logo=formik&logoColor=white) | **Axios** <br/> ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=flat&logo=axios&logoColor=white) | **Email Js** <br/> ![EmailJS](https://img.shields.io/badge/EmailJS-FF5A1F?style=flat&logo=emailjs&logoColor=white) | **Sweet Alert 2** <br/> ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF6F61?style=flat&logo=sweetalert&logoColor=white) |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
 |  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/> <br/>`npm i react-redux` <br/> <br/> `npm i redux-persist` | `npm i formik` <br/> <br />`npm i yup`| `npm i axios` | `npm install @emailjs/browser` | `npm install sweetalert2` | 
 
@@ -57,7 +57,7 @@
 | **Endpoints**: <br />- POST `/auth/register` <br />- POST `/auth/login` <br />- GET `/orders` <br />- POST `/orders` | The Largest Library of Open-Source UI | 
 
 
-| **Email Js** | **SweetAlert2** |
+| **Email Js** <br /> ![EmailJS](https://img.shields.io/badge/EmailJS-FF5A1F?style=flat&logo=emailjs&logoColor=white) | **SweetAlert2** <br /> ![SweetAlert2](https://img.shields.io/badge/SweetAlert2-FF6F61?style=flat&logo=sweetalert&logoColor=white)  |
 | ----- | ----- |
 | **Web**: <br />`https://www.emailjs.com/` | **Web**: <br />`https://sweetalert2.github.io/#examples` | 
 | **Documentación**: `https://www.emailjs.com/docs/tutorial/overview/`| **Documentación**: `https://sweetalert2.github.io/#download` |
