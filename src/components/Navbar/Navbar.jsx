@@ -39,6 +39,11 @@ const Navbar = () => {
     // Menu responsivo
     const [menuOpen, setMenuOpen] = useState(false)
 
+
+  const handleLinkClick = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <>
             <NavbarContainerStyled>
@@ -66,7 +71,7 @@ const Navbar = () => {
                     <LinksContainerStyled
                         whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/'>
+                            <Link to='/' onClick={handleLinkClick}>
                                 <GiCupcake size={30} /> 
                                 <span className="link-text">Productos</span>
                             </Link>
@@ -79,7 +84,7 @@ const Navbar = () => {
                         whileTap={{ scale: 0.97 }}
                     >
                         <TooltipWrapper>
-                            <Link to='/'>
+                            <Link to='/' onClick={handleLinkClick}>
                                 <GiCook size={30} />
                                 <span className="link-text">Nosotros</span>
                             </Link>
@@ -90,7 +95,7 @@ const Navbar = () => {
                     {/* Contacto */}
                     <LinksContainerStyled whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/'>
+                            <Link to='/' onClick={handleLinkClick}>
                                 <LuSend size={30} />
                                 <span className="link-text">Contacto</span>
                             </Link>
@@ -104,7 +109,7 @@ const Navbar = () => {
                         onClick={() => dispatch(toggleCarrito())}
                     >
                         <TooltipWrapper>
-                            <CarritoWrapper to='#'>
+                            <CarritoWrapper to='#' onClick={handleLinkClick}>
                                 <GiShoppingCart size={30} />
                                 {cantidad > 0 && <CartBadge>{cantidad}</CartBadge>}
                             <span className="link-text">Tu carrito</span>
@@ -120,6 +125,7 @@ const Navbar = () => {
                             usuarioActual ?
                                 dispatch(toggleHiddenMenu()) :
                                 navigate("/registrate")
+                               handleLinkClick()
                         }}
                     >
                         <TooltipWrapper>

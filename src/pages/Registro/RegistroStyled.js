@@ -3,7 +3,7 @@ import { Form as FormikForm } from 'formik';
 
 export const ContenedorPrincipal = styled.div`
     display: flex;
-    padding-top: 110px;
+    padding: 110px 0 0 0; 
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@ export const ContenedorPrincipal = styled.div`
     }
 
      @media (max-width: 768px) {
-        padding-top: 150px;
+       padding: 150px 1rem 0 1rem;
 
         h1 {
             text-align: center;
