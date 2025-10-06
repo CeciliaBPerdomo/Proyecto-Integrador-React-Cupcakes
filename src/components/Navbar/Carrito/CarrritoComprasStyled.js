@@ -184,7 +184,6 @@ export const TotalFinal = styled.div`
     }
 `;
 
-
 // Cupackes card
 export const CupcakeContainerStyled = styled.div`
     display: flex;

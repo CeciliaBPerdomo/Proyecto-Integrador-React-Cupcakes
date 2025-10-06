@@ -39,34 +39,22 @@
 |  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/>`npm i react-redux` <br/> `npm i redux-persist` | `npm i formik` <br />`npm i yup`| `npm i axios` | `npm install @emailjs/browser` | `npm install sweetalert2` | 
 
 ## 🎓​ Requisitos para la entrega
-- 👉 Una **landing page** con:
-    - Header con su navbar funcional en responsive con API Context o Redux Toolkit.
-    - Hero representativo de su página.
-    - Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera (por ejemplo, un botón).
-    - Sección de cards con productos destacados que lleve a la página de productos de alguna manera (por ejemplo, un botón).
-    - Footer.
-- 👉 Una página de "**Sobre nosotros**" (Con Header , footer y la información que corresponda y quieran colocar en su página "Sobre nosotros").
-- 👉 Una página de "**Productos**", con los productos renderizados dinámicamente, lógica de filtros, agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra.(Todas estas acciones deben tener un modal de confirmación).
-- 👉 Una página de contacto en la cual tienen que tener al menos un formulario de **contacto** con los campos "nombre", "apellido" , "email" y "asunto". Además, utilizando Formik, deberán realizar la validación del formulario de contacto. El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación.
-- 👉 Todas las páginas vinculadas entre si mediante React Router.
-- 👉 Diseño responsive de todas las páginas.
-- 👉 Se deben poder persistir los productos del carrito.
-- 👉 Agregar un sistema de login y registro.
-- 👉 Agregar una página de checkout al realizar la compra.
-- 👉 Agregar una página de producto para cada producto individual
-- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS.
+
+| Landing page | Sobre nosotros | Productos | Contacto | Extras |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+|- Header con su navbar funcional en responsive con API Context o Redux Toolkit. <br/>- Hero representativo de su página. <br/>- Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera (por ejemplo, un botón). <br/>- Sección de cards con productos destacados que lleve a la página de productos de alguna manera (por ejemplo, un botón).<br/>- Footer. | Con Header , footer y la información que corresponda y quieran colocar en su página "Sobre nosotros". |- Con los productos renderizados dinámicamente <br/>- Lógica de filtros <br/>- Agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra. <br/>- Todas estas acciones deben tener un modal de confirmación.|- Formulario de con los campos "nombre", "apellido" , "email" y "asunto". <br/>- Además, utilizando Formik, deberán realizar la validación del formulario de contacto. <br/>- El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación. |- 👉 Todas las páginas vinculadas entre si mediante React Router. <br/>- 👉 Diseño responsive de todas las páginas. <br/>- 👉 Se deben poder persistir los productos del carrito. <br/>- 👉 Agregar un sistema de login y registro. <br/>- 👉 Agregar una página de checkout al realizar la compra. <br/>- 👉 Agregar una página de producto para cada producto individual. <br/>- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
 
 ## 📖 Documentación
 | **NucbazAPI** | **Loader** | 
 | ----- | ----- | 
-| Web: `https://nucbaz-api.vercel.app/` | The Largest Library of Open-Source UI | 
-| Endpoints: <br />- POST /auth/register <br />- POST /auth/login <br />- GET /orders <br />- POST /orders |  Web: `https://uiverse.io/raunak_2064/rotten-falcon-14` | 
+| **Web**: <br />`https://nucbaz-api.vercel.app/` | **Web**: <br />`https://uiverse.io/raunak_2064/rotten-falcon-14` | 
+| **Endpoints**: <br />- POST /auth/register <br />- POST /auth/login <br />- GET /orders <br />- POST /orders | The Largest Library of Open-Source UI | 
 
 
 | **Email Js** | **SweetAlert2** |
 | ----- | ----- |
-| Web: `https://www.emailjs.com/` | Web: `https://sweetalert2.github.io/#examples` | 
-| Documentación: `https://www.emailjs.com/docs/tutorial/overview/`| Documentación: `https://sweetalert2.github.io/#download` |
+| **Web**: <br />`https://www.emailjs.com/` | **Web**: <br />`https://sweetalert2.github.io/#examples` | 
+| **Documentación**: `https://www.emailjs.com/docs/tutorial/overview/`| **Documentación**: `https://sweetalert2.github.io/#download` |
 
 ## 🛠️ Desarrollo y deploy web
 - Hecho con 💙​ por <a href="https://www.linkedin.com/in/cecilia-perdomo/" style="text-decoration: none; color: black">Cecilia Perdomo</a>, desde el 29 de Julio de 2025.
@@ -74,6 +62,6 @@
 - Repositorio: <a href="https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes" style="text-decoration: none; color: black">https://github.com/CeciliaBPerdomo/Proyecto-Integrador-React-Cupcakes</a>
 - Versión en vivo: <a href="https://proyecto-integrador-react-cupcakes.vercel.app/" style="text-decoration: none; color: black">en Vercel</a>
 
-<p align="start">
+<div align="start">
     <img src="./src/assets/cupcakes/hero.png" style="width: 40%;">
-</p>
+</div>
