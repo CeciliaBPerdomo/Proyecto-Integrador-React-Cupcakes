@@ -56,7 +56,6 @@ export const FormFormik = styled(FormikForm)`
     }
 
     @media (max-width: 768px) {
-        margin-left: 1rem;
         
         label {
             font-size: 1rem;

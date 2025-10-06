@@ -33,15 +33,15 @@ export const InputStyled = styled.input`
     }
 
     @media (max-width: 768px) {
-        width: 90%;   
-        min-width: 35rem;       
+        width: 85%;   
+        min-width: 30rem;       
         padding: 0.8rem;
         font-size: 0.9rem;
     }
 
     @media (max-width: 576px) {
-        width: 50%;
-        min-width: 25rem;
+        width: 80%;
+        min-width: 20rem;
         padding: 0.7rem 0.7rem;
         font-size: 0.85rem;
     }
