@@ -40,9 +40,15 @@
 
 ## 🎓​ Requisitos para la entrega
 
-| Landing page | Sobre nosotros | Productos | Contacto | Extras |
-| ------------ | ------------ | ------------ | ------------ | ------------ |
-|- Header con su navbar funcional en responsive con API Context o Redux Toolkit. <br/>- Hero representativo de su página. <br/>- Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera (por ejemplo, un botón). <br/>- Sección de cards con productos destacados que lleve a la página de productos de alguna manera (por ejemplo, un botón).<br/>- Footer. | Con Header , footer y la información que corresponda y quieran colocar en su página "Sobre nosotros". |- Con los productos renderizados dinámicamente <br/>- Lógica de filtros <br/>- Agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra. <br/>- Todas estas acciones deben tener un modal de confirmación.|- Formulario de con los campos "nombre", "apellido" , "email" y "asunto". <br/>- Además, utilizando Formik, deberán realizar la validación del formulario de contacto. <br/>- El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación. |- 👉 Todas las páginas vinculadas entre si mediante React Router. <br/>- 👉 Diseño responsive de todas las páginas. <br/>- 👉 Se deben poder persistir los productos del carrito. <br/>- 👉 Agregar un sistema de login y registro. <br/>- 👉 Agregar una página de checkout al realizar la compra. <br/>- 👉 Agregar una página de producto para cada producto individual. <br/>- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
+| Landing page | Sobre nosotros | Productos | Contacto |
+| ------------ | ------------ | ------------ | ------------ | 
+|- Header con su navbar funcional en responsive con API Context o Redux Toolkit. <br/>- Hero representativo de su página. <br/>- Un breve apartado introductorio de about, que lleve a la página "Sobre Nosotros" de alguna manera (por ejemplo, un botón). <br/>- Sección de cards con productos destacados que lleve a la página de productos de alguna manera (por ejemplo, un botón).<br/>- Footer. | Con Header , footer y la información que corresponda y quieran colocar en su página "Sobre nosotros". |- Con los productos renderizados dinámicamente <br/>- Lógica de filtros <br/>- Agregado de productos al carrito, manejo de cantidades en carrito y la posibilidad de vaciar el carrito, borrar individualmente cada producto y realizar compra. <br/>- Todas estas acciones deben tener un modal de confirmación.|- Formulario de con los campos "nombre", "apellido" , "email" y "asunto". <br/>- Además, utilizando Formik, deberán realizar la validación del formulario de contacto. <br/>- El mismo no debe enviar nada, pero si cumplir con la validación de manera correcta de cada uno de los campos y renderizar un mensaje de envió correcto en caso de que todos los campos pasen dicha validación. |
+
+
+| Extras |
+| ------------ |
+| |- 👉 Todas las páginas vinculadas entre si mediante React Router. <br/>- 👉 Diseño responsive de todas las páginas. <br/>- 👉 Se deben poder persistir los productos del carrito. <br/>- 👉 Agregar un sistema de login y registro. <br/>- 👉 Agregar una página de checkout al realizar la compra. <br/>- 👉 Agregar una página de producto para cada producto individual. <br/>- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
+
 
 ## 📖 Documentación
 | **NucbazAPI** | **Loader** | 
