@@ -36,7 +36,8 @@ export const ContenedorFormulario = styled(FormikForm)`
     }
 
     input, textarea {
-        width: 90%;
+        width: 80%;
+        min-width: 50rem;
         padding: 0.5rem 0.75rem; 
         border-radius: 1rem;
         border: 1px solid var(--color-border);
@@ -56,13 +57,13 @@ export const ContenedorFormulario = styled(FormikForm)`
     @media (max-width: 768px) {
         width: 100%;
 
-        input {
+        input, textarea {
             min-width: 35rem;
         }
     }
 
     @media (max-width: 660px) {
-        input {
+        input, textarea {
             min-width: 25rem;
         }
     }
