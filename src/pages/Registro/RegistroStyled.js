@@ -39,6 +39,13 @@ export const FormFormik = styled(FormikForm)`
     padding: 0 2rem;
     gap: 20px;
 
+     label {
+        align-self: start;
+        text-align: left; 
+        color: var(--color-text-black);
+        font-size: 1.5rem;
+    }
+
     p {
         text-align: center;
         color: var(--color-text-dark);
@@ -49,4 +56,11 @@ export const FormFormik = styled(FormikForm)`
             transition: color 0.3s ease;
         }
     }
+
+    @media (max-width: 768px) {
+         label {
+            font-size: 1rem;
+         }
+    }
+
 `;

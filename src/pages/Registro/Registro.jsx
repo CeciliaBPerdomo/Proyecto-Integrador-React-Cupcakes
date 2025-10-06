@@ -19,8 +19,13 @@ import { createUser } from '../../axios/axios-usuario';
 import { useDispatch } from 'react-redux';
 import { setUsuarioActual } from "../../redux/usuario/usuarioSlice"
 
-import useRedirect  from "../../hooks/useRedirect"
+import useRedirect from "../../hooks/useRedirect"
 import { Link } from 'react-router-dom';
+
+// Mientras se loguea
+import Loader from '../../components/UI/Loader/Loader';
+// Sweet Alert 
+import Swal from 'sweetalert2'
 
 const Registro = () => {
     const dispatch = useDispatch()
@@ -31,54 +36,75 @@ const Registro = () => {
         <ContenedorPrincipal>
             <h1>🧁 Sé parte del cupcake club</h1>
             <p>Por favor, ingresá tus datos para poder registrarte en nuestra web</p>
-            
+
             <Formik
                 initialValues={registroInitialValues}
                 validationSchema={registroValidationSchema}
                 onSubmit={async (values, actions) => {
+                    try {
+                        const user = await createUser(
+                            values.nombre,
+                            values.email,
+                            values.password
+                        )
 
-                    const user = await createUser(
-                        values.nombre,
-                        values.email,
-                        values.password
-                    )
+                        actions.resetForm()
 
-                    actions.resetForm()
+                        // se envia al store-persist
+                        if (user) {
+                            dispatch(setUsuarioActual({
+                                ...user.usuario
+                            }))
+                        }
 
-                    // se envia al store-persist
-                    if (user) {
-                        dispatch(setUsuarioActual({
-                            ...user.usuario
-                        }))
+                        Swal.fire({
+                            title: "Registro",
+                            text: 'Tu registro ha sido existoso 🚀',
+                            icon: "success",
+                            timer: 3000,
+                            timerProgressBar: true,
+                            showConfirmButton: false,
+                            background: "var(--color-primary-light)",
+                        });
+                    } catch (error) {
+                        console.error(error)
+                    } finally {
+                        actions.setSubmitting(false);
                     }
                 }}
             >
-                <FormFormik>
-                    <label htmlFor="nombre">Tú nombre completo</label>
-                    <RegisterLoginInput
-                        name="nombre"
-                        type='text'
-                        placeholder='Tú nombre completo'
-                    />
+                {
+                    ({ isSubmitting }) => (
+                        <FormFormik>
+                            <label htmlFor="nombre">Tú nombre completo:</label>
+                            <RegisterLoginInput
+                                name="nombre"
+                                type='text'
+                                placeholder='Tú nombre completo'
+                            />
 
-                    <RegisterLoginInput
-                        name="email"
-                        type='email'
-                        placeholder='Tú correo electrónico'
-                    />
+                            <label htmlFor="email">Tú correo electrónico:</label>
+                            <RegisterLoginInput
+                                name="email"
+                                type='email'
+                                placeholder='Tú correo electrónico'
+                            />
 
-                    <RegisterLoginInput
-                        name="password"
-                        type='password'
-                        placeholder='Tú contraseña'
-                    />
+                            <label htmlFor="password">Tú contraseña:</label>
+                            <RegisterLoginInput
+                                name="password"
+                                type='password'
+                                placeholder='Tú contraseña'
+                            />
 
-                    <p>¿Ya tienes cuenta? <Link to="/iniciar-sesion">Inicia sesión</Link></p>
+                            <p>¿Ya tienes cuenta? <Link to="/iniciar-sesion">Inicia sesión</Link></p>
 
-                    <BotonSubmit>
-                        Registrate!
-                    </BotonSubmit>
-                </FormFormik>
+                            <BotonSubmit>
+                                {isSubmitting ? <Loader /> : " Registrate!"}
+
+                            </BotonSubmit>
+                        </FormFormik>
+                    )}
             </Formik>
             <h3>Tú cuenta más dulce 🍓</h3>
         </ContenedorPrincipal>

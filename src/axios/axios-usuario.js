@@ -14,7 +14,17 @@ export const createUser = async (nombre, email, password) => {
         return response.data
     } catch (error) {
         console.error(error)
-        return alert(error.response.data.errors[0].msg)
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: `Ocurrió un error 😢: ${error.response.data.errors[0].msg}`,
+            timer: 3000,
+            timerProgressBar: true,
+            showConfirmButton: false,
+            position: 'center',
+            background: "var(--color-primary-light)",
+        });
+        return false
     }
 }
 
