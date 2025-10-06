@@ -48,6 +48,7 @@ export const ContenedorFormulario = styled(FormikForm)`
     }
 
     input {
+        min-width: 50rem;
         height: 50px;
         outline: none;
     }
@@ -55,7 +56,17 @@ export const ContenedorFormulario = styled(FormikForm)`
     @media (max-width: 768px) {
         width: 100%;
 
+        input {
+            min-width: 35rem;
+        }
     }
+
+    @media (max-width: 660px) {
+        input {
+            min-width: 25rem;
+        }
+    }
+
 `;
 
 export const ContenedorImagen = styled.div`

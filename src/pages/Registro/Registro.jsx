@@ -54,6 +54,7 @@ const Registro = () => {
                 }}
             >
                 <FormFormik>
+                    <label htmlFor="nombre">Tú nombre completo</label>
                     <RegisterLoginInput
                         name="nombre"
                         type='text'
@@ -79,7 +80,7 @@ const Registro = () => {
                     </BotonSubmit>
                 </FormFormik>
             </Formik>
-            <p>Tú cuenta más dulce 🍓</p>
+            <h3>Tú cuenta más dulce 🍓</h3>
         </ContenedorPrincipal>
     )
 }

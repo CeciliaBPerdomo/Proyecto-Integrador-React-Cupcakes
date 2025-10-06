@@ -23,7 +23,10 @@ import { setUsuarioActual } from '../../redux/usuario/usuarioSlice';
 
 import useRedirect from '../../hooks/useRedirect';
 
-
+// Mientras se loguea
+import Loader from '../../components/UI/Loader/Loader';
+// Sweet Alert 
+import Swal from 'sweetalert2'
 
 const Login = () => {
 
@@ -38,38 +41,57 @@ const Login = () => {
             <Formik
                 initialValues={loginInitialValues}
                 validationSchema={loginValidationSchema}
-                onSubmit={async (values) => {
-                    const usuario = await loginUser(
-                        values.email,
-                        values.password
-                    )
+                onSubmit={async (values, actions) => {
+                    try {
+                        const usuario = await loginUser(values.email, values.password)
+                        if (usuario) {
+                            dispatch(setUsuarioActual({
+                                ...usuario.usuario,
+                                token: usuario.token
+                            }))
 
-                    if (usuario) {
-                        dispatch(setUsuarioActual({
-                            ...usuario.usuario,
-                            token: usuario.token
-                        }))
+                            Swal.fire({
+                                title: "Login",
+                                text: 'Inicio de sesión existoso 🚀',
+                                icon: "success",
+                                timer: 3000,
+                                timerProgressBar: true,
+                                showConfirmButton: false,
+                                background: "var(--color-primary-light)",
+                            });
+                        }
+                    } catch (error) {
+                        console.error(error)
+                    } finally {
+                        actions.setSubmitting(false);
                     }
                 }}
             >
-                <FormFormik>
-                    <RegisterLoginInput
-                        name="email"
-                        type='email'
-                        placeholder='Tú correo electrónico'
-                    />
+                {
+                    ({ isSubmitting }) => (
+                        <FormFormik>
+                            <label htmlFor="email">Tu email:</label>
+                            <RegisterLoginInput
+                                name="email"
+                                type='email'
+                                placeholder='Tú correo electrónico'
+                            />
 
-                    <RegisterLoginInput
-                        name="password"
-                        type='password'
-                        placeholder='Tú contraseña'
-                    />
-                    <p>¿Aún no tienes cuenta? <Link to="/registrate">Registrate</Link></p>
-                    <BotonSubmit>Iniciar sesión</BotonSubmit>
-                </FormFormik>
+                            <label htmlFor="password">Tu contraseña:</label>
+                            <RegisterLoginInput
+                                name="password"
+                                type='password'
+                                placeholder='Tú contraseña'
+                            />
+                            <p>¿Aún no tienes cuenta? <Link to="/registrate">Registrate</Link></p>
+                            <BotonSubmit>
+                                {isSubmitting ? <Loader /> : "Iniciar sesión"}
+                            </BotonSubmit>
+                        </FormFormik>
+                    )}
             </Formik>
 
-            <p>Tú cuenta más dulce 🍓</p>
+            <h3>Tú cuenta más dulce 🍓</h3>
         </ContenedorPrincipal>
     )
 }

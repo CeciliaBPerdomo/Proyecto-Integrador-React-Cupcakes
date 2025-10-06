@@ -67,6 +67,7 @@ const PedidoFormulario = ({ itemsCarrito, envio, precio }) => {
           } catch (error) {
             alert("Error al crear la orden", error)
           }
+          
         }}
         
       >
