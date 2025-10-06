@@ -47,7 +47,7 @@
 
 | Extras |
 | ------------ |
-| |- 👉 Todas las páginas vinculadas entre si mediante React Router. <br/>- 👉 Diseño responsive de todas las páginas. <br/>- 👉 Se deben poder persistir los productos del carrito. <br/>- 👉 Agregar un sistema de login y registro. <br/>- 👉 Agregar una página de checkout al realizar la compra. <br/>- 👉 Agregar una página de producto para cada producto individual. <br/>- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
+| - 👉 Todas las páginas vinculadas entre si mediante React Router. <br/>- 👉 Diseño responsive de todas las páginas. <br/>- 👉 Se deben poder persistir los productos del carrito. <br/>- 👉 Agregar un sistema de login y registro. <br/>- 👉 Agregar una página de checkout al realizar la compra. <br/>- 👉 Agregar una página de producto para cada producto individual. <br/>- 👉 Agregar envió de mail desde el formulario de contacto, usando API's como emailJS. |
 
 
 ## 📖 Documentación
