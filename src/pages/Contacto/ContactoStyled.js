@@ -49,7 +49,7 @@ export const ContenedorFormulario = styled(FormikForm)`
     }
 
     input {
-        min-width: 50rem;
+        min-width: 40rem;
         height: 50px;
         outline: none;
     }
@@ -58,13 +58,13 @@ export const ContenedorFormulario = styled(FormikForm)`
         width: 100%;
 
         input, textarea {
-            min-width: 35rem;
+            min-width: 25rem;
         }
     }
 
     @media (max-width: 660px) {
         input, textarea {
-            min-width: 25rem;
+            min-width: 20rem;
         }
     }
 
