@@ -36,7 +36,7 @@
 
 | **React Icons** | **Redux** | **Formik** | **Axios** | **Email Js** | **Sweet Alert 2** |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | 
-|  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/>`npm i react-redux` <br/> `npm i redux-persist` | `npm i formik` <br />`npm i yup`| `npm i axios` | `npm install @emailjs/browser` | `npm install sweetalert2` | 
+|  `npm install react-icons --save` | `npm i @reduxjs/toolkit` <br/> <br/>`npm i react-redux` <br/> <br/> `npm i redux-persist` | `npm i formik` <br/> <br />`npm i yup`| `npm i axios` | `npm install @emailjs/browser` | `npm install sweetalert2` | 
 
 ## 🎓​ Requisitos para la entrega
 
