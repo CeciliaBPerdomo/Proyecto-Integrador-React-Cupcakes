@@ -25,9 +25,9 @@ const Footer = () => {
         <FooterColumna>
           <h2>🧁 Nuestra web</h2>
           <FooterLink href="/">Inicio</FooterLink>
-          <FooterLink href="/productos">Cupcakes</FooterLink>
-          <FooterLink href="/nosotros">Acerca de Nosotros</FooterLink>
-          <FooterLink href="/contacto">Contacto</FooterLink>
+          <FooterLink href="/#productos">Cupcakes</FooterLink>
+          <FooterLink href="/#nosotros">Acerca de Nosotros</FooterLink>
+          <FooterLink href="/#contacto">Contacto</FooterLink>
         </FooterColumna>
 
         <FooterColumna>

@@ -1,4 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
+// Botonazo
 import Button from '../UI/Boton/Button'
 
 // imagenes 
@@ -11,7 +14,7 @@ import {
     TituloContainerStyled,
     ImagenContainerStyled,
     HeroParagraphStyled,
-    HeroButtonContainerStyled, 
+    HeroButtonContainerStyled,
     ContenedorImagenResponsive
 } from './HeroStyled'
 
@@ -21,7 +24,7 @@ const Hero = () => {
             <TituloContainerStyled>
                 <h1>Bienvenid@ a</h1>
                 <img src={cupcakeText} alt="CupcakeLandia" />
-                
+
                 <ContenedorImagenResponsive>
                     <img src={cupcakesHero} alt='Cupcakes' />
                 </ContenedorImagenResponsive>
@@ -47,14 +50,13 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <Button
-                        onClick={e => e.preventDefault()}
-                        radius='50'
-                    >
-                        Conocé nuestros cupcakes
-                    </Button>
+                    <Link to='/#productos'>
+                        <Button radius='50'>
+                            Conocé nuestros cupcakes
+                        </Button>
+                    </Link>
                 </HeroButtonContainerStyled>
-                
+
             </TituloContainerStyled>
 
             <ImagenContainerStyled>
