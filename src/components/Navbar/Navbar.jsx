@@ -62,7 +62,6 @@ const Navbar = () => {
                     </Link>
                 </LogoContainerStyled>
 
-
                 {/* Botón hamburguesa (solo mobile) */}
                 <HamburgerButton onClick={() => setMenuOpen(!menuOpen)}>
                     <FiAlignJustify size={30} />
@@ -139,8 +138,9 @@ const Navbar = () => {
                             usuarioActual ?
                                 dispatch(toggleHiddenMenu()) :
                                 navigate("/registrate")
-                            handleLinkClick()
+                                handleLinkClick("login")
                         }}
+                        className={activeLink === "login" ? "active" : ""}
                     >
                         <TooltipWrapper>
                             <Link>

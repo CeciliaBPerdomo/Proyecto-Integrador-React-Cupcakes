@@ -113,7 +113,7 @@ export const LinksContainerStyled = styled(motion.div)`
       }
 
       &.active {
-        background-color: var(--color-accent-light);
+        background-color: var(--color-text-white);
         color: var(--color-text);
         transform: scale(1.05);
         border: 1px solid var(--color-text);
