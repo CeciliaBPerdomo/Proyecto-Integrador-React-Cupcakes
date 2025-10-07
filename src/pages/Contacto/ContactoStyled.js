@@ -58,13 +58,13 @@ export const ContenedorFormulario = styled(FormikForm)`
         width: 100%;
 
         input, textarea {
-            min-width: 30rem;
+            min-width: 27rem;
         }
     }
 
     @media (max-width: 660px) {
         input, textarea {
-            min-width: 25rem;
+            min-width: 22rem;
         }
     }
 
