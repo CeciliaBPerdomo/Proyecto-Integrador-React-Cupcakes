@@ -11,10 +11,10 @@ export const obtenerOrdenes = async (dispatch, usuarioActual) => {
         })
         if (ordenes) {
             dispatch(fetchOrderSuccess(ordenes.data.data))
-            console.log(ordenes.data.data)
+            // console.log(ordenes.data.data)
         }
     } catch (error) {
-        console.log(error)
+        console.error(error)
         dispatch(fetchOrderFail("Ups!, algo salió mal."))
     }
 }

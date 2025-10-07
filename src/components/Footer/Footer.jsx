@@ -10,7 +10,22 @@ import {
   FooterCreditos,
 } from "./FooterSyled"
 
+// Iconos de redes sociales
+import { FaWhatsapp, FaInstagram } from "react-icons/fa"
+import { CiFacebook, CiYoutube } from "react-icons/ci";
+
 const Footer = () => {
+
+  function mensaje() {
+    console.log("Gracias por visitar la web de CupcakeLandia 🧁");
+    console.log("Esta realizada con mucha harina, ingredientes mágicos y mucho amor ❤️")
+    console.log("🧁 Espero que disfrutes tu visita")
+    console.log("Esta web está realizada por ❤️ Cecilia Perdomo ❤️")
+    console.error("Profe apruebeme!")
+  }
+
+  mensaje()
+
   return (
     <FooterWrapper>
       <FooterContenido>
@@ -20,6 +35,7 @@ const Footer = () => {
           <p>📍 <span>Dirección:</span> Av. Dulce 123, Colonia</p>
           <p>📞 <span>Teléfono:</span> +598 99 999 999</p>
           <p>✉️ <span>Email:</span> holis@cupcakeLandia.uy</p>
+          <p> <a href="https://wa.me/59899387921/?text=Hola,%20te%20escribo%20desde%20la%20web%20de%20cupCakelandia."><FaWhatsapp size={24} /></a> <a href="https://www.instagram.com/"><FaInstagram size={24} /></a> <a href="https://www.facebook.com/"><CiFacebook size={24} /></a> <a href="https://www.youtube.com/"><CiYoutube size={24} /></a></p>
         </FooterColumna>
 
         <FooterColumna>

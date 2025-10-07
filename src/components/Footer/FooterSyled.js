@@ -29,6 +29,11 @@ export const FooterColumna = styled.div`
         span {
             color: var(--color-text-dark); 
         }
+
+        a {
+          text-decoration: none;
+          color: var(--color-text-dark); 
+        }
     }
 `
 
