@@ -14,4 +14,8 @@ export const ContenedorPrincipal = styled.div`
     p {
         color: var(--color-text-dark);
     }
-`
+
+    @media (max-width: 768px) {
+        padding-top: 160px;
+    }
+`;

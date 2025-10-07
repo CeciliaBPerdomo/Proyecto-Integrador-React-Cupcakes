@@ -49,15 +49,15 @@ const Resumen = () => {
                             )
                         })}
                     </CupcakeCardContainer>
-
-                    <hr />
-                    <h3>Costos</h3>
+                   
+                </OrdenStyled>
+                <OrdenStyled>
+                    <h2>Costos</h2>
                     <span>Precio: {formatoPrecio(verOrden?.price)}</span>
                     <span>Envío: {formatoPrecio(verOrden?.shippingCost)}</span>
                     <span>Total: {formatoPrecio(verOrden?.total)}</span>
                     <hr />
-                </OrdenStyled>
-                <OrdenStyled>
+
                     <h2>Detalles de envío</h2>
                     <span>Nombre: {verOrden?.shippingDetails.name}</span>
                     <span>Celular: {verOrden?.shippingDetails.cellphone}</span>
