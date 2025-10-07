@@ -7,12 +7,12 @@ import {
   Form,
 } from "./PedidoFormularioStyled"
 
-
 // UI
 import Input from '../../UI/Input/Input'
 import BotonSubmit from '../../UI/Boton/Submit/BotonSubmit'
 import Loader from "../../UI/Loader/Loader"
-
+// Sweet Alert 
+import Swal from 'sweetalert2'
 
 // Formik
 import { pedidoInitialValues } from '../../../formik/initialValues'
@@ -61,15 +61,32 @@ const PedidoFormulario = ({ itemsCarrito, envio, precio }) => {
 
           try {
             await crearOrdenes(ordenData, dispatch, usuarioActual)
-            alert("Felicitaciones por tu compra")
+            Swal.fire({
+              title: "Pedido",
+              text: 'Tus cupca;es ya estan siendo preparados para que toda su dulzura llegué a tu casa 🚀',
+              icon: "success",
+              timer: 3000,
+              timerProgressBar: true,
+              showConfirmButton: false,
+              background: "var(--color-primary-light)",
+            });
             dispatch(vaciarCarrito(itemsCarrito))
             navigate("/tus-ordenes")
           } catch (error) {
-            alert("Error al crear la orden", error)
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: `Ocurrió un error al crear la orden😢: ${error}`,
+              timer: 3000,
+              timerProgressBar: true,
+              showConfirmButton: false,
+              position: 'center',
+              background: "var(--color-primary-light)",
+            });
           }
-          
+
         }}
-        
+
       >
 
         {

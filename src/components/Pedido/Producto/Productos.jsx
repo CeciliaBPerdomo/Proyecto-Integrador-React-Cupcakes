@@ -37,7 +37,7 @@ const Productos = ({ itemsCarrito, envio, precio }) => {
             <PreciosWrapper>
                 <hr />
                 <ContenedorPrecio>
-                    <p>sub-Total:</p>
+                    <p>SubTotal:</p>
                     <p>{formatoPrecio(precio)}</p>
                 </ContenedorPrecio>
                 <ContenedorPrecio>

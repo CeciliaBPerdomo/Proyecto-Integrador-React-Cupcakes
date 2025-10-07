@@ -101,7 +101,6 @@ const Registro = () => {
 
                             <BotonSubmit>
                                 {isSubmitting ? <Loader /> : " Registrate!"}
-
                             </BotonSubmit>
                         </FormFormik>
                     )}

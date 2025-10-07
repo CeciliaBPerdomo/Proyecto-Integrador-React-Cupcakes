@@ -11,40 +11,35 @@ export const ProductosContainerStyled = styled.div`
     }
 `;
 
-
 export const CardsWrapperStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-  min-height: 410px;
-  
-  overflow: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-height: 400px;
+    
+    overflow: scroll;
 
-  &::-webkit-scrollbar {
-    background: transparent;
-    width: 6px;
-  }
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: 6px;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    background: var(--gray-bg);
-    border-radius: 5px;
-  }
+    &::-webkit-scrollbar-thumb {
+      background: var(--gray-bg);
+      border-radius: 5px;
+    }
 
-  &::-webkit-scrollbar:horizontal {
-    display: none;
-  }
+    &::-webkit-scrollbar:horizontal {
+      display: none;
+    }
 
-  @media (max-height: 800px) {
-    height: 270px;
-  }
+    @media (max-width: 1500px) {
+      width: 100%;
+    }
 
-  @media (max-width: 1500px) {
-    width: 100%;
-  }
-
-  svg {
-        color: var(--color-text-black);
+    svg {
+      color: var(--color-text-black);
     }
 `;
 
@@ -64,7 +59,12 @@ export const ContenedorPrecio = styled.div`
         font-weight: bold;
         color: var(--color-botones);
     }
-`
+
+    @media (max-width: 768px) {
+        width: 90%;
+        padding: 0 0 0 0;
+    }
+`;
 
 export const PreciosWrapper = styled.div`
     display: flex;
@@ -78,4 +78,11 @@ export const PreciosWrapper = styled.div`
         width: 80%; 
         margin-bottom: 1rem;
     }
-`
+
+    @media (max-width: 768px) {
+      hr {
+        width: 95%;
+        margin-top: 0.25rem;
+      }
+    }
+`;
