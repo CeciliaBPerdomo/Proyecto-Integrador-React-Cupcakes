@@ -112,6 +112,13 @@ export const LinksContainerStyled = styled(motion.div)`
         transform: scale(1.03);
       }
 
+      &.active {
+        background-color: var(--color-accent-light);
+        color: var(--color-text);
+        transform: scale(1.05);
+        border: 1px solid var(--color-text);
+      }
+
       svg {
         font-size: 1.5rem;
       }

@@ -38,9 +38,11 @@ const Navbar = () => {
     const { usuarioActual } = useSelector(state => state.usuario)
     // Menu responsivo
     const [menuOpen, setMenuOpen] = useState(false)
+    const [activeLink, setActiveLink] = useState("");
 
 
-  const handleLinkClick = () => {
+    const handleLinkClick = (section) => {
+        setActiveLink(section);
         setMenuOpen(false);
     };
 
@@ -63,7 +65,7 @@ const Navbar = () => {
 
                 {/* Botón hamburguesa (solo mobile) */}
                 <HamburgerButton onClick={() => setMenuOpen(!menuOpen)}>
-                    <FiAlignJustify size={30}/>
+                    <FiAlignJustify size={30} />
                 </HamburgerButton>
 
                 <MenuIconos className={menuOpen ? "show" : "hide"}>
@@ -71,8 +73,12 @@ const Navbar = () => {
                     <LinksContainerStyled
                         whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/#productos' onClick={handleLinkClick}>
-                                <GiCupcake size={30} /> 
+                            <Link
+                                to='/#productos'
+                                onClick={() => handleLinkClick("productos")}
+                                className={activeLink === "productos" ? "active" : ""}
+                            >
+                                <GiCupcake size={30} />
                                 <span className="link-text">Productos</span>
                             </Link>
                             <Tooltip>Productos</Tooltip>
@@ -84,7 +90,11 @@ const Navbar = () => {
                         whileTap={{ scale: 0.97 }}
                     >
                         <TooltipWrapper>
-                            <Link to='/#nosotros' onClick={handleLinkClick}>
+                            <Link
+                                to='/#nosotros'
+                                onClick={() => handleLinkClick("nosotros")}
+                                className={activeLink === "nosotros" ? "active" : ""}
+                            >
                                 <GiCook size={30} />
                                 <span className="link-text">Nosotros</span>
                             </Link>
@@ -95,7 +105,11 @@ const Navbar = () => {
                     {/* Contacto */}
                     <LinksContainerStyled whileTap={{ scale: 0.97 }}>
                         <TooltipWrapper>
-                            <Link to='/#contacto' onClick={handleLinkClick}>
+                            <Link
+                                to='/#contacto'
+                                onClick={() => handleLinkClick("contacto")}
+                                className={activeLink === "contacto" ? "active" : ""}
+                            >
                                 <LuSend size={30} />
                                 <span className="link-text">Contacto</span>
                             </Link>
@@ -112,7 +126,7 @@ const Navbar = () => {
                             <CarritoWrapper to='#' onClick={handleLinkClick}>
                                 <GiShoppingCart size={30} />
                                 {cantidad > 0 && <CartBadge>{cantidad}</CartBadge>}
-                            <span className="link-text">Tu carrito</span>
+                                <span className="link-text">Tu carrito</span>
                             </CarritoWrapper >
                             <Tooltip>Tu carrito</Tooltip>
                         </TooltipWrapper>
@@ -125,13 +139,13 @@ const Navbar = () => {
                             usuarioActual ?
                                 dispatch(toggleHiddenMenu()) :
                                 navigate("/registrate")
-                               handleLinkClick()
+                            handleLinkClick()
                         }}
                     >
                         <TooltipWrapper>
                             <Link>
                                 <LuCircleUserRound size={30} />
-                                <span className="link-text">{usuarioActual ?  usuarioActual.nombre : "Iniciar sesión"}</span>
+                                <span className="link-text">{usuarioActual ? usuarioActual.nombre : "Iniciar sesión"}</span>
                             </Link>
                             <Tooltip> {usuarioActual ? usuarioActual.nombre : "Iniciar sesión"} </Tooltip>
                         </TooltipWrapper>

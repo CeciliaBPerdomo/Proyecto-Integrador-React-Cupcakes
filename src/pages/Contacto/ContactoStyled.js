@@ -37,7 +37,7 @@ export const ContenedorFormulario = styled(FormikForm)`
 
     input, textarea {
         width: 80%;
-        min-width: 50rem;
+        min-width: 40rem;
         padding: 0.5rem 0.75rem; 
         border-radius: 1rem;
         border: 1px solid var(--color-border);
