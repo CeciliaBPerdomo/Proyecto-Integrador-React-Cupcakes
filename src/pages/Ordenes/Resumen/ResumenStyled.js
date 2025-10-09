@@ -38,7 +38,7 @@ export const OrdenStyled = styled.div`
     h2 {
       color: var(--color-text-dark);
       text-decoration: underline;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
 
     @media (max-width: 768px) {
@@ -52,13 +52,13 @@ export const OrdenStyledWrapper = styled.div`
     h2 {
       color: var(--color-text-dark);
       text-decoration: underline;
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
     
     p {
       text-align: center;
       color: var(--color-text-black);
-      font-size: 1.25rem;
+      font-size: 1rem;
       padding: 5px;
 
       span {
