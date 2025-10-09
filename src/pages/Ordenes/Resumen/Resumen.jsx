@@ -6,15 +6,19 @@ import {
     ResumenInfoStyled,
     OrdenStyled,
     CupcakeCardContainer,
+    ContenedorEncabezado,
 } from "./ResumenStyled"
 
+// Formato Precio y fecha
 import { formatoPrecio } from '../../../utilidades/precio'
+// import { formatoFecha } from '../../../utilidades/fecha'
 
 import { useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { obtenerOrdenes } from '../../../axios/axios-orden'
 import ResumenOrden from '../../../components/Pedido/MisOrdenes/ResumenOrden'
 
+import { EstadoOrden } from '../../../components/Pedido/MisOrdenes/EstadoOrden'
 const Resumen = () => {
     const dispatch = useDispatch()
 
@@ -34,8 +38,11 @@ const Resumen = () => {
 
     return (
         <ResumenStyled>
-            <h3>Tu orden: #{ordenId.slice(18)}</h3>
-            <h4>Estado: {verOrden?.status}</h4>
+            <ContenedorEncabezado>
+                <h2>🍓Tu orden: #{ordenId.slice(18)}</h2>
+                <EstadoOrden status={verOrden?.status} />
+            </ContenedorEncabezado>
+
             <ResumenInfoStyled>
                 <OrdenStyled>
                     <h2>Tus cupcakes</h2>
@@ -49,7 +56,7 @@ const Resumen = () => {
                             )
                         })}
                     </CupcakeCardContainer>
-                   
+
                 </OrdenStyled>
                 <OrdenStyled>
                     <h2>Costos</h2>

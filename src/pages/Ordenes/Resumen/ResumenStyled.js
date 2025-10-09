@@ -3,15 +3,21 @@ import styled from 'styled-components';
 export const ResumenStyled = styled.div`
   padding-top: 110px;
   text-align: center;
+  margin: 1rem 0 1.5rem 0;
 
-  h3 {
+  @media (max-width: 768px) {
+    padding-top: 150px;
+    margin-bottom: 1rem;
+  }
+`;
+
+export const ContenedorEncabezado = styled.div`
+  display: flex;
+  justify-content: space-around; 
+
+  h {
     color: var(--color-text);
   }
-
-    @media (max-width: 768px) {
-      padding-top: 150px;
-      margin-bottom: 1rem;
-    }
 `;
 
 export const ResumenInfoStyled = styled.div`
