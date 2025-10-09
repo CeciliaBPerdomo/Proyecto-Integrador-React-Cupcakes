@@ -58,7 +58,7 @@ export const OrdenStyledWrapper = styled.div`
     p {
       text-align: center;
       color: var(--color-text-black);
-      font-size: 1rem;
+      font-size: 1.25rem;
       padding: 5px;
 
       span {

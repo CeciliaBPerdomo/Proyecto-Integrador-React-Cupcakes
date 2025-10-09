@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Estilos 
 import {
@@ -8,6 +8,7 @@ import {
   FooterMapa,
   FooterLink,
   FooterCreditos,
+  ModoAzulButton,
 } from "./FooterSyled"
 
 // Iconos de redes sociales
@@ -15,13 +16,34 @@ import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { CiFacebook, CiYoutube } from "react-icons/ci";
 
 const Footer = () => {
+  const [isBlueMode, setIsBlueMode] = useState(false);
+
+  const toggleTheme = () => {
+    if (isBlueMode) {
+      document.body.removeAttribute("data-theme");
+      localStorage.setItem("theme", "light");
+      setIsBlueMode(false);
+    } else {
+      document.body.setAttribute("data-theme", "blue");
+      localStorage.setItem("theme", "blue");
+      setIsBlueMode(true);
+    }
+  };
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "blue") {
+      document.body.setAttribute("data-theme", "blue");
+      setIsBlueMode(true);
+    }
+  }, []);
 
   function mensaje() {
     console.log("Gracias por visitar la web de CupcakeLandia 🧁");
     console.log("Esta realizada con mucha harina, ingredientes mágicos y mucho amor ❤️")
     console.log("🧁 Espero que disfrutes tu visita")
     console.log("Esta web está realizada por ❤️ Cecilia Perdomo ❤️")
-    console.error("Profe apruebeme!")
+    console.error("Profe, este modo azul también cuenta, ¿no? 😎, apruebemeeee");
   }
 
   mensaje()
@@ -44,6 +66,9 @@ const Footer = () => {
           <FooterLink href="/#productos">Cupcakes</FooterLink>
           <FooterLink href="/#nosotros">Acerca de Nosotros</FooterLink>
           <FooterLink href="/#contacto">Contacto</FooterLink>
+          <ModoAzulButton onClick={toggleTheme} isBlueMode={isBlueMode} >
+            {isBlueMode ? "Pink Mode 🌸" : "Blue Mode 🌙"}
+          </ModoAzulButton>
         </FooterColumna>
 
         <FooterColumna>
