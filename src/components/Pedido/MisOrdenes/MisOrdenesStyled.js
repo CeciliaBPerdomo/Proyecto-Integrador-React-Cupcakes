@@ -55,6 +55,8 @@ export const PrecioWrapper = styled.p`
   }
 `;
 
+
+// Resumen de ordenes
 export const ResumenOrdenStyled = styled.div`
     display: flex;
     align-items: center;
@@ -63,38 +65,64 @@ export const ResumenOrdenStyled = styled.div`
     background: var(--color-secondary-background);
     border-radius: 15px;
     border: 1px solid var(--color-border);
-    padding: 1.5rem 1rem;
-    margin: 0 auto 10px auto;
+    padding: 1rem;
 `
 
 export const CupcakeStyled = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    text-align: center;
+    gap: 20px;
+    text-align: left;
+`;
+
+export const ContenedorInfo = styled.div`
+      width: 70%; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      h3 {
+        margin: 5px 0 0 0;
+        font-size: 1.5rem;
+        color: var(--color-text-dark);
+      }
+
+      p {
+        font-size: 1.25rem;
+        color: var(--color-text-black);
+        margin: 2px 0;
+        display: flex;
+        align-items: center;
+
+        span {
+          font-size: 1.5rem;
+          margin: 0;
+          background: linear-gradient(83deg, var(--color-text), var(--color-text-dark));
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 600;
+          text-align: end;
+        }
+      }
+`;
+
+export const ContenedorImagen = styled.div`
+  width: 50%; 
+  display: flex; 
+  justify-content: center;
 
     img {
-      width: 120px;
-      height: 120px;
+      width: 100%;
+      height: 250px;
       object-fit: contain;
+      display: block;
+      margin: 0 auto;
     }
 
-    h3 {
-      margin: 5px 0 0 0;
-      font-size: 1.2rem;
-      color: var(--color-text-dark);
-    }
-
-    p {
-      font-size: 0.95rem;
-      color: var(--color-text);
-      margin: 2px 0;
-    }
-
-    hr {
-      border: none; 
-    }
 `;
 
 export const EstadoOrdenWrapper = styled.p`

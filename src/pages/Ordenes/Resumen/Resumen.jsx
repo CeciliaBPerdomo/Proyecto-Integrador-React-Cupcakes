@@ -7,6 +7,7 @@ import {
     OrdenStyled,
     CupcakeCardContainer,
     ContenedorEncabezado,
+    OrdenStyledWrapper
 } from "./ResumenStyled"
 
 // Formato Precio y fecha
@@ -39,7 +40,7 @@ const Resumen = () => {
     return (
         <ResumenStyled>
             <ContenedorEncabezado>
-                <h2>🍓Tu orden: #{ordenId.slice(18)}</h2>
+                <h1>🍓Tu orden: #{ordenId.slice(18)}</h1>
                 <EstadoOrden status={verOrden?.status} />
             </ContenedorEncabezado>
 
@@ -58,20 +59,22 @@ const Resumen = () => {
                     </CupcakeCardContainer>
 
                 </OrdenStyled>
-                <OrdenStyled>
+
+                <OrdenStyledWrapper>
                     <h2>Costos</h2>
-                    <span>Precio: {formatoPrecio(verOrden?.price)}</span>
-                    <span>Envío: {formatoPrecio(verOrden?.shippingCost)}</span>
-                    <span>Total: {formatoPrecio(verOrden?.total)}</span>
+                    <p>Precio: {formatoPrecio(verOrden?.price)}</p>
+                    <p>Envío: {formatoPrecio(verOrden?.shippingCost)}</p>
+                    <p>Total: <span>{formatoPrecio(verOrden?.total)}</span></p>
+                    
                     <hr />
 
                     <h2>Detalles de envío</h2>
-                    <span>Nombre: {verOrden?.shippingDetails.name}</span>
-                    <span>Celular: {verOrden?.shippingDetails.cellphone}</span>
-                    <span>Dirección: {verOrden?.shippingDetails.address}</span>
-                    <span>Ciudad: {verOrden?.shippingDetails.location}</span>
+                    <p>Nombre: {verOrden?.shippingDetails.name}</p>
+                    <p>Celular: {verOrden?.shippingDetails.cellphone}</p>
+                    <p>Dirección: {verOrden?.shippingDetails.address}</p>
+                    <p>Ciudad: {verOrden?.shippingDetails.location}</p>
 
-                </OrdenStyled>
+                </OrdenStyledWrapper>
             </ResumenInfoStyled>
 
         </ResumenStyled>

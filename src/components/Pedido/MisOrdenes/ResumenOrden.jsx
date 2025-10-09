@@ -2,7 +2,9 @@ import React from 'react'
 
 import {
     ResumenOrdenStyled,
-    CupcakeStyled
+    CupcakeStyled,
+    ContenedorImagen,
+    ContenedorInfo,
 } from "./MisOrdenesStyled"
 
 import { formatoPrecio } from '../../../utilidades/precio'
@@ -11,15 +13,18 @@ const ResumenOrden = ({ title, desc, quantity, img, price }) => {
     return (
         <ResumenOrdenStyled>
             <CupcakeStyled>
-                <img src={img} alt={title} />
 
-                <div>
+                <ContenedorImagen>
+                    <img src={img} alt={title} />
+                </ContenedorImagen>
+                
+                <ContenedorInfo>
                     <h3>{title}</h3>
                     <p>{desc}</p>
-                    <hr />
+                    <br />
                     <p>Cantidad: {quantity}</p>
-                    <p>Precio: {formatoPrecio(price * quantity)}</p>
-                </div>
+                    <p>Precio: <span>{formatoPrecio(price * quantity)}</span></p>
+                </ContenedorInfo>
             </CupcakeStyled>
         </ResumenOrdenStyled>
     )

@@ -12,12 +12,12 @@ export const ResumenStyled = styled.div`
 `;
 
 export const ContenedorEncabezado = styled.div`
-  display: flex;
-  justify-content: space-around; 
+    display: flex;
+    justify-content: space-around; 
 
-  h {
-    color: var(--color-text);
-  }
+    h1 {
+      color: var(--color-text);
+    }
 `;
 
 export const ResumenInfoStyled = styled.div`
@@ -27,6 +27,7 @@ export const ResumenInfoStyled = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: 3rem;
   }
 `;
@@ -37,12 +38,46 @@ export const OrdenStyled = styled.div`
     h2 {
       color: var(--color-text-dark);
       text-decoration: underline;
+      font-size: 1.75rem;
     }
 
-    span {
-      display: flex; 
-      justify-content: center;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+`;
+
+export const OrdenStyledWrapper = styled.div`
+    width: 50%;
+    
+    h2 {
+      color: var(--color-text-dark);
+      text-decoration: underline;
+      font-size: 1.75rem;
+    }
+    
+    p {
+      text-align: center;
+      color: var(--color-text-black);
+      font-size: 1.25rem;
       padding: 5px;
+
+      span {
+          font-size: 1.5rem;
+          margin: 0;
+          background: linear-gradient(83deg, var(--color-text), var(--color-text-dark));
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: 600;
+          text-align: end;
+      }
+    }
+
+    hr {
+        border: none; 
+        border-top: 2px solid var(--color-botones);
+        width: 80%; 
+        margin-bottom: 1rem;
     }
 
     @media (max-width: 768px) {
@@ -59,4 +94,9 @@ export const CupcakeCardContainer = styled.div`
     gap: 20px;  
     align-items: center;
     margin: 0 auto; 
+
+    @media (max-width: 768px) {
+      width: 100%;
+      min-width: 350px;
+    }
 `;
