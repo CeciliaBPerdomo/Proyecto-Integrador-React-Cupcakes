@@ -63,7 +63,7 @@ const PedidoFormulario = ({ itemsCarrito, envio, precio }) => {
             await crearOrdenes(ordenData, dispatch, usuarioActual)
             Swal.fire({
               title: "Pedido",
-              text: 'Tus cupca;es ya estan siendo preparados para que toda su dulzura llegué a tu casa 🚀',
+              text: 'Tus cupcakes ya están siendo preparados para que toda su dulzura llegué a tu casa 🚀',
               icon: "success",
               timer: 3000,
               timerProgressBar: true,

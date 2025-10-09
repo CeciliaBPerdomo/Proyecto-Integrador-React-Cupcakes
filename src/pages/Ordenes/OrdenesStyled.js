@@ -19,3 +19,13 @@ export const ContenedorPrincipal = styled.div`
         padding-top: 160px;
     }
 `;
+
+export const ContenedorEncabezado = styled.div`
+    width: 72%;
+    display: flex;
+    justify-content: space-between; 
+
+    @media (max-width: 768px) {
+         width: 95%;
+    }
+`;

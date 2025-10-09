@@ -12,7 +12,6 @@ export const ResumenStyled = styled.div`
       padding-top: 150px;
       margin-bottom: 1rem;
     }
-
 `;
 
 export const ResumenInfoStyled = styled.div`

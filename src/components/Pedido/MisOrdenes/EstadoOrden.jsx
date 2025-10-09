@@ -1,7 +1,15 @@
 import React from 'react'
 
-export const EstadoOrden = ({status}) => {
+import {
+  EstadoOrdenWrapper,
+} from "./MisOrdenesStyled"
+
+export const EstadoOrden = ({ status }) => {
   return (
-    <div>Estado: {status}</div>
+    <div>
+      <EstadoOrdenWrapper>
+        Estado: <span>{status === "pending" ? "pendiente" : status}</span>
+      </EstadoOrdenWrapper>
+    </div>
   )
 }

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 // Estilos
 import {
     ContenedorPrincipal,
+    ContenedorEncabezado,
 } from "./OrdenesStyled"
 import Button from "../../components/UI/Boton/Button"
 
@@ -33,10 +34,12 @@ const Ordenes = () => {
 
     return (
         <ContenedorPrincipal>
-            <Button onClick={()=> navigate("/")}>Volver a comprar</Button>
-            <h1>Mis órdenes</h1>
+            <ContenedorEncabezado>
+                <h1>Mis órdenes</h1>
+                <Button onClick={() => navigate("/")}>Volver a comprar</Button>
+            </ContenedorEncabezado>
 
-            <MisOrdenes/>
+            <MisOrdenes />
         </ContenedorPrincipal>
     )
 }

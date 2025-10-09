@@ -8,28 +8,51 @@ export const MisOrdenesContainerStyled = styled.div`
   gap: 20px;
   max-width: 1500px;
   margin: 0 auto;
+  margin: 1rem 0 1rem 0;
 `;
 
 export const PedidoContainerStyled = styled.div`
   background: var(--color-secondary-background);
-  width: 380px;
+  max-width: 380px;
   border-radius: 15px;
   border: 1px solid var(--color-border);
   padding: 1rem 1.4rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   position: relative;
   cursor: pointer;
-
-  h3 {
-    color: var(--color-text-black);
-  }
 `;
 
 export const TextContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  h3 {
+    margin-bottom: 0;
+    color: var(--color-text-black);
+    text-align: center;
+  }
+`;
+
+export const HorarioWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+`;
+
+export const PrecioWrapper = styled.p`
+  text-align: end;
+  font-size: 1.25rem;
+
+  span {
+      margin: 0;
+      background: linear-gradient(83deg, var(--color-text), var(--color-text-dark));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
+  }
 `;
 
 export const ResumenOrdenStyled = styled.div`
@@ -58,7 +81,7 @@ export const CupcakeStyled = styled.div`
     }
 
     h3 {
-      margin: 5px 0;
+      margin: 5px 0 0 0;
       font-size: 1.2rem;
       color: var(--color-text-dark);
     }
@@ -72,4 +95,9 @@ export const CupcakeStyled = styled.div`
     hr {
       border: none; 
     }
-`
+`;
+
+export const EstadoOrdenWrapper = styled.p`
+    text-align: center;
+    color: var(--color-text-black) !important;
+`;

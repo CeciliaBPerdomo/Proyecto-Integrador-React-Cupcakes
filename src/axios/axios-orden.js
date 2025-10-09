@@ -20,13 +20,13 @@ export const obtenerOrdenes = async (dispatch, usuarioActual) => {
 }
 
 export const crearOrdenes = async(orden, dispatch, usuarioActual) => {
-    console.log(usuarioActual.token)
+   // console.log(usuarioActual.token)
     try {
         const response = await axios.post(`${api_base_url}/orders`, orden, {
             headers: { "x-token": usuarioActual.token }
         })
         if (response) {
-            console.log(response)
+        //    console.log(response)
             obtenerOrdenes(dispatch, usuarioActual)
         }
     } catch (error) {
