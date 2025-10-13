@@ -9,7 +9,7 @@ export const BarraContenedor = styled.div`
         text-align: center;
         color: var(--color-text)
     }
-`
+`;
 
 export const BusquedaContenedor = styled.form`
     display: flex;
@@ -22,5 +22,25 @@ export const BusquedaContenedor = styled.form`
         border-radius: 25px; 
         padding: 10px;
         font-size: 1rem;
+        outline: none;
+        transition: all 0.3s ease;
+
+        &:focus {
+            border-color: var(--color-text);
+            box-shadow: 0 0 5px rgba(255, 108, 170, 0.3);
+        }
     }
-`
+
+    button {
+        width: 40px;
+        height: 40px;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 0 !important;
+
+        svg {
+            margin: 0 !important; 
+        }
+    }
+`;

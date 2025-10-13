@@ -16,8 +16,10 @@ import { seleccionarCategoria } from "../../redux/categorias/categoriasSlice"
 
 // Sweet Alert 
 import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 
-const BarraBusqueda = ({ doScroll }) => {
+const BarraBusqueda = () => {
+    const navigate = useNavigate()
     const dispatch = useDispatch()
     const [valueCategoria, setValueCategoria] = useState("")
 
@@ -34,7 +36,7 @@ const BarraBusqueda = ({ doScroll }) => {
 
         if (categoriaSelecionado) {
             dispatch(seleccionarCategoria(categoriaSelecionado))
-            doScroll()
+            navigate('/#productos');
         } else {
             Swal.fire({
                 icon: 'error',

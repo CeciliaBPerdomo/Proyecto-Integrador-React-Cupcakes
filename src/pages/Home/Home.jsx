@@ -20,8 +20,12 @@ const Home = () => {
   const contactoRef = useRef(null)
   const location = useLocation()
 
-    const scrollToSection = (ref) => {
-    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const scrollToProductos = () => {
+    if (productosRef.current) {
+      const yOffset = -100;
+      const y = productosRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
   }
 
   useEffect(() => {
@@ -45,7 +49,7 @@ const Home = () => {
       <Hero />
 
       {/* Barra de búsqueda */}
-      <BarraBusqueda doScroll={() => scrollToSection(productosRef)} />
+      <BarraBusqueda doScroll={scrollToProductos} />
 
       {/* Productos destacados */}
       <Recomendados />
