@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 // Botonazo
 import Button from '../UI/Boton/Button'
@@ -19,14 +19,23 @@ import {
 } from './HeroStyled'
 
 const Hero = () => {
+    const navigate = useNavigate()
     return (
         <HeroContainerStyled>
             <TituloContainerStyled>
                 <h1>Bienvenid@ a</h1>
                 <img src={cupcakeText} alt="CupcakeLandia" />
 
-                <ContenedorImagenResponsive>
-                    <img src={cupcakesHero} alt='Cupcakes' />
+                <ContenedorImagenResponsive
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                    <img src={cupcakesHero} alt='Cupcakes'
+                        animate={{ y: [0, -8, 0] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        whileHover={{ scale: 1.03, y: -5, transition: { duration: 0.3 } }}
+                    />
                 </ContenedorImagenResponsive>
 
                 <HeroParagraphStyled
@@ -50,17 +59,24 @@ const Hero = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
-                    <Link to='/#productos'>
-                        <Button radius='50'>
-                            Conocé nuestros cupcakes
-                        </Button>
-                    </Link>
+                    <Button radius='50' onClick={() => navigate('/#productos')}>
+                        Conocé nuestros cupcakes
+                    </Button>
                 </HeroButtonContainerStyled>
 
             </TituloContainerStyled>
 
-            <ImagenContainerStyled>
-                <img src={cupcakesHero} alt='Cupcakes' />
+            <ImagenContainerStyled
+                initial={{ opacity: 0, scale: 0.8, x: 50 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+            >
+                <img src={cupcakesHero} alt='Cupcakes'
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    whileHover={{ scale: 1.05, y: -10, transition: { duration: 0.5 } }}
+                />
             </ImagenContainerStyled>
 
         </HeroContainerStyled>

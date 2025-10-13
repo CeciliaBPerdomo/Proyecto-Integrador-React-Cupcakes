@@ -61,14 +61,16 @@ export const HeroParagraphStyled = styled(motion.p)`
     }
 `;
 
-export const ImagenContainerStyled = styled.div`
+export const ImagenContainerStyled = styled(motion.div)`
     width: 60%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    cursor: pointer;
 
     img {
         width: 100%;
+        filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, 0.1));
 
         @media (max-width: 768px) {
             display: none;
@@ -79,6 +81,7 @@ export const ImagenContainerStyled = styled.div`
         display: none;
     }
 `;
+
 
 
 export const HeroButtonContainerStyled = styled(motion.div)`
@@ -92,16 +95,17 @@ export const HeroButtonContainerStyled = styled(motion.div)`
   }
 `;
 
-export const ContenedorImagenResponsive = styled.div`
+export const ContenedorImagenResponsive = styled(motion.div)`
     img {
         display: none;
+        filter: drop-shadow(0px 5px 15px rgba(0, 0, 0, 0.1));
 
          @media (max-width: 768px) {
             display: flex;
             margin: 0 auto;
             width: 80%;
             margin-top: -20px;
+            cursor: pointer;
         }
     }
-
 `;
