@@ -73,25 +73,24 @@ export const FooterCreditos = styled.p`
 `;
 
 export const ModoAzulButton = styled.button`
-  background: ${({ isBlueMode }) => (isBlueMode ? "pink" : "blue")};
-  color: ${({ isBlueMode }) => (isBlueMode ? "var(--color-text-dark)" : "var(--color-text-white)")};
-  color: var(--color-text-white);
-  border: none;
-  border-radius: 20px;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-  display: inline-block;
+    background: ${({ $isBlueMode }) => ($isBlueMode ? "pink" : "blue")};
+    color: var(--color-text-white);
+    border: none;
+    border-radius: 20px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    display: inline-block;
 
-  &:hover {
-    background: ${({ isBlueMode }) => (isBlueMode ? "#ffb6c1" : "var(--color-text)")};
-    transform: scale(1.05);
-  }
+    &:hover {
+      background: ${({ $isBlueMode }) => ($isBlueMode ? "pink" : "blue")};
+      transform: scale(1.05);
+    }
 
-  &:active {
-    transform: scale(0.98);
-  }
+    &:active {
+      transform: scale(0.98);
+    }
 `;

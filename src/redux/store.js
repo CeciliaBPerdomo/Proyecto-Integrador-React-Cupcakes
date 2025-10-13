@@ -19,6 +19,8 @@ import carritoReducer from "./carrito/carritoSlice"
 import usuarioReducer from "./usuario/usuarioSlice"
 // Ordenes
 import ordenReducer from "./ordenes/ordenesSlice"
+// Tema
+import  themeReducer from './feature/theme/themeSlice';
 
 
 const reducers = combineReducers({
@@ -29,12 +31,13 @@ const reducers = combineReducers({
     cocineros: cocinerosReducer,
     usuario: usuarioReducer,
     ordenes: ordenReducer,
+    theme: themeReducer,
 })
 
 const persistConfig = {
     key: "root",
     storage,
-    whitelist: ["carrito", "usuario"] // Lo que realmente quiero peristir
+    whitelist: ["carrito", "usuario", "theme"] // Lo que realmente quiero peristir
 }
 
 // Persiste la info, le paso la configuración y que quiero que persista.

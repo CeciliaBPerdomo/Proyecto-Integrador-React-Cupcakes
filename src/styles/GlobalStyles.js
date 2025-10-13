@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-    :root {
+    /* :root {
         --color-background: #FFFFFF;
         --color-primary-background: #fff0f6;
         --color-secondary-background: #faeeee;
@@ -35,10 +35,11 @@ export const GlobalStyles = createGlobalStyle`
         --color-border: #415a77;
         --color-primary-light: #1b263b; 
         --color-botones: #4cc9f0;
-    }
+    } */
 
     * {
         box-sizing: border-box;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     }
 
     html {
@@ -53,6 +54,7 @@ export const GlobalStyles = createGlobalStyle`
         color: var(--color-primary);
         -webkit-tap-highlight-color: transparent;
         overflow-x: hidden;
+        color: inherit;
     }
 
     a {
@@ -62,4 +64,8 @@ export const GlobalStyles = createGlobalStyle`
     li {
         list-style: none;
     }
-`
+
+    button {
+        font-family: 'Montserrat', sans-serif;
+    }
+`;

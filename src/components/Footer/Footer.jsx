@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux';
 
 // Estilos 
 import {
@@ -15,28 +16,37 @@ import {
 import { FaWhatsapp, FaInstagram } from "react-icons/fa"
 import { CiFacebook, CiYoutube } from "react-icons/ci";
 
+// Tema
+import { toggleTheme } from "../../redux/feature/theme/themeSlice"
+
 const Footer = () => {
-  const [isBlueMode, setIsBlueMode] = useState(false);
+  const dispatch = useDispatch();
+  const isBlueMode = useSelector((state) => state.theme.isBlueMode);
 
-  const toggleTheme = () => {
-    if (isBlueMode) {
-      document.body.removeAttribute("data-theme");
-      localStorage.setItem("theme", "light");
-      setIsBlueMode(false);
-    } else {
-      document.body.setAttribute("data-theme", "blue");
-      localStorage.setItem("theme", "blue");
-      setIsBlueMode(true);
-    }
+  const handleToggleTheme = () => {
+    dispatch(toggleTheme());
   };
+  // const [isBlueMode, setIsBlueMode] = useState(false);
 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "blue") {
-      document.body.setAttribute("data-theme", "blue");
-      setIsBlueMode(true);
-    }
-  }, []);
+  // const toggleTheme = () => {
+  //   if (isBlueMode) {
+  //     document.body.removeAttribute("data-theme");
+  //     localStorage.setItem("theme", "light");
+  //     setIsBlueMode(false);
+  //   } else {
+  //     document.body.setAttribute("data-theme", "blue");
+  //     localStorage.setItem("theme", "blue");
+  //     setIsBlueMode(true);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem("theme");
+  //   if (savedTheme === "blue") {
+  //     document.body.setAttribute("data-theme", "blue");
+  //     setIsBlueMode(true);
+  //   }
+  // }, []);
 
   function mensaje() {
     console.log("Gracias por visitar la web de CupcakeLandia 🧁");
@@ -46,7 +56,9 @@ const Footer = () => {
     console.error("Profe, este modo azul también cuenta, ¿no? 😎, apruebemeeee");
   }
 
-  mensaje()
+  useEffect(() => {
+    mensaje()
+  }, [])
 
   return (
     <FooterWrapper>
@@ -66,7 +78,7 @@ const Footer = () => {
           <FooterLink href="/#productos">Cupcakes</FooterLink>
           <FooterLink href="/#nosotros">Acerca de Nosotros</FooterLink>
           <FooterLink href="/#contacto">Contacto</FooterLink>
-          <ModoAzulButton onClick={toggleTheme} isBlueMode={isBlueMode} >
+          <ModoAzulButton onClick={handleToggleTheme} $isBlueMode={isBlueMode} >
             {isBlueMode ? "Pink Mode 🌸" : "Blue Mode 🌙"}
           </ModoAzulButton>
         </FooterColumna>
